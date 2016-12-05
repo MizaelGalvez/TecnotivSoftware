@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TivSoftware.Control
 {
-    class Class1
+    class SerialLectura
     {
     }
 }
