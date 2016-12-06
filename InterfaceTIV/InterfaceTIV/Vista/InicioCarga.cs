@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TivSoftware
+namespace InterfaceTIV.Vista
 {
-    public partial class Form1 : Form
+    public partial class InicioCarga : Form
     {
-        public Form1()
+        public InicioCarga()
         {
             InitializeComponent();
         }
