@@ -20,7 +20,7 @@ namespace InterfaceTIV.Controladores
             SerialPort _serialPort;
             StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
             String valor = "";
-            string sensor_uso = "1";  // TODO:   asignar al Valor guardado en la base de Datos en la tabla Configuracion
+            string sensor_uso = "0";  // TODO:   asignar al Valor guardado en la base de Datos en la tabla Configuracion
             bool continuar = true;
 
             _serialPort = new SerialPort();
@@ -58,6 +58,7 @@ namespace InterfaceTIV.Controladores
                        
                         var movimiento = new MovimientoInterface() { valor = valor };
                         movimiento.MoverCursor();
+                        Console.WriteLine("{ }",valor);
                         
                     }
 
