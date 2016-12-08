@@ -66,6 +66,8 @@
   <ItemGroup>
     <Compile Include="Controladores\LecturaSerial.cs" />
     <Compile Include="Controladores\MovimientoInterface.cs" />
+    <Compile Include="Controladores\ProgresBAR.cs" />
+    <Compile Include="Controladores\Acciones.cs" />
     <Compile Include="Model\acondicionado.cs" />
     <Compile Include="Model\actitidades.cs" />
     <Compile Include="Model\bebidas.cs" />
@@ -110,6 +112,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Vista\Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\PruebaMovimiento.resx">
       <DependentUpon>PruebaMovimiento.cs</DependentUpon>
     </EmbeddedResource>

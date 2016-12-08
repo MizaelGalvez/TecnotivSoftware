@@ -15,15 +15,17 @@ namespace InterfaceTIV.Model
 
         public int? lbl_idioma { get; set; }
 
-        public bool? uso_silla { get; set; }
+        public int? uso_silla { get; set; }
 
-        public bool? uso_diadema { get; set; }
+        public int? uso_diadema { get; set; }
 
-        public bool? uso_Mause { get; set; }
+        public int? uso_Mause { get; set; }
 
-        public bool? uso_Sensor { get; set; }
-
+        public int? uso_Sensor { get; set; }
+        
         [StringLength(45)]
         public string lbl_Usuario { get; set; }
+
+       
     }
 }
