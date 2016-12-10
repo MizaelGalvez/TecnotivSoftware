@@ -65,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cabezeras\EdkDll.cs" />
+    <Compile Include="Cabezeras\EmoEngine.cs" />
+    <Compile Include="Cabezeras\EmoState.cs" />
+    <Compile Include="Cabezeras\EmotivCloudClient.cs" />
     <Compile Include="Controladores\LecturaSerial.cs" />
     <Compile Include="Controladores\MovimientoInterface.cs" />
     <Compile Include="Controladores\ProgresBAR.cs" />
@@ -125,6 +128,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cabezeras\edk.dll" />
     <Content Include="Cabezeras\EmotivCloudClient.h" />
     <Content Include="Cabezeras\EmotivCloudErrorCode.h" />
     <Content Include="Cabezeras\FacialExpressionDetection.h" />
@@ -133,6 +137,7 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <Content Include="Vista\edk.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

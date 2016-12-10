@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using InterfaceTIV.Model;
 using System.Data.Entity;
 using InterfaceTIV.Model;
+using Emotiv;
 
 namespace InterfaceTIV.Model
 {
@@ -235,5 +236,8 @@ namespace InterfaceTIV.Model
         }
 
         //Vista Configuracion
+
+        //datos rtecibidos de la diadema
+      
     }
 }

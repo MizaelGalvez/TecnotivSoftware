@@ -11,24 +11,71 @@ using System.Windows.Forms;
 using InterfaceTIV.Vista;
 using InterfaceTIV.Controladores;
 using Emotiv;
-using InterfaceTIV;
+using InterfaceTIV.Controladores;
 
 namespace InterfaceTIV.Vista
 {
     public partial class Home : Form
     {
-        public IntPtr Diadema { get; private set; }
+
+        EmoEngine engine;
+        int userID = 12600143;
 
         public Home()
         {
 
             InitializeComponent();
 
-            Diadema = EdkDll.IEE_EmoStateCreate();
 
-            Console.WriteLine(EdkDll.IS_GetHeadsetOn(Diadema));
-            
-            
+            //
+            //
+           
+
+            Program program = new Program();
+            engine = EmoEngine.Instance;
+            engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
+            engine.EmoStateUpdated += new EmoEngine.EmoStateUpdatedEventHandler(engine_EmoStateUpdated);
+            engine.Connect();
+
+            var Diadema = EdkDll.IEE_EmoStateCreate();
+
+
+            Console.WriteLine(EdkDll.IEE_InputChannels_t.IEE_CHAN_T8.ToString());
+
+            while (true)
+            {
+                engine.ProcessEvents();
+            }
+            //
+
+
+
+        }
+
+
+
+        void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
+        {
+            Console.WriteLine("User Added Event has occured");
+            // record the user      
+            userID = (int)e.userId;
+            // enable data aquisition for this user.          
+            // ask for up to 1 second of buffered data      
+        }
+
+        void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
+        {
+            if (e.userId == 0)
+            {
+                EmoState es = e.emoState;
+
+                Console.WriteLine("User ", e.userId, ":  ", es.GetTimeFromStart());
+            }
+            else if (e.userId == 1)
+            {
+                EmoState es = e.emoState;
+                Console.WriteLine("User ", e.userId, ":  ", es.GetTimeFromStart());
+            }
         }
 
 
@@ -51,6 +98,8 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelAlimentos.Show();
             panelAlimentos.Location = new Point(42, 90);
+
+            
         }
 
         private void btnActividades_Click(object sender, EventArgs e)
@@ -58,7 +107,9 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelActividades.Show();
             panelActividades.Location = new Point(42, 90);
+
             
+
         }
 
         private void btnEntretenimiento_Click(object sender, EventArgs e)
@@ -66,6 +117,8 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelEntretenimiento.Show();
             panelEntretenimiento.Location = new Point(42, 90);
+
+            
         }
 
         private void btnControlRemoto_Click(object sender, EventArgs e)
@@ -73,6 +126,8 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelControlRemoto.Show();
             panelControlRemoto.Location = new Point(42, 90);
+
+            
         }
 
         private void btnSilla_Click(object sender, EventArgs e)
@@ -80,14 +135,10 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelSilla.Show();
             panelSilla.Location = new Point(42, 90);
+
+            
         }
-
-
-
-
-
-
-
+        
         //
         //
         //
@@ -97,19 +148,7 @@ namespace InterfaceTIV.Vista
             panelAlimentos.Hide();
             panelHome.Show();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
         //
         //
         //
@@ -119,21 +158,7 @@ namespace InterfaceTIV.Vista
             panelActividades.Hide();
             panelHome.Show();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
         //
         //
         //
@@ -152,15 +177,7 @@ namespace InterfaceTIV.Vista
            
             
         }
-
-
-
-
-
-
-
-
-
+        
         //
         //
         //
@@ -170,8 +187,7 @@ namespace InterfaceTIV.Vista
             panelControlRemoto.Hide();
             panelHome.Show();
         }
-
-
+        
         //
         //
         //
@@ -182,6 +198,5 @@ namespace InterfaceTIV.Vista
             panelHome.Show();
         }
 
-        
     }
 }
