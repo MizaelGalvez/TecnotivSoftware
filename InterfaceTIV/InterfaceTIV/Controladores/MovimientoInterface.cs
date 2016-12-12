@@ -16,36 +16,61 @@ namespace InterfaceTIV.Controladores
         public static Point Position { get; set; }
         public Cursor Cursor { get; private set; }
 
+        
+
         public void MoverCursor()
         {
 
             // N = neutral A = adelante I = izquierda D = derecha UP = arriba DOWN = abajo
 
-            switch (this.valor)
+            switch (valor)
             {
-                case "N":
-                    this.Cursor = new Cursor(Cursor.Current.Handle);
-                    Cursor.Position = new Point(Cursor.Position.X - 0, Cursor.Position.Y - 0);
+                case "1":
+                    
                     break;
                 case "A":
-                    this.Cursor = new Cursor(Cursor.Current.Handle);
-                    SendKeys.Send("{ENTER}");
-                    break;
-                case "I":
-                    this.Cursor = new Cursor(Cursor.Current.Handle);
-                    Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 0);
+                    
+                    try
+                    {
+                        Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 0);
+                    }
+                    catch
+                    {
+                        Console.Write("Error clase MovimientoInterface al Mover Mause");
+                    }
+                    
+                    
                     break;
                 case "D":
-                    this.Cursor = new Cursor(Cursor.Current.Handle);
-                    Cursor.Position = new Point(Cursor.Position.X + 50, Cursor.Position.Y + 0);
+                    try
+                    {
+                        Cursor.Position = new Point(Cursor.Position.X + 50, Cursor.Position.Y + 0);
+                    }
+                    catch
+                    {
+                        Console.Write("Error clase MovimientoInterface al Mover Mause");
+                    }
+
                     break;
-                case "UP":
-                    this.Cursor = new Cursor(Cursor.Current.Handle);
-                    Cursor.Position = new Point(Cursor.Position.X + 0, Cursor.Position.Y + 50);
+                case "S":
+                    try
+                    {
+                        Cursor.Position = new Point(Cursor.Position.X + 0, Cursor.Position.Y + 50);
+                    }
+                    catch
+                    {
+                        Console.Write("Error clase MovimientoInterface al Mover Mause");
+                    }
                     break;
-                case "DOWN":
-                    this.Cursor = new Cursor(Cursor.Current.Handle);
-                    Cursor.Position = new Point(Cursor.Position.X - 0, Cursor.Position.Y - 50);
+                case "W":
+                    try
+                    {
+                        Cursor.Position = new Point(Cursor.Position.X - 0, Cursor.Position.Y - 50);
+                    }
+                    catch
+                    {
+                        Console.Write("Error clase MovimientoInterface al Mover Mause");
+                    }
                     break;
                 default:
                     break;
@@ -54,7 +79,7 @@ namespace InterfaceTIV.Controladores
         }
 
 
-
+       
 
     }
 }

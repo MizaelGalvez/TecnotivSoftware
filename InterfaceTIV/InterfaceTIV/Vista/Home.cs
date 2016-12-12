@@ -18,65 +18,29 @@ namespace InterfaceTIV.Vista
     public partial class Home : Form
     {
 
-        EmoEngine engine;
-        int userID = 12600143;
-
+        int cambio = 0;
         public Home()
         {
-
             InitializeComponent();
 
+            focus();
+            
+        }
 
-            //
-            //
-           
-
-            Program program = new Program();
-            engine = EmoEngine.Instance;
-            engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
-            engine.EmoStateUpdated += new EmoEngine.EmoStateUpdatedEventHandler(engine_EmoStateUpdated);
-            engine.Connect();
-
-            var Diadema = EdkDll.IEE_EmoStateCreate();
-
-
-            Console.WriteLine(EdkDll.IEE_InputChannels_t.IEE_CHAN_T8.ToString());
-
-            while (true)
-            {
-                engine.ProcessEvents();
-            }
-            //
-
-
-
+        public void focus(){ txtComando.Text = ""; txtComando.Select();}
+        public void enviar() {
+            
+            string valor = txtComando.Text;
+            Console.WriteLine(valor);
+            LecturaSerial enviardatos = new LecturaSerial();
+            enviardatos.sensor = cambio;
+            enviardatos.valor = valor;
+            enviardatos.Lectura();
+            
+            focus();
         }
 
 
-
-        void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
-        {
-            Console.WriteLine("User Added Event has occured");
-            // record the user      
-            userID = (int)e.userId;
-            // enable data aquisition for this user.          
-            // ask for up to 1 second of buffered data      
-        }
-
-        void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
-        {
-            if (e.userId == 0)
-            {
-                EmoState es = e.emoState;
-
-                Console.WriteLine("User ", e.userId, ":  ", es.GetTimeFromStart());
-            }
-            else if (e.userId == 1)
-            {
-                EmoState es = e.emoState;
-                Console.WriteLine("User ", e.userId, ":  ", es.GetTimeFromStart());
-            }
-        }
 
 
         //entrar a la ventana de configuracion
@@ -98,7 +62,7 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelAlimentos.Show();
             panelAlimentos.Location = new Point(42, 90);
-
+            focus();
             
         }
 
@@ -108,7 +72,7 @@ namespace InterfaceTIV.Vista
             panelActividades.Show();
             panelActividades.Location = new Point(42, 90);
 
-            
+            focus();
 
         }
 
@@ -118,7 +82,7 @@ namespace InterfaceTIV.Vista
             panelEntretenimiento.Show();
             panelEntretenimiento.Location = new Point(42, 90);
 
-            
+            focus();
         }
 
         private void btnControlRemoto_Click(object sender, EventArgs e)
@@ -127,7 +91,7 @@ namespace InterfaceTIV.Vista
             panelControlRemoto.Show();
             panelControlRemoto.Location = new Point(42, 90);
 
-            
+            focus();
         }
 
         private void btnSilla_Click(object sender, EventArgs e)
@@ -135,8 +99,8 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelSilla.Show();
             panelSilla.Location = new Point(42, 90);
-
-            
+            cambio = 1;
+            focus();
         }
         
         //
@@ -147,6 +111,8 @@ namespace InterfaceTIV.Vista
         {
             panelAlimentos.Hide();
             panelHome.Show();
+
+            focus();
         }
         
         //
@@ -157,6 +123,8 @@ namespace InterfaceTIV.Vista
         {
             panelActividades.Hide();
             panelHome.Show();
+
+            focus();
         }
         
         //
@@ -167,6 +135,8 @@ namespace InterfaceTIV.Vista
         {
             panelEntretenimiento.Hide();
             panelHome.Show();
+
+            focus();
         }
 
         private void btnYoutube_Click(object sender, EventArgs e)
@@ -174,8 +144,8 @@ namespace InterfaceTIV.Vista
             panelHome.Hide();
             panelWeb.Show();
             panelWeb.Location = new Point(12, 13);
-           
-            
+
+            focus();
         }
         
         //
@@ -186,6 +156,8 @@ namespace InterfaceTIV.Vista
         {
             panelControlRemoto.Hide();
             panelHome.Show();
+
+            focus();
         }
         
         //
@@ -196,7 +168,30 @@ namespace InterfaceTIV.Vista
         {
             panelSilla.Hide();
             panelHome.Show();
+            cambio = 0;
+
+            focus();
         }
 
+
+        //
+        //
+        //
+        //Eventos de enviar comandos recibidos
+       
+        private void txtComando_TextChanged(object sender, EventArgs e)
+        {
+            enviar();
+        }
+        
+        //
+        //
+        //
+        //Eventos de focus al elemento necesario
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            focus();
+        }
     }
 }

@@ -12,10 +12,16 @@ namespace InterfaceTIV
     {
         static void Main(string[] args)
         {
+
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Home HOME = new Home();
+            HOME.Show();
+            HOME.Activate();
+            Application.Run();
 
+           
         }
     }
 }

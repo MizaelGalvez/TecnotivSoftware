@@ -13,63 +13,48 @@ namespace InterfaceTIV.Controladores
 
     public class LecturaSerial
     {
-        
+        public int sensor{ get; set; }
+        public string valor { get; set; }
         public void Lectura()
         {
-
+            
             SerialPort _serialPort;
             StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
-            String valor = "";
-            string sensor_uso = "0";  // TODO:   asignar al Valor guardado en la base de Datos en la tabla Configuracion
-            bool continuar = true;
-
+            
             _serialPort = new SerialPort();
 
+            _serialPort.PortName = "COM1";
             _serialPort.BaudRate = 9600;
-            _serialPort.ReadTimeout = 500;
-            _serialPort.WriteTimeout = 500;
+            _serialPort.Parity = Parity.None;
+            _serialPort.StopBits = StopBits.One;
+            _serialPort.DataBits = 8;
 
-            _serialPort.Open();
+            
 
-
-            while (continuar)
+            if (sensor == 1)
             {
-                valor = Console.ReadLine().ToString();
-
-                if (stringComparer.Equals("cerrar", valor))
+                try
                 {
-
-                    continuar = false;
-
+                    _serialPort.Open();
+                    _serialPort.Write(String.Format("{0}", valor));
+                    _serialPort.Close();
                 }
-                else
+                catch
                 {
-
-                    if (sensor_uso.Equals("1"))
-                    { 
-
-                        _serialPort.BaudRate = 4800;
-                        _serialPort.WriteLine(String.Format("{0}", valor));
-                        _serialPort.BaudRate = 9600;
-
-                    }
-                    else
-                    {
-                       
-                        var movimiento = new MovimientoInterface() { valor = valor };
-                        movimiento.MoverCursor();
-                        Console.WriteLine("{ }",valor);
-                        
-                    }
-
+                    Console.Write(String.Format("Escribir por serial: {0}", valor));
                 }
+                
+            }
+            else
+            {
+
+                MovimientoInterface movimiento = new MovimientoInterface();
+                movimiento.valor = valor;
+                movimiento.MoverCursor();
+
 
             }
-
-
-
-
-
+            
         }
     }
 }

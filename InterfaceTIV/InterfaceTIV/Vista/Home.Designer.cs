@@ -63,6 +63,7 @@
             this.btnAcondicionado = new System.Windows.Forms.Button();
             this.btnTelevision = new System.Windows.Forms.Button();
             this.panelSilla = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -73,25 +74,27 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnRegresarSilla = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panelComando = new System.Windows.Forms.Panel();
+            this.txtComando = new System.Windows.Forms.TextBox();
             this.panelHome.SuspendLayout();
             this.panelAlimentos.SuspendLayout();
             this.panelActividades.SuspendLayout();
             this.panelEntretenimiento.SuspendLayout();
             this.panelControlRemoto.SuspendLayout();
             this.panelSilla.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panelComando.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConfiguracion
             // 
-            this.btnConfiguracion.Location = new System.Drawing.Point(12, 528);
+            this.btnConfiguracion.Location = new System.Drawing.Point(10, 11);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(75, 23);
             this.btnConfiguracion.TabIndex = 0;
@@ -444,6 +447,14 @@
             this.panelSilla.TabIndex = 11;
             this.panelSilla.Visible = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(215, 196);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(29, 30);
+            this.pictureBox7.TabIndex = 14;
+            this.pictureBox7.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Location = new System.Drawing.Point(654, 307);
@@ -529,19 +540,32 @@
             this.button2.Text = "Frente";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // panelComando
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(215, 196);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(29, 30);
-            this.pictureBox7.TabIndex = 14;
-            this.pictureBox7.TabStop = false;
+            this.panelComando.Controls.Add(this.txtComando);
+            this.panelComando.Controls.Add(this.btnConfiguracion);
+            this.panelComando.Location = new System.Drawing.Point(12, 518);
+            this.panelComando.Name = "panelComando";
+            this.panelComando.Size = new System.Drawing.Size(98, 133);
+            this.panelComando.TabIndex = 13;
+            // 
+            // txtComando
+            // 
+            this.txtComando.BackColor = System.Drawing.Color.Azure;
+            this.txtComando.ForeColor = System.Drawing.Color.Azure;
+            this.txtComando.Location = new System.Drawing.Point(15, 100);
+            this.txtComando.Name = "txtComando";
+            this.txtComando.Size = new System.Drawing.Size(70, 20);
+            this.txtComando.TabIndex = 1;
+            this.txtComando.TextChanged += new System.EventHandler(this.txtComando_TextChanged);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(940, 563);
+            this.Controls.Add(this.panelComando);
             this.Controls.Add(this.panelSilla);
             this.Controls.Add(this.panelControlRemoto);
             this.Controls.Add(this.panelWeb);
@@ -549,22 +573,24 @@
             this.Controls.Add(this.panelActividades);
             this.Controls.Add(this.panelAlimentos);
             this.Controls.Add(this.panelHome);
-            this.Controls.Add(this.btnConfiguracion);
             this.Name = "Home";
             this.Text = "Home";
+            this.Click += new System.EventHandler(this.Home_Click);
             this.panelHome.ResumeLayout(false);
             this.panelAlimentos.ResumeLayout(false);
             this.panelActividades.ResumeLayout(false);
             this.panelEntretenimiento.ResumeLayout(false);
             this.panelControlRemoto.ResumeLayout(false);
             this.panelSilla.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panelComando.ResumeLayout(false);
+            this.panelComando.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -617,5 +643,7 @@
         private System.Windows.Forms.Button btnRegresarSilla;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panelComando;
+        private System.Windows.Forms.TextBox txtComando;
     }
 }
