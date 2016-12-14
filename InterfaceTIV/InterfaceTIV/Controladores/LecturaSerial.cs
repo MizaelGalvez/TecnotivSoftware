@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 using System.ComponentModel;
 using InterfaceTIV.Controladores;
-using InterfaceTIV.Model;
+using InterfaceTIV.Vista;
 
 namespace InterfaceTIV.Controladores
 {
@@ -22,14 +22,18 @@ namespace InterfaceTIV.Controladores
             StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
             
             _serialPort = new SerialPort();
-
-            _serialPort.PortName = "COM1";
+            
             _serialPort.BaudRate = 9600;
             _serialPort.Parity = Parity.None;
             _serialPort.StopBits = StopBits.One;
             _serialPort.DataBits = 8;
 
-            
+
+            foreach (var item in SerialPort.GetPortNames())
+            {
+               // Console.WriteLine(item);
+                _serialPort.PortName = item;
+            }
 
             if (sensor == 1)
             {
@@ -41,7 +45,7 @@ namespace InterfaceTIV.Controladores
                 }
                 catch
                 {
-                    Console.Write(String.Format("Escribir por serial: {0}", valor));
+                    Console.Write("error al abrir");
                 }
                 
             }

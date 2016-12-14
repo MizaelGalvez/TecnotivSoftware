@@ -7,6 +7,9 @@ using InterfaceTIV.Model;
 using System.Data.Entity;
 using InterfaceTIV.Model;
 using Emotiv;
+using System.Web;
+using System.Net;
+using System.IO;
 
 namespace InterfaceTIV.Model
 {
@@ -53,6 +56,35 @@ namespace InterfaceTIV.Model
                     foreach (var result in user)
                     {
                           valor = result.ToString();
+                    }
+
+
+                    return valor;
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static string contraseña(int Id)
+        {
+            string valor = "";
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    var user = (from dato in ctx.configuracion
+                                where dato.idConfiguracion == Id
+                                select dato.txtContraseña);
+
+                    //Console.WriteLine(user.ToString());
+
+                    foreach (var result in user)
+                    {
+                        valor = result.ToString();
                     }
 
 
@@ -237,7 +269,7 @@ namespace InterfaceTIV.Model
 
         //Vista Configuracion
 
-        //datos rtecibidos de la diadema
-      
+       
+
     }
 }

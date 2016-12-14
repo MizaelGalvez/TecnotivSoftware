@@ -26,6 +26,9 @@ namespace InterfaceTIV.Model
         [StringLength(45)]
         public string lbl_Usuario { get; set; }
 
-       
+        [StringLength(200)]
+        public string txtContraseña { get; set; }
+
+
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.btnAlimentos = new System.Windows.Forms.Button();
             this.btnEntretenimiento = new System.Windows.Forms.Button();
@@ -76,6 +77,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panelComando = new System.Windows.Forms.Panel();
             this.txtComando = new System.Windows.Forms.TextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panelHome.SuspendLayout();
             this.panelAlimentos.SuspendLayout();
             this.panelActividades.SuspendLayout();
@@ -90,13 +92,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelComando.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfiguracion
             // 
-            this.btnConfiguracion.Location = new System.Drawing.Point(10, 11);
+            this.btnConfiguracion.Location = new System.Drawing.Point(3, 3);
             this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(75, 23);
+            this.btnConfiguracion.Size = new System.Drawing.Size(92, 46);
             this.btnConfiguracion.TabIndex = 0;
             this.btnConfiguracion.Text = "Configuracion";
             this.btnConfiguracion.UseVisualStyleBackColor = true;
@@ -104,7 +107,7 @@
             // 
             // btnAlimentos
             // 
-            this.btnAlimentos.Location = new System.Drawing.Point(22, 26);
+            this.btnAlimentos.Location = new System.Drawing.Point(38, 35);
             this.btnAlimentos.Name = "btnAlimentos";
             this.btnAlimentos.Size = new System.Drawing.Size(210, 130);
             this.btnAlimentos.TabIndex = 1;
@@ -114,9 +117,9 @@
             // 
             // btnEntretenimiento
             // 
-            this.btnEntretenimiento.Location = new System.Drawing.Point(22, 265);
+            this.btnEntretenimiento.Location = new System.Drawing.Point(38, 265);
             this.btnEntretenimiento.Name = "btnEntretenimiento";
-            this.btnEntretenimiento.Size = new System.Drawing.Size(210, 130);
+            this.btnEntretenimiento.Size = new System.Drawing.Size(210, 116);
             this.btnEntretenimiento.TabIndex = 2;
             this.btnEntretenimiento.Text = "Entretenimiento";
             this.btnEntretenimiento.UseVisualStyleBackColor = true;
@@ -126,7 +129,7 @@
             // 
             this.btnControlRemoto.Location = new System.Drawing.Point(348, 265);
             this.btnControlRemoto.Name = "btnControlRemoto";
-            this.btnControlRemoto.Size = new System.Drawing.Size(210, 130);
+            this.btnControlRemoto.Size = new System.Drawing.Size(210, 116);
             this.btnControlRemoto.TabIndex = 4;
             this.btnControlRemoto.Text = "Control Remoto";
             this.btnControlRemoto.UseVisualStyleBackColor = true;
@@ -134,7 +137,7 @@
             // 
             // btnActividades
             // 
-            this.btnActividades.Location = new System.Drawing.Point(348, 26);
+            this.btnActividades.Location = new System.Drawing.Point(348, 35);
             this.btnActividades.Name = "btnActividades";
             this.btnActividades.Size = new System.Drawing.Size(210, 130);
             this.btnActividades.TabIndex = 3;
@@ -179,9 +182,9 @@
             this.panelHome.Controls.Add(this.btnActividades);
             this.panelHome.Controls.Add(this.btnEntretenimiento);
             this.panelHome.Controls.Add(this.btnAlimentos);
-            this.panelHome.Location = new System.Drawing.Point(57, 65);
+            this.panelHome.Location = new System.Drawing.Point(72, 71);
             this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(844, 431);
+            this.panelHome.Size = new System.Drawing.Size(798, 431);
             this.panelHome.TabIndex = 8;
             // 
             // panelAlimentos
@@ -190,7 +193,7 @@
             this.panelAlimentos.Controls.Add(this.btnPostres);
             this.panelAlimentos.Controls.Add(this.btnBebidas);
             this.panelAlimentos.Controls.Add(this.btnComidas);
-            this.panelAlimentos.Location = new System.Drawing.Point(907, 469);
+            this.panelAlimentos.Location = new System.Drawing.Point(908, 451);
             this.panelAlimentos.Name = "panelAlimentos";
             this.panelAlimentos.Size = new System.Drawing.Size(868, 371);
             this.panelAlimentos.TabIndex = 9;
@@ -198,9 +201,9 @@
             // 
             // btnRegresarAlimentos
             // 
-            this.btnRegresarAlimentos.Location = new System.Drawing.Point(781, 21);
+            this.btnRegresarAlimentos.Location = new System.Drawing.Point(781, 3);
             this.btnRegresarAlimentos.Name = "btnRegresarAlimentos";
-            this.btnRegresarAlimentos.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresarAlimentos.Size = new System.Drawing.Size(75, 41);
             this.btnRegresarAlimentos.TabIndex = 5;
             this.btnRegresarAlimentos.Text = "Regresar";
             this.btnRegresarAlimentos.UseVisualStyleBackColor = true;
@@ -232,6 +235,7 @@
             this.btnComidas.TabIndex = 1;
             this.btnComidas.Text = "Comidas";
             this.btnComidas.UseVisualStyleBackColor = true;
+            this.btnComidas.Click += new System.EventHandler(this.btnComidas_Click);
             // 
             // panelActividades
             // 
@@ -242,7 +246,7 @@
             this.panelActividades.Controls.Add(this.btnIncomodidad);
             this.panelActividades.Controls.Add(this.btnBanarse);
             this.panelActividades.Controls.Add(this.btnDolor);
-            this.panelActividades.Location = new System.Drawing.Point(895, 502);
+            this.panelActividades.Location = new System.Drawing.Point(896, 481);
             this.panelActividades.Name = "panelActividades";
             this.panelActividades.Size = new System.Drawing.Size(868, 418);
             this.panelActividades.TabIndex = 10;
@@ -277,9 +281,9 @@
             // 
             // btnRegresarPanelActividades
             // 
-            this.btnRegresarPanelActividades.Location = new System.Drawing.Point(781, 21);
+            this.btnRegresarPanelActividades.Location = new System.Drawing.Point(781, 3);
             this.btnRegresarPanelActividades.Name = "btnRegresarPanelActividades";
-            this.btnRegresarPanelActividades.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresarPanelActividades.Size = new System.Drawing.Size(75, 41);
             this.btnRegresarPanelActividades.TabIndex = 5;
             this.btnRegresarPanelActividades.Text = "Regresar";
             this.btnRegresarPanelActividades.UseVisualStyleBackColor = true;
@@ -319,7 +323,7 @@
             this.panelEntretenimiento.Controls.Add(this.btnNetflix);
             this.panelEntretenimiento.Controls.Add(this.btnYoutube);
             this.panelEntretenimiento.Controls.Add(this.btnNavegar);
-            this.panelEntretenimiento.Location = new System.Drawing.Point(883, 518);
+            this.panelEntretenimiento.Location = new System.Drawing.Point(884, 505);
             this.panelEntretenimiento.Name = "panelEntretenimiento";
             this.panelEntretenimiento.Size = new System.Drawing.Size(868, 418);
             this.panelEntretenimiento.TabIndex = 11;
@@ -336,9 +340,9 @@
             // 
             // btnRegresarEntretenimiento
             // 
-            this.btnRegresarEntretenimiento.Location = new System.Drawing.Point(781, 21);
+            this.btnRegresarEntretenimiento.Location = new System.Drawing.Point(781, 3);
             this.btnRegresarEntretenimiento.Name = "btnRegresarEntretenimiento";
-            this.btnRegresarEntretenimiento.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresarEntretenimiento.Size = new System.Drawing.Size(75, 41);
             this.btnRegresarEntretenimiento.TabIndex = 5;
             this.btnRegresarEntretenimiento.Text = "Regresar";
             this.btnRegresarEntretenimiento.UseVisualStyleBackColor = true;
@@ -374,7 +378,7 @@
             // 
             // panelWeb
             // 
-            this.panelWeb.Location = new System.Drawing.Point(910, 24);
+            this.panelWeb.Location = new System.Drawing.Point(922, 24);
             this.panelWeb.Name = "panelWeb";
             this.panelWeb.Size = new System.Drawing.Size(916, 509);
             this.panelWeb.TabIndex = 12;
@@ -385,7 +389,7 @@
             this.panelControlRemoto.Controls.Add(this.btnLuces);
             this.panelControlRemoto.Controls.Add(this.btnAcondicionado);
             this.panelControlRemoto.Controls.Add(this.btnTelevision);
-            this.panelControlRemoto.Location = new System.Drawing.Point(871, 528);
+            this.panelControlRemoto.Location = new System.Drawing.Point(872, 525);
             this.panelControlRemoto.Name = "panelControlRemoto";
             this.panelControlRemoto.Size = new System.Drawing.Size(868, 371);
             this.panelControlRemoto.TabIndex = 10;
@@ -393,9 +397,9 @@
             // 
             // btnRegresarRemoto
             // 
-            this.btnRegresarRemoto.Location = new System.Drawing.Point(781, 21);
+            this.btnRegresarRemoto.Location = new System.Drawing.Point(781, 3);
             this.btnRegresarRemoto.Name = "btnRegresarRemoto";
-            this.btnRegresarRemoto.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresarRemoto.Size = new System.Drawing.Size(75, 41);
             this.btnRegresarRemoto.TabIndex = 5;
             this.btnRegresarRemoto.Text = "Regresar";
             this.btnRegresarRemoto.UseVisualStyleBackColor = true;
@@ -441,7 +445,7 @@
             this.panelSilla.Controls.Add(this.button3);
             this.panelSilla.Controls.Add(this.btnRegresarSilla);
             this.panelSilla.Controls.Add(this.button2);
-            this.panelSilla.Location = new System.Drawing.Point(859, 539);
+            this.panelSilla.Location = new System.Drawing.Point(848, 539);
             this.panelSilla.Name = "panelSilla";
             this.panelSilla.Size = new System.Drawing.Size(892, 424);
             this.panelSilla.TabIndex = 11;
@@ -523,9 +527,9 @@
             // 
             // btnRegresarSilla
             // 
-            this.btnRegresarSilla.Location = new System.Drawing.Point(781, 21);
+            this.btnRegresarSilla.Location = new System.Drawing.Point(781, 3);
             this.btnRegresarSilla.Name = "btnRegresarSilla";
-            this.btnRegresarSilla.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresarSilla.Size = new System.Drawing.Size(75, 41);
             this.btnRegresarSilla.TabIndex = 5;
             this.btnRegresarSilla.Text = "Regresar";
             this.btnRegresarSilla.UseVisualStyleBackColor = true;
@@ -544,9 +548,9 @@
             // 
             this.panelComando.Controls.Add(this.txtComando);
             this.panelComando.Controls.Add(this.btnConfiguracion);
-            this.panelComando.Location = new System.Drawing.Point(12, 518);
+            this.panelComando.Location = new System.Drawing.Point(12, 502);
             this.panelComando.Name = "panelComando";
-            this.panelComando.Size = new System.Drawing.Size(98, 133);
+            this.panelComando.Size = new System.Drawing.Size(98, 149);
             this.panelComando.TabIndex = 13;
             // 
             // txtComando
@@ -559,12 +563,23 @@
             this.txtComando.TabIndex = 1;
             this.txtComando.TextChanged += new System.EventHandler(this.txtComando_TextChanged);
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(95, 84);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 14;
+            this.pictureBox8.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(940, 563);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.panelComando);
             this.Controls.Add(this.panelSilla);
             this.Controls.Add(this.panelControlRemoto);
@@ -573,6 +588,7 @@
             this.Controls.Add(this.panelActividades);
             this.Controls.Add(this.panelAlimentos);
             this.Controls.Add(this.panelHome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.Text = "Home";
             this.Click += new System.EventHandler(this.Home_Click);
@@ -591,6 +607,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelComando.ResumeLayout(false);
             this.panelComando.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -645,5 +662,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panelComando;
         private System.Windows.Forms.TextBox txtComando;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

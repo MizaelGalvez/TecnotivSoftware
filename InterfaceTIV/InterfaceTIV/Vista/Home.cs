@@ -12,6 +12,8 @@ using InterfaceTIV.Vista;
 using InterfaceTIV.Controladores;
 using Emotiv;
 using InterfaceTIV.Controladores;
+using System.IO.Ports;
+using InterfaceTIV.Model;
 
 namespace InterfaceTIV.Vista
 {
@@ -22,22 +24,21 @@ namespace InterfaceTIV.Vista
         public Home()
         {
             InitializeComponent();
-
             focus();
             
         }
 
         public void focus(){ txtComando.Text = ""; txtComando.Select();}
         public void enviar() {
-            
-            string valor = txtComando.Text;
-            Console.WriteLine(valor);
-            LecturaSerial enviardatos = new LecturaSerial();
-            enviardatos.sensor = cambio;
-            enviardatos.valor = valor;
-            enviardatos.Lectura();
-            
-            focus();
+
+                string valor = txtComando.Text;
+                Console.WriteLine(valor);
+                LecturaSerial enviardatos = new LecturaSerial();
+                enviardatos.sensor = cambio;
+                enviardatos.valor = valor;
+                enviardatos.Lectura();
+
+                focus();
         }
 
 
@@ -114,7 +115,11 @@ namespace InterfaceTIV.Vista
 
             focus();
         }
-        
+        private void btnComidas_Click(object sender, EventArgs e)
+        {
+          
+        }
+
         //
         //
         //
@@ -193,5 +198,7 @@ namespace InterfaceTIV.Vista
         {
             focus();
         }
+
+        
     }
 }

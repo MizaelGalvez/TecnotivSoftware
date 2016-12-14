@@ -16,9 +16,7 @@ namespace InterfaceTIV
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Home HOME = new Home();
-            HOME.Show();
-            HOME.Activate();
+            InicioCarga HOME = new InicioCarga();
             Application.Run();
 
            
