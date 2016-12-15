@@ -193,7 +193,7 @@
             this.panelAlimentos.Controls.Add(this.btnPostres);
             this.panelAlimentos.Controls.Add(this.btnBebidas);
             this.panelAlimentos.Controls.Add(this.btnComidas);
-            this.panelAlimentos.Location = new System.Drawing.Point(908, 451);
+            this.panelAlimentos.Location = new System.Drawing.Point(909, 422);
             this.panelAlimentos.Name = "panelAlimentos";
             this.panelAlimentos.Size = new System.Drawing.Size(868, 371);
             this.panelAlimentos.TabIndex = 9;
@@ -217,6 +217,7 @@
             this.btnPostres.TabIndex = 4;
             this.btnPostres.Text = "Postres";
             this.btnPostres.UseVisualStyleBackColor = true;
+            this.btnPostres.Click += new System.EventHandler(this.btnPostres_Click);
             // 
             // btnBebidas
             // 
@@ -226,6 +227,7 @@
             this.btnBebidas.TabIndex = 3;
             this.btnBebidas.Text = "Bebidas";
             this.btnBebidas.UseVisualStyleBackColor = true;
+            this.btnBebidas.Click += new System.EventHandler(this.btnBebidas_Click);
             // 
             // btnComidas
             // 
@@ -233,7 +235,7 @@
             this.btnComidas.Name = "btnComidas";
             this.btnComidas.Size = new System.Drawing.Size(210, 130);
             this.btnComidas.TabIndex = 1;
-            this.btnComidas.Text = "Comidas";
+            this.btnComidas.Text = "hamburgesas estilo Sonora";
             this.btnComidas.UseVisualStyleBackColor = true;
             this.btnComidas.Click += new System.EventHandler(this.btnComidas_Click);
             // 

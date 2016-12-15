@@ -117,9 +117,16 @@ namespace InterfaceTIV.Vista
         }
         private void btnComidas_Click(object sender, EventArgs e)
         {
-          
+            alimentoNotificador(1, btnComidas.Text);
         }
-
+        private void btnBebidas_Click(object sender, EventArgs e)
+        {
+            alimentoNotificador(1, btnBebidas.Text);
+        }
+        private void btnPostres_Click(object sender, EventArgs e)
+        {
+            alimentoNotificador(1, btnPostres.Text);
+        }
         //
         //
         //
@@ -197,6 +204,23 @@ namespace InterfaceTIV.Vista
         private void Home_Click(object sender, EventArgs e)
         {
             focus();
+        }
+        //
+        //
+        //
+        //metodo para enviar el datos del texto del boton.
+        private void alimentoNotificador(int activo, string Texto) {
+
+            MetodosHTTP datos = new MetodosHTTP();
+            datos.user = Acciones.usuario(1);
+            datos.idAlimento = activo;
+            datos.txtAlimento = Texto;
+            datos.idActividad = 0;
+            datos.txtActividad = "";
+            datos.idtexto = 0;
+            datos.txtTecto = "";
+            datos.EnviarNotificacion();
+
         }
 
         

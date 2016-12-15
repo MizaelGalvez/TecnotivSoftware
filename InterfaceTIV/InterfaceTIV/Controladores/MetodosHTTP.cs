@@ -15,6 +15,12 @@ namespace InterfaceTIV.Controladores
         //datos enviados o recibidos por webservice
         public string user { get; set; }
         public string pass { get; set; }
+        public int idAlimento { get; set; }
+        public string txtAlimento { get; set; }
+        public int idActividad { get; set; }
+        public string txtActividad { get; set; }
+        public int idtexto { get; set; }
+        public string txtTecto { get; set; }
         
 
         public string VerificarUsuario()
@@ -57,6 +63,41 @@ namespace InterfaceTIV.Controladores
             return activo.bActivo;
 
         }
+
+
+        public string EnviarNotificacion()
+        {
+
+            string sURL;
+
+            sURL = String.Format("http://138.197.144.25/inserts/updateVacante.php?txtUsuario="
+                                 + user + "&idAlimento=" + idAlimento + "&txtAlimento="
+                                 + txtAlimento + "&idActividad=" + idActividad + "&txtActividad=" 
+                                 + txtActividad + "&idTexto=" + idtexto + "&txttexto=" + txtTecto);
+            
+            WebRequest wrGETURL;
+            wrGETURL = WebRequest.Create(sURL);
+
+            Stream objStream;
+            objStream = wrGETURL.GetResponse().GetResponseStream();
+
+
+            StreamReader objReader = new StreamReader(objStream);
+
+            string sLine = "";
+            int i = 0;
+            
+            i++;
+            sLine = objReader.ReadLine();
+            
+            string json = sLine;
+            
+            Console.WriteLine(json);
+            
+            return json;
+
+        }
         
+
     }
 }

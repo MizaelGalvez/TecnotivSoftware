@@ -67,8 +67,26 @@ class tecnotiv {
     }
     
     public static function update($idAlimento,$txtAlimento,$idActividad,$txtActividad,$idTexto, $txtTexto, $Usuario){
-        $query="UPDATE Notificador SET idAlimento=?, txtAlimento=?, idActividad=?, txtActividad=?, idTexto=?, txtTecto=? WHERE Usuario=?;";
-         self::ejecutarConsultaParametro($query, $valores);
+        $query="UPDATE Notificador SET idAlimento=?, txtAlimento=?, idActividad=?, txtActividad=?, idTexto=?, txtTecto=?  WHERE Usuario=?;";
+         try{
+            $comando= BaseDatos::getInstance()->getDB()->prepare($query);
+            $comando->execute(
+                    array(
+                        $idAlimento,
+                        $txtAlimento,
+                        $idActividad,
+                        $txtActividad,
+                        $idTexto,
+                        $txtTexto,
+                        $Usuario
+                    )
+                    );
+            
+        }catch(PDOException $ex){
+            //manejar el mensaje de error
+            print_r($ex);
+            return FALSE;
+        }
     }
     
     ///////////////////////////////////////////////////////////////////////////
