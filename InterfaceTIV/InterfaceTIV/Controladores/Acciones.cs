@@ -113,7 +113,7 @@ namespace InterfaceTIV.Model
 
                     foreach (var result in user)
                     {           
-                        valor = (int)result-1;
+                        valor = (int)result;
                     }
 
 

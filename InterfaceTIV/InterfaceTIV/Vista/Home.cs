@@ -121,11 +121,11 @@ namespace InterfaceTIV.Vista
         }
         private void btnBebidas_Click(object sender, EventArgs e)
         {
-            alimentoNotificador(1, btnBebidas.Text);
+            alimentoNotificador(2, btnBebidas.Text);
         }
         private void btnPostres_Click(object sender, EventArgs e)
         {
-            alimentoNotificador(1, btnPostres.Text);
+            alimentoNotificador(3, btnPostres.Text);
         }
         //
         //
@@ -213,10 +213,10 @@ namespace InterfaceTIV.Vista
 
             MetodosHTTP datos = new MetodosHTTP();
             datos.user = Acciones.usuario(1);
-            datos.idAlimento = activo;
-            datos.txtAlimento = Texto;
-            datos.idActividad = 0;
-            datos.txtActividad = "";
+            datos.idAlimento = 0;
+            datos.txtAlimento = "";
+            datos.idActividad = activo;
+            datos.txtActividad = Texto;
             datos.idtexto = 0;
             datos.txtTecto = "";
             datos.EnviarNotificacion();

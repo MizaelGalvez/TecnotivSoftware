@@ -13,5 +13,3 @@ require '../app/app.php';
 tecnotiv::update($idAlimento, $txtAlimento, $idActividad, $txtActividad, $idTexto, $txtTexto, $Usuario);
 
 ?>
-
-<h1>Perfecto</h1>
