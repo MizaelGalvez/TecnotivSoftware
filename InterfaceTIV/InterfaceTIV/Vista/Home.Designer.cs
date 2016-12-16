@@ -170,7 +170,7 @@
             this.btnSeleccion.Name = "btnSeleccion";
             this.btnSeleccion.Size = new System.Drawing.Size(108, 92);
             this.btnSeleccion.TabIndex = 7;
-            this.btnSeleccion.Text = "Seleccionar";
+            this.btnSeleccion.Text = "Mensajes";
             this.btnSeleccion.UseVisualStyleBackColor = true;
             // 
             // panelHome

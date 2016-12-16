@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private int Valor = 1;
     private String idActividad = "";
     private String txtActividad="";
+    private int lanzador = 0;
 
 
 
@@ -80,13 +81,20 @@ public class MainActivity extends AppCompatActivity {
                     Valor = 0;
                     btnapagarEnceder.setBackgroundColor(getResources().getColor(R.color.btnancendodo));
                     btnapagarEnceder.setText("ON");
-                    llamado();
+                    lblencenderapagar.setText("Notificaciones");
+                    lblencenderapagar.setTextSize(25);
+                    if (lanzador==0) {
+                        llamado();
+                        lanzador=1;
+                    }
                 }
                 else
                 {
                     Valor = 1;
-                    btnapagarEnceder.setBackgroundColor(getResources().getColor(R.color.btnApagado));
-                    btnapagarEnceder.setText("OFF");
+                    btnapagarEnceder.setBackgroundColor(getResources().getColor(R.color.colorAtencion));
+                    btnapagarEnceder.setText("!!!");
+                    lblencenderapagar.setText("No Detener Avisos ");
+                    lblencenderapagar.setTextSize(18);
 
                 }
             }
@@ -101,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
 
@@ -236,24 +246,37 @@ public class MainActivity extends AppCompatActivity {
                 txtActividad = JArrayObject.getJSONObject(0).getString("txtActividad");
 
                 if (idActividad.equals("0")){
-                    //new CountDownTimer(5000, 1000) {
-                    //    public void onFinish() {
-                    //        // When timer is finished
-                    //        // Execute your code here
-                    //
-                    //    }
-                    //
-                    //    public void onTick(long millisUntilFinished) {
-                    //        // millisUntilFinished    The amount of time until finished.
-                    //    }
-                    //}.start();
-                    llamado();
+                    new CountDownTimer(3000, 1000) {
+                        public void onFinish() {
+                            // When timer is finished
+                            // Execute your code here
+                            llamado();
+
+                        }
+
+                        public void onTick(long millisUntilFinished) {
+                            // millisUntilFinished    The amount of time until finished.
+                        }
+                    }.start();
+
 
                 }else {
                     notificaciones(idActividad, txtActividad);
                     new peticionHttp().execute("http://138.197.144.25/inserts/updateVacante.php?txtUsuario=Mizael&idAlimento=0&txtAlimento=&idActividad=0&txtActividad=&idTexto=0&txttexto=");
-                    llamado();
+                    new CountDownTimer(5000, 1000) {
+                        public void onFinish() {
+                            // When timer is finished
+                            // Execute your code here
+                            llamado();
+
+                        }
+
+                        public void onTick(long millisUntilFinished) {
+                            // millisUntilFinished    The amount of time until finished.
+                        }
+                    }.start();
                 }
+
 
             } catch (JSONException e){
                 Log.e("JSON Parser", "Error parsing data " + e.toString() );
