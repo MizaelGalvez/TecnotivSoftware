@@ -117,4 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnimgMensaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgMensaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnControlRemotoClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnControlRemotoClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimgAlimentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgAlimentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimgSilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgSilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnEntretenimientoClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnEntretenimientoClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnHablarClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnHablarClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimgEntretenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgEntretenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnAlimentosClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnAlimentosClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimgControl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgControl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnSillaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSillaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnMensajeClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnMensajeClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimgHablar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgHablar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnActividadesClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnActividadesClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimgActividades" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgActividades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barra superior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barra superior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

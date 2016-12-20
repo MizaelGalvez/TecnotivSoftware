@@ -17,7 +17,7 @@ namespace InterfaceTIV.Vista
         public Configuracion()
         {
             InitializeComponent();
-            comboxIdioma.SelectedIndex = Acciones.idioma(1);
+            comboxIdioma.SelectedIndex = Acciones.idioma(1)-1;
             txtNombreUsuario.Text = Acciones.usuario(1);
             txtNombreUsuario.Focus();
 
@@ -38,6 +38,8 @@ namespace InterfaceTIV.Vista
             nEntrada.idConfiguracion = 1;
             nEntrada.lbl_idioma = comboxIdioma.SelectedIndex + 1;
             nEntrada.lbl_Usuario = txtNombreUsuario.Text;
+            nEntrada.txtContraseña = Acciones.contraseña(1);
+
 
             if (radiobtnDiadema.Checked) { nEntrada.uso_diadema = 1; } else { nEntrada.uso_diadema = 0; }
             if (radiobtnSilla.Checked) { nEntrada.uso_silla = 1; } else { nEntrada.uso_silla = 0; }

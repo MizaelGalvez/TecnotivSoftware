@@ -154,6 +154,22 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\barra superior.png" />
+    <None Include="Resources\btnSillaClick.png" />
+    <None Include="Resources\btnMensajeClick.png" />
+    <None Include="Resources\btnHablarClick.png" />
+    <None Include="Resources\btnEntretenimientoClick.png" />
+    <None Include="Resources\btnControlRemotoClick.png" />
+    <None Include="Resources\btnActividadesClick.png" />
+    <None Include="Resources\btnAlimentosClick.png" />
+    <None Include="Resources\imgLogo.png" />
+    <None Include="Resources\btnimgControl.png" />
+    <None Include="Resources\btnimgEntretenimiento.png" />
+    <None Include="Resources\btnimgActividades.png" />
+    <None Include="Resources\btnimgAlimentos.png" />
+    <None Include="Resources\btnimgMensaje.png" />
+    <None Include="Resources\btnimgSilla.png" />
+    <None Include="Resources\btnimgHablar.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

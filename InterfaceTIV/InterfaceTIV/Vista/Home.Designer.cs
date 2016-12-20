@@ -28,15 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.btnAlimentos = new System.Windows.Forms.Button();
-            this.btnEntretenimiento = new System.Windows.Forms.Button();
-            this.btnControlRemoto = new System.Windows.Forms.Button();
-            this.btnActividades = new System.Windows.Forms.Button();
-            this.btnSilla = new System.Windows.Forms.Button();
-            this.btnHablar = new System.Windows.Forms.Button();
-            this.btnSeleccion = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
             this.panelAlimentos = new System.Windows.Forms.Panel();
             this.btnRegresarAlimentos = new System.Windows.Forms.Button();
@@ -64,6 +56,14 @@
             this.btnAcondicionado = new System.Windows.Forms.Button();
             this.btnTelevision = new System.Windows.Forms.Button();
             this.panelSilla = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnRegresarSilla = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panelComando = new System.Windows.Forms.Panel();
+            this.txtComando = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -71,19 +71,21 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnRegresarSilla = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panelComando = new System.Windows.Forms.Panel();
-            this.txtComando = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnSeleccion = new System.Windows.Forms.Button();
+            this.btnSilla = new System.Windows.Forms.Button();
+            this.btnHablar = new System.Windows.Forms.Button();
+            this.btnControlRemoto = new System.Windows.Forms.Button();
+            this.btnActividades = new System.Windows.Forms.Button();
+            this.btnEntretenimiento = new System.Windows.Forms.Button();
+            this.btnAlimentos = new System.Windows.Forms.Button();
             this.panelHome.SuspendLayout();
             this.panelAlimentos.SuspendLayout();
             this.panelActividades.SuspendLayout();
             this.panelEntretenimiento.SuspendLayout();
             this.panelControlRemoto.SuspendLayout();
             this.panelSilla.SuspendLayout();
+            this.panelComando.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -91,87 +93,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelComando.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfiguracion
             // 
+            this.btnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(99)))));
+            this.btnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
             this.btnConfiguracion.Location = new System.Drawing.Point(3, 3);
             this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(92, 46);
+            this.btnConfiguracion.Size = new System.Drawing.Size(108, 46);
             this.btnConfiguracion.TabIndex = 0;
             this.btnConfiguracion.Text = "Configuracion";
-            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.UseVisualStyleBackColor = false;
             this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
-            // 
-            // btnAlimentos
-            // 
-            this.btnAlimentos.Location = new System.Drawing.Point(38, 35);
-            this.btnAlimentos.Name = "btnAlimentos";
-            this.btnAlimentos.Size = new System.Drawing.Size(210, 130);
-            this.btnAlimentos.TabIndex = 1;
-            this.btnAlimentos.Text = "Alimentos";
-            this.btnAlimentos.UseVisualStyleBackColor = true;
-            this.btnAlimentos.Click += new System.EventHandler(this.btnAlimentos_Click);
-            // 
-            // btnEntretenimiento
-            // 
-            this.btnEntretenimiento.Location = new System.Drawing.Point(38, 265);
-            this.btnEntretenimiento.Name = "btnEntretenimiento";
-            this.btnEntretenimiento.Size = new System.Drawing.Size(210, 116);
-            this.btnEntretenimiento.TabIndex = 2;
-            this.btnEntretenimiento.Text = "Entretenimiento";
-            this.btnEntretenimiento.UseVisualStyleBackColor = true;
-            this.btnEntretenimiento.Click += new System.EventHandler(this.btnEntretenimiento_Click);
-            // 
-            // btnControlRemoto
-            // 
-            this.btnControlRemoto.Location = new System.Drawing.Point(348, 265);
-            this.btnControlRemoto.Name = "btnControlRemoto";
-            this.btnControlRemoto.Size = new System.Drawing.Size(210, 116);
-            this.btnControlRemoto.TabIndex = 4;
-            this.btnControlRemoto.Text = "Control Remoto";
-            this.btnControlRemoto.UseVisualStyleBackColor = true;
-            this.btnControlRemoto.Click += new System.EventHandler(this.btnControlRemoto_Click);
-            // 
-            // btnActividades
-            // 
-            this.btnActividades.Location = new System.Drawing.Point(348, 35);
-            this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Size = new System.Drawing.Size(210, 130);
-            this.btnActividades.TabIndex = 3;
-            this.btnActividades.Text = "Actividades";
-            this.btnActividades.UseVisualStyleBackColor = true;
-            this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
-            // 
-            // btnSilla
-            // 
-            this.btnSilla.Location = new System.Drawing.Point(678, 167);
-            this.btnSilla.Name = "btnSilla";
-            this.btnSilla.Size = new System.Drawing.Size(108, 92);
-            this.btnSilla.TabIndex = 6;
-            this.btnSilla.Text = "Silla";
-            this.btnSilla.UseVisualStyleBackColor = true;
-            this.btnSilla.Click += new System.EventHandler(this.btnSilla_Click);
-            // 
-            // btnHablar
-            // 
-            this.btnHablar.Location = new System.Drawing.Point(678, 45);
-            this.btnHablar.Name = "btnHablar";
-            this.btnHablar.Size = new System.Drawing.Size(108, 92);
-            this.btnHablar.TabIndex = 5;
-            this.btnHablar.Text = "Hablar";
-            this.btnHablar.UseVisualStyleBackColor = true;
-            // 
-            // btnSeleccion
-            // 
-            this.btnSeleccion.Location = new System.Drawing.Point(678, 284);
-            this.btnSeleccion.Name = "btnSeleccion";
-            this.btnSeleccion.Size = new System.Drawing.Size(108, 92);
-            this.btnSeleccion.TabIndex = 7;
-            this.btnSeleccion.Text = "Mensajes";
-            this.btnSeleccion.UseVisualStyleBackColor = true;
             // 
             // panelHome
             // 
@@ -453,6 +388,82 @@
             this.panelSilla.TabIndex = 11;
             this.panelSilla.Visible = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(21, 167);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(160, 87);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Izquierda";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(279, 167);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(160, 87);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Derecha";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnRegresarSilla
+            // 
+            this.btnRegresarSilla.Location = new System.Drawing.Point(781, 3);
+            this.btnRegresarSilla.Name = "btnRegresarSilla";
+            this.btnRegresarSilla.Size = new System.Drawing.Size(75, 41);
+            this.btnRegresarSilla.TabIndex = 5;
+            this.btnRegresarSilla.Text = "Regresar";
+            this.btnRegresarSilla.UseVisualStyleBackColor = true;
+            this.btnRegresarSilla.Click += new System.EventHandler(this.btnRegresarSilla_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(180, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 141);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Frente";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panelComando
+            // 
+            this.panelComando.Controls.Add(this.txtComando);
+            this.panelComando.Controls.Add(this.btnConfiguracion);
+            this.panelComando.Location = new System.Drawing.Point(12, 502);
+            this.panelComando.Name = "panelComando";
+            this.panelComando.Size = new System.Drawing.Size(114, 149);
+            this.panelComando.TabIndex = 13;
+            // 
+            // txtComando
+            // 
+            this.txtComando.BackColor = System.Drawing.Color.Azure;
+            this.txtComando.ForeColor = System.Drawing.Color.Azure;
+            this.txtComando.Location = new System.Drawing.Point(15, 100);
+            this.txtComando.Name = "txtComando";
+            this.txtComando.Size = new System.Drawing.Size(70, 20);
+            this.txtComando.TabIndex = 1;
+            this.txtComando.TextChanged += new System.EventHandler(this.txtComando_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(99)))));
+            this.panel1.BackgroundImage = global::InterfaceTIV.Properties.Resources.barra_superior;
+            this.panel1.Location = new System.Drawing.Point(-1, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(942, 48);
+            this.panel1.TabIndex = 15;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = global::InterfaceTIV.Properties.Resources.imgLogo;
+            this.pictureBox8.Location = new System.Drawing.Point(-1, 55);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(139, 138);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 14;
+            this.pictureBox8.TabStop = false;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Location = new System.Drawing.Point(215, 196);
@@ -509,78 +520,132 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // btnSeleccion
             // 
-            this.button4.Location = new System.Drawing.Point(21, 167);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 87);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Izquierda";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSeleccion.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgMensaje;
+            this.btnSeleccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSeleccion.FlatAppearance.BorderSize = 0;
+            this.btnSeleccion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSeleccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccion.Location = new System.Drawing.Point(669, 292);
+            this.btnSeleccion.Name = "btnSeleccion";
+            this.btnSeleccion.Size = new System.Drawing.Size(108, 92);
+            this.btnSeleccion.TabIndex = 7;
+            this.btnSeleccion.UseVisualStyleBackColor = true;
+            this.btnSeleccion.MouseLeave += new System.EventHandler(this.btnSeleccion_MouseLeave);
+            this.btnSeleccion.MouseHover += new System.EventHandler(this.btnSeleccion_MouseHover);
             // 
-            // button3
+            // btnSilla
             // 
-            this.button3.Location = new System.Drawing.Point(279, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 87);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Derecha";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSilla.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgSilla;
+            this.btnSilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSilla.FlatAppearance.BorderSize = 0;
+            this.btnSilla.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSilla.Location = new System.Drawing.Point(669, 175);
+            this.btnSilla.Name = "btnSilla";
+            this.btnSilla.Size = new System.Drawing.Size(108, 92);
+            this.btnSilla.TabIndex = 6;
+            this.btnSilla.UseVisualStyleBackColor = true;
+            this.btnSilla.Click += new System.EventHandler(this.btnSilla_Click);
+            this.btnSilla.MouseLeave += new System.EventHandler(this.btnSilla_MouseLeave);
+            this.btnSilla.MouseHover += new System.EventHandler(this.btnSilla_MouseHover);
             // 
-            // btnRegresarSilla
+            // btnHablar
             // 
-            this.btnRegresarSilla.Location = new System.Drawing.Point(781, 3);
-            this.btnRegresarSilla.Name = "btnRegresarSilla";
-            this.btnRegresarSilla.Size = new System.Drawing.Size(75, 41);
-            this.btnRegresarSilla.TabIndex = 5;
-            this.btnRegresarSilla.Text = "Regresar";
-            this.btnRegresarSilla.UseVisualStyleBackColor = true;
-            this.btnRegresarSilla.Click += new System.EventHandler(this.btnRegresarSilla_Click);
+            this.btnHablar.BackColor = System.Drawing.Color.Transparent;
+            this.btnHablar.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgHablar;
+            this.btnHablar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHablar.FlatAppearance.BorderSize = 0;
+            this.btnHablar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHablar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHablar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHablar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnHablar.Location = new System.Drawing.Point(669, 53);
+            this.btnHablar.Name = "btnHablar";
+            this.btnHablar.Size = new System.Drawing.Size(108, 92);
+            this.btnHablar.TabIndex = 5;
+            this.btnHablar.UseVisualStyleBackColor = false;
+            this.btnHablar.MouseLeave += new System.EventHandler(this.btnHablar_MouseLeave);
+            this.btnHablar.MouseHover += new System.EventHandler(this.btnHablar_MouseHover);
             // 
-            // button2
+            // btnControlRemoto
             // 
-            this.button2.Location = new System.Drawing.Point(180, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 141);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Frente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnControlRemoto.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgControl;
+            this.btnControlRemoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnControlRemoto.FlatAppearance.BorderSize = 0;
+            this.btnControlRemoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnControlRemoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnControlRemoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControlRemoto.Location = new System.Drawing.Point(402, 257);
+            this.btnControlRemoto.Name = "btnControlRemoto";
+            this.btnControlRemoto.Size = new System.Drawing.Size(210, 153);
+            this.btnControlRemoto.TabIndex = 4;
+            this.btnControlRemoto.UseVisualStyleBackColor = true;
+            this.btnControlRemoto.Click += new System.EventHandler(this.btnControlRemoto_Click);
+            this.btnControlRemoto.MouseLeave += new System.EventHandler(this.btnControlRemoto_MouseLeave);
+            this.btnControlRemoto.MouseHover += new System.EventHandler(this.btnControlRemoto_MouseHover);
             // 
-            // panelComando
+            // btnActividades
             // 
-            this.panelComando.Controls.Add(this.txtComando);
-            this.panelComando.Controls.Add(this.btnConfiguracion);
-            this.panelComando.Location = new System.Drawing.Point(12, 502);
-            this.panelComando.Name = "panelComando";
-            this.panelComando.Size = new System.Drawing.Size(98, 149);
-            this.panelComando.TabIndex = 13;
+            this.btnActividades.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgActividades;
+            this.btnActividades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActividades.FlatAppearance.BorderSize = 0;
+            this.btnActividades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActividades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActividades.Location = new System.Drawing.Point(402, 27);
+            this.btnActividades.Name = "btnActividades";
+            this.btnActividades.Size = new System.Drawing.Size(210, 153);
+            this.btnActividades.TabIndex = 3;
+            this.btnActividades.UseVisualStyleBackColor = true;
+            this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
+            this.btnActividades.MouseLeave += new System.EventHandler(this.btnActividades_MouseLeave);
+            this.btnActividades.MouseHover += new System.EventHandler(this.btnActividades_MouseHover);
             // 
-            // txtComando
+            // btnEntretenimiento
             // 
-            this.txtComando.BackColor = System.Drawing.Color.Azure;
-            this.txtComando.ForeColor = System.Drawing.Color.Azure;
-            this.txtComando.Location = new System.Drawing.Point(15, 100);
-            this.txtComando.Name = "txtComando";
-            this.txtComando.Size = new System.Drawing.Size(70, 20);
-            this.txtComando.TabIndex = 1;
-            this.txtComando.TextChanged += new System.EventHandler(this.txtComando_TextChanged);
+            this.btnEntretenimiento.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgEntretenimiento;
+            this.btnEntretenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEntretenimiento.FlatAppearance.BorderSize = 0;
+            this.btnEntretenimiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEntretenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEntretenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntretenimiento.Location = new System.Drawing.Point(104, 257);
+            this.btnEntretenimiento.Name = "btnEntretenimiento";
+            this.btnEntretenimiento.Size = new System.Drawing.Size(210, 153);
+            this.btnEntretenimiento.TabIndex = 2;
+            this.btnEntretenimiento.UseVisualStyleBackColor = true;
+            this.btnEntretenimiento.Click += new System.EventHandler(this.btnEntretenimiento_Click);
+            this.btnEntretenimiento.MouseLeave += new System.EventHandler(this.btnEntretenimiento_MouseLeave);
+            this.btnEntretenimiento.MouseHover += new System.EventHandler(this.btnEntretenimiento_MouseHover);
             // 
-            // pictureBox8
+            // btnAlimentos
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(95, 84);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 14;
-            this.pictureBox8.TabStop = false;
+            this.btnAlimentos.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgAlimentos;
+            this.btnAlimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAlimentos.FlatAppearance.BorderSize = 0;
+            this.btnAlimentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAlimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAlimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlimentos.Location = new System.Drawing.Point(104, 27);
+            this.btnAlimentos.Name = "btnAlimentos";
+            this.btnAlimentos.Size = new System.Drawing.Size(210, 153);
+            this.btnAlimentos.TabIndex = 1;
+            this.btnAlimentos.UseVisualStyleBackColor = true;
+            this.btnAlimentos.Click += new System.EventHandler(this.btnAlimentos_Click);
+            this.btnAlimentos.MouseLeave += new System.EventHandler(this.btnAlimentos_MouseLeave);
+            this.btnAlimentos.MouseHover += new System.EventHandler(this.btnAlimentos_MouseHover);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(940, 563);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.panelComando);
             this.Controls.Add(this.panelSilla);
@@ -600,6 +665,9 @@
             this.panelEntretenimiento.ResumeLayout(false);
             this.panelControlRemoto.ResumeLayout(false);
             this.panelSilla.ResumeLayout(false);
+            this.panelComando.ResumeLayout(false);
+            this.panelComando.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -607,9 +675,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelComando.ResumeLayout(false);
-            this.panelComando.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -665,5 +730,6 @@
         private System.Windows.Forms.Panel panelComando;
         private System.Windows.Forms.TextBox txtComando;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Panel panel1;
     }
 }

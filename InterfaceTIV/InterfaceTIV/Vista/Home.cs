@@ -40,6 +40,14 @@ namespace InterfaceTIV.Vista
 
                 focus();
         }
+        public void ocultarVentana(ref Panel control)
+        {
+            panelHome.Hide();
+            control.Show();
+            control.Location = new Point(42, 90);
+            focus();
+
+        }
 
 
 
@@ -60,48 +68,29 @@ namespace InterfaceTIV.Vista
         // eventos del panel HOME
         private void btnAlimentos_Click(object sender, EventArgs e)
         {
-            panelHome.Hide();
-            panelAlimentos.Show();
-            panelAlimentos.Location = new Point(42, 90);
-            focus();
-            
+            ocultarVentana(ref panelAlimentos);
         }
 
         private void btnActividades_Click(object sender, EventArgs e)
         {
-            panelHome.Hide();
-            panelActividades.Show();
-            panelActividades.Location = new Point(42, 90);
-
-            focus();
+            ocultarVentana(ref panelActividades);
 
         }
 
         private void btnEntretenimiento_Click(object sender, EventArgs e)
         {
-            panelHome.Hide();
-            panelEntretenimiento.Show();
-            panelEntretenimiento.Location = new Point(42, 90);
-
-            focus();
+            ocultarVentana(ref panelEntretenimiento);
         }
 
         private void btnControlRemoto_Click(object sender, EventArgs e)
         {
-            panelHome.Hide();
-            panelControlRemoto.Show();
-            panelControlRemoto.Location = new Point(42, 90);
-
-            focus();
+            ocultarVentana(ref panelControlRemoto);
         }
 
         private void btnSilla_Click(object sender, EventArgs e)
         {
-            panelHome.Hide();
-            panelSilla.Show();
-            panelSilla.Location = new Point(42, 90);
+            ocultarVentana(ref panelSilla);
             cambio = 1;
-            focus();
         }
         
         //
@@ -112,7 +101,6 @@ namespace InterfaceTIV.Vista
         {
             panelAlimentos.Hide();
             panelHome.Show();
-
             focus();
         }
         private void btnComidas_Click(object sender, EventArgs e)
@@ -223,6 +211,121 @@ namespace InterfaceTIV.Vista
 
         }
 
-        
+
+
+        //
+        //
+        //
+        //Eventos de Animacion del Sistema
+
+        public static void CambiarTamañoControl(ref Button c)
+        {
+            c.Height = c.Size.Height + 20;
+            c.Width = c.Size.Width + 20;
+            c.Location = new Point(c.Location.X - 10, c.Location.Y - 10);
+            
+        }
+        public static void RegresarTamañoControl(ref Button c)
+        {
+            c.Height = c.Size.Height - 20;
+            c.Width = c.Size.Width - 20;
+            c.Location = new Point(c.Location.X + 10, c.Location.Y + 10);
+
+        }
+
+
+        private void btnAlimentos_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnAlimentos);
+            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.btnAlimentosClick;
+        }
+
+        private void btnAlimentos_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnAlimentos);
+            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgAlimentos;
+        }
+
+        private void btnActividades_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnActividades);
+            btnActividades.BackgroundImage = InterfaceTIV.Properties.Resources.btnActividadesClick;
+        }
+
+        private void btnActividades_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnActividades);
+            btnActividades.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgActividades;
+        }
+
+        private void btnEntretenimiento_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnEntretenimiento);
+            btnEntretenimiento.BackgroundImage = InterfaceTIV.Properties.Resources.btnEntretenimientoClick;
+        }
+
+        private void btnEntretenimiento_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnEntretenimiento);
+            btnEntretenimiento.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgEntretenimiento;
+        }
+
+        private void btnControlRemoto_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnControlRemoto);
+            btnControlRemoto.BackgroundImage = InterfaceTIV.Properties.Resources.btnControlRemotoClick;
+        }
+
+        private void btnControlRemoto_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnControlRemoto);
+            btnControlRemoto.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgControl;
+        }
+
+        private void btnHablar_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnHablar);
+            btnHablar.BackgroundImage = InterfaceTIV.Properties.Resources.btnHablarClick;
+        }
+
+        private void btnHablar_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnHablar);
+            btnHablar.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgHablar;
+        }
+
+        private void btnSilla_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnSilla);
+            btnSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnSillaClick;
+        }
+
+        private void btnSilla_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnSilla);
+            btnSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgSilla;
+        }
+
+        private void btnSeleccion_MouseHover(object sender, EventArgs e)
+        {
+            btnSeleccion.Height = 112;
+            btnSeleccion.Width = 128;
+            btnSeleccion.Location =  new Point(659, 282);
+
+
+            btnSeleccion.BackgroundImage = InterfaceTIV.Properties.Resources.btnMensajeClick;
+
+        }
+
+        private void btnSeleccion_MouseLeave(object sender, EventArgs e)
+        {
+            btnSeleccion.Height = 92;
+            btnSeleccion.Width = 108;
+            btnSeleccion.Location = new Point(669, 292);
+
+
+
+            btnSeleccion.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgMensaje;
+        }
     }
 }
