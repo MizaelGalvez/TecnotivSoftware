@@ -35,18 +35,20 @@ namespace InterfaceTIV.Controladores
                 _serialPort.PortName = item;
             }
 
-            if (sensor == 1)
+            if (sensor == 1)  //TODO arreglar la impresion serial
             {
-                try
-                {
-                    _serialPort.Open();
-                    _serialPort.Write(String.Format("{0}", valor));
-                    _serialPort.Close();
-                }
-                catch
-                {
-                    Console.Write("error al abrir");
-                }
+            
+
+                //try
+                //{
+                //    _serialPort.Open();
+                //    _serialPort.Write(String.Format("{0}", valor));
+                //    _serialPort.Close();
+                //}
+                //catch
+                //{
+                //    Console.Write("error al abrir");
+                //}
                 
             }
             else

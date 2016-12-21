@@ -38,7 +38,6 @@ namespace InterfaceTIV.Vista
                 enviardatos.sensor = cambio;
                 enviardatos.valor = valor;
                 enviardatos.Lectura();
-
                 focus();
         }                                                   //Evento para enviar los datos recividos por Diadema y canalizarlos a movimiento mause o impresion Serial
         public void ocultarVentana(ref Panel Abrir, ref Panel Cerrar)
@@ -51,6 +50,38 @@ namespace InterfaceTIV.Vista
         }           //Evento para ocultar Ventana Home y Mostrar la Deseada            
         private void txtComando_TextChanged(object sender, EventArgs e)
         {
+            if (cambio==1)
+            {
+                switch (txtComando.Text)
+                {
+                    case "N":
+                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
+                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
+                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+                        break;
+                    case "W":
+                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArribaClick;//arriba
+                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
+                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+
+                        break;
+                    case "A":
+                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierdaClick;//Izquierda
+                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
+                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+                        break;
+                    case "D":
+                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerechaClick;//derecha
+                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
+                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
+                        break;
+                    case "C":
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
             enviar();
         }         //Eventos de enviar comandos recibidos cuando el txt cambia de Valor.
         private void Home_Click(object sender, EventArgs e)
@@ -194,7 +225,20 @@ namespace InterfaceTIV.Vista
         private void btnSilla_Click(object sender, EventArgs e)
         {
             ocultarVentana(ref panelSilla, ref panelHome);
-            cambio = 1;                                                           //cambio especial del swich para cambia a impresion Serial
+            cambio = 1;
+
+            try
+            {
+                Cursor.Position = new Point(830, 89);
+            }
+            catch
+            {
+                Console.Write("Error clase MovimientoInterface al Mover Mause");
+            }
+
+
+
+            //cambio especial del swich para cambia a impresion Serial
         }                   //aqui el evento para cambiar a impresion serial
 
         
@@ -388,7 +432,22 @@ namespace InterfaceTIV.Vista
             RegresarTamañoControl(ref btnPostres);
             btnPostres.BackgroundImage = InterfaceTIV.Properties.Resources.btnPostre;
         }
+        //
+        //
+        //
+        //
+        //ANIMACION PANEL DE SILLA
+        private void btnRegresarSilla_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnRegresarSilla);
+            btnRegresarSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnRegresar;
+        }
 
+        private void btnRegresarSilla_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnRegresarSilla);
+            btnRegresarSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnRegresar;
+        }
         
         //
         //

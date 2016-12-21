@@ -46,6 +46,7 @@ namespace InterfaceTIV.Vista
 
                 Home HOME = new Home();
                 HOME.Show();
+                HOME.SetDesktopLocation(0, 0);
                 HOME.Activate();
 
 

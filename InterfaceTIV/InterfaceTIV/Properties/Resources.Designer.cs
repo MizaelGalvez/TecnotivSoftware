@@ -203,6 +203,66 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnFlechaArriba {
+            get {
+                object obj = ResourceManager.GetObject("btnFlechaArriba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnFlechaArribaClick {
+            get {
+                object obj = ResourceManager.GetObject("btnFlechaArribaClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnFlechaDerecha {
+            get {
+                object obj = ResourceManager.GetObject("btnFlechaDerecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnFlechaDerechaClick {
+            get {
+                object obj = ResourceManager.GetObject("btnFlechaDerechaClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnFlechaIzquierda {
+            get {
+                object obj = ResourceManager.GetObject("btnFlechaIzquierda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnFlechaIzquierdaClick {
+            get {
+                object obj = ResourceManager.GetObject("btnFlechaIzquierdaClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnGris {
             get {
                 object obj = ResourceManager.GetObject("btnGris", resourceCulture);
@@ -406,6 +466,16 @@ namespace InterfaceTIV.Properties {
         internal static System.Drawing.Bitmap foto6 {
             get {
                 object obj = ResourceManager.GetObject("foto6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgBaseElectrodos {
+            get {
+                object obj = ResourceManager.GetObject("imgBaseElectrodos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

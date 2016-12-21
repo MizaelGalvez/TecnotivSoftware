@@ -154,6 +154,13 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\imgBaseElectrodos.png" />
+    <None Include="Resources\btnFlechaIzquierdaClick.png" />
+    <None Include="Resources\btnFlechaIzquierda.png" />
+    <None Include="Resources\btnFlechaDerechaClick.png" />
+    <None Include="Resources\btnFlechaDerecha.png" />
+    <None Include="Resources\btnFlechaArribaClick.png" />
+    <None Include="Resources\btnFlechaArriba.png" />
     <None Include="Resources\btnCargarMenos1.png" />
     <None Include="Resources\btnCargarMenos.png" />
     <None Include="Resources\btnCargarMas.png" />

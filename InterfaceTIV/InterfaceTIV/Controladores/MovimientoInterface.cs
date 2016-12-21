@@ -72,6 +72,9 @@ namespace InterfaceTIV.Controladores
                         Console.Write("Error clase MovimientoInterface al Mover Mause");
                     }
                     break;
+
+                case "C":
+                    break;
                 default:
                     break;
             }
