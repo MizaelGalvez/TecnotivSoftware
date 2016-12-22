@@ -143,6 +143,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnCargarMasDER {
+            get {
+                object obj = ResourceManager.GetObject("btnCargarMasDER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnCargarMenos {
             get {
                 object obj = ResourceManager.GetObject("btnCargarMenos", resourceCulture);
@@ -153,9 +163,9 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btnCargarMenos1 {
+        internal static System.Drawing.Bitmap btnCargarMenosIZQ {
             get {
-                object obj = ResourceManager.GetObject("btnCargarMenos1", resourceCulture);
+                object obj = ResourceManager.GetObject("btnCargarMenosIZQ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,6 +496,16 @@ namespace InterfaceTIV.Properties {
         internal static System.Drawing.Bitmap imgLogo {
             get {
                 object obj = ResourceManager.GetObject("imgLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgNO {
+            get {
+                object obj = ResourceManager.GetObject("imgNO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

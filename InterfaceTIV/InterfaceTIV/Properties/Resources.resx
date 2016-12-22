@@ -121,6 +121,9 @@
   <data name="btnPostre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnPostre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imgBaseElectrodos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgBaseElectrodos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnSillaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnSillaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,11 +139,11 @@
   <data name="barra superior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barra superior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnCargarMenos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnCargarMenos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="foto5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgNO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgNO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnCargarMenos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnCargarMenos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +154,17 @@
   <data name="foto6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnFlechaArribaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnFlechaArribaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnBebida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnBebida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnimgSilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnimgSilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnimgAlimentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnimgAlimentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnFlechaDerechaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnFlechaDerechaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="asd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\asd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,6 +177,9 @@
   </data>
   <data name="btnGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnFlechaIzquierdaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnFlechaIzquierdaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnControlRemotoClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnControlRemotoClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +205,9 @@
   <data name="btnActividadesClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnActividadesClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnMensajeClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnMensajeClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imgLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -207,6 +219,15 @@
   </data>
   <data name="btnCargarMas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnCargarMas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnFlechaIzquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnFlechaIzquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnFlechaArriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnFlechaArriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimgAlimentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgAlimentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnimgHablar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnimgHablar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,28 +244,13 @@
   <data name="foto3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnMensajeClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnMensajeClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnFlechaArriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnFlechaArriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnFlechaArribaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnFlechaArribaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btnFlechaDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnFlechaDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnFlechaDerechaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnFlechaDerechaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnCargarMasDER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnCargarMasDER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnFlechaIzquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnFlechaIzquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnFlechaIzquierdaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnFlechaIzquierdaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imgBaseElectrodos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgBaseElectrodos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnCargarMenosIZQ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnCargarMenosIZQ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
