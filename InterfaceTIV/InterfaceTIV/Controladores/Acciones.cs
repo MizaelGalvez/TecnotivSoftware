@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using InterfaceTIV.Model;
 using System.Data.Entity;
-using InterfaceTIV.Model;
 using Emotiv;
 using System.Web;
 using System.Net;
@@ -84,7 +83,7 @@ namespace InterfaceTIV.Model
 
                     foreach (var result in user)
                     {
-                        valor = result.ToString();
+                        Console.WriteLine(valor);
                     }
 
 

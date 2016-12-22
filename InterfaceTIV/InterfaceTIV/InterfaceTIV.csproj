@@ -75,7 +75,6 @@
     <Compile Include="Controladores\LecturaSerial.cs" />
     <Compile Include="Controladores\MetodosHTTP.cs" />
     <Compile Include="Controladores\MovimientoInterface.cs" />
-    <Compile Include="Controladores\ProgresBAR.cs" />
     <Compile Include="Controladores\Acciones.cs" />
     <Compile Include="Model\acondicionado.cs" />
     <Compile Include="Model\actitidades.cs" />
@@ -114,12 +113,6 @@
     <Compile Include="Vista\InicioCarga.Designer.cs">
       <DependentUpon>InicioCarga.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\PruebaMovimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\PruebaMovimiento.Designer.cs">
-      <DependentUpon>PruebaMovimiento.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -129,6 +122,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Configuracion.resx">
@@ -139,9 +133,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\InicioCarga.resx">
       <DependentUpon>InicioCarga.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\PruebaMovimiento.resx">
-      <DependentUpon>PruebaMovimiento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +145,9 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\btnCargarMenosIZQ.png" />
+    <None Include="Resources\btnCargarMasDER.png" />
+    <None Include="Resources\imgNO.png" />
     <None Include="Resources\imgBaseElectrodos.png" />
     <None Include="Resources\btnFlechaIzquierdaClick.png" />
     <None Include="Resources\btnFlechaIzquierda.png" />
@@ -161,7 +155,6 @@
     <None Include="Resources\btnFlechaDerecha.png" />
     <None Include="Resources\btnFlechaArribaClick.png" />
     <None Include="Resources\btnFlechaArriba.png" />
-    <None Include="Resources\btnCargarMenos1.png" />
     <None Include="Resources\btnCargarMenos.png" />
     <None Include="Resources\btnCargarMas.png" />
     <None Include="Resources\btnAgregar.png" />
@@ -171,7 +164,6 @@
     <None Include="Resources\foto3.jpg" />
     <None Include="Resources\foto2.jpg" />
     <None Include="Resources\foto1.jpg" />
-    <None Include="Resources\asd.jpg" />
     <None Include="Resources\btnRegresar.png" />
     <None Include="Resources\btnPostreClick.png" />
     <None Include="Resources\btnPostre.png" />

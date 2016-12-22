@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using InterfaceTIV.Vista;
 using InterfaceTIV.Controladores;
 using Emotiv;
-using InterfaceTIV.Controladores;
 using System.IO.Ports;
 using InterfaceTIV.Model;
 
@@ -20,26 +19,87 @@ namespace InterfaceTIV.Vista
     public partial class Home : Form
     {
 
+
+
+        ///////////////////////////////////////////////////VARIABLES LOCALES///////////////////////////////////////////////////////
+        //
+        //
+        //
+        //
         int cambio = 0;                                                            //Variable para el Swicheo de diadema, ratos, silla etc...
         int cambioPanel = 0;                                                       //variable para controlar el panel automatico, si regresara atras o al de alimentos segun sea necesario
+        //
+        //
+        //
+        int altoBTNregresar=0;
+        int anchoBTNregresar=0;
+
+        int altoBTNautomatico=0;
+        int anchoBTNautomatico=0;
+
+        int altoBTNmostrarmas=0;
+        int anchoBTNmostrarmas=0;
+
+        int altoBTNagregar=0;
+        int anchoBTNagragar=0;
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+        ///////////////////////////////////////////////////METODOS Y CREACION DE OBJETOS///////////////////////////////////////////////////////
+        //
+        //
+        //
+        //
         public Home()
         {
             InitializeComponent();
             focus();
-            
+            obtenerTamaños();
+
         }
-
         public void focus(){ txtComando.Text = ""; txtComando.Select();}           //Metodo Llamado en Cada Accion para regresar al Focus donde se reciben los parametros de la diadema
-        public void enviar() {
-
-                string valor = txtComando.Text;
+        public void enviar(string valor) {
+            
                 Console.WriteLine(valor);
                 LecturaSerial enviardatos = new LecturaSerial();
                 enviardatos.sensor = cambio;
                 enviardatos.valor = valor;
                 enviardatos.Lectura();
                 focus();
-        }                                                   //Evento para enviar los datos recividos por Diadema y canalizarlos a movimiento mause o impresion Serial
+        }                                       //Evento para enviar los datos recividos por Diadema y canalizarlos a movimiento mause o impresion Serial
+        public void pintarMovimiento(string valor) {
+            switch (valor)
+            {
+                case "N":
+                    btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
+                    btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
+                    btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+                    break;
+                case "W":
+                    btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArribaClick;//arriba
+                    btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
+                    btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+
+                    break;
+                case "A":
+                    btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierdaClick;//Izquierda
+                    btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
+                    btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+                    break;
+                case "D":
+                    btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerechaClick;//derecha
+                    btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
+                    btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
+                    break;
+                case "C":
+                    break;
+                default:
+                    break;
+            }
+
+        }
         public void ocultarVentana(ref Panel Abrir, ref Panel Cerrar)
         {
             Cerrar.Hide();
@@ -50,39 +110,13 @@ namespace InterfaceTIV.Vista
         }           //Evento para ocultar Ventana Home y Mostrar la Deseada            
         private void txtComando_TextChanged(object sender, EventArgs e)
         {
+            string valor = txtComando.Text;
             if (cambio==1)
             {
-                switch (txtComando.Text)
-                {
-                    case "N":
-                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
-                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
-                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
-                        break;
-                    case "W":
-                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArribaClick;//arriba
-                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
-                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
-
-                        break;
-                    case "A":
-                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierdaClick;//Izquierda
-                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
-                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
-                        break;
-                    case "D":
-                        btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerechaClick;//derecha
-                        btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
-                        btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
-                        break;
-                    case "C":
-                        break;
-                    default:
-                        break;
-                }
+                pintarMovimiento(valor);
             }
             
-            enviar();
+            enviar(valor);
         }         //Eventos de enviar comandos recibidos cuando el txt cambia de Valor.
         private void Home_Click(object sender, EventArgs e)
         {
@@ -102,12 +136,51 @@ namespace InterfaceTIV.Vista
             datos.EnviarNotificacion();
 
         }              //metodo para enviar el datos del texto del boton. sera necesario adaptarlo para utilizar como modificador 
+        public void ventanaAUTOMATICA(ref Panel Abrir, ref Panel Cerrar)
+        {
+            Cerrar.Hide();
+            Abrir.Show();
+            Abrir.Location = new Point(2, 55);
+            focus();
+
+        }           //Abrir Ventana Automatica con los valores necesarios para llenarla            
+        //
+        //
+        //
+        //PRUEBAAAAA TENER Y REGRESAR TAMAÑOS
+        public void obtenerTamaños() {
+            this.altoBTNregresar = btnRegresarAutomatico.Height;
+            this.anchoBTNregresar = btnRegresarAutomatico.Width;
+
+            this.altoBTNautomatico = btnUNO.Height;
+            this.anchoBTNautomatico = btnUNO.Width;
+
+            this.altoBTNmostrarmas = btnMostrarMasDER.Height;
+            this.anchoBTNmostrarmas = btnMostrarMasDER.Width;
+
+            this.altoBTNagregar = btnAgregarMAS.Height;
+            this.anchoBTNagragar = btnAgregarMAS.Width;
+        }
+        public void ajustarTamaños()
+        {
+            btnAgregarMAS.Height=altoBTNagregar;
+            btnAgregarMAS.Width=anchoBTNagragar;
+        }
+        //PRUEBAAAAAA
+        //
+        //
+        //
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-        
 
-        //entrar a la ventana de configuracion
+        ///////////////////////////////////////////////////ABRIR VENTANAS NUEVAS///////////////////////////////////////////////////////
+        //
+        //
+        //
+        //
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
           
@@ -116,10 +189,21 @@ namespace InterfaceTIV.Vista
             VistaConfiguracion.Show();
 
         }         //Creando la Ventana de Configuracion
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-        ///////////////////////////////////////////////////ABRIR/CERRAR VENTANAS//////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////ABRIR/CERRAR PANELES////////////////////////////////////////////////////////
+        //
+        //
+        //
         //
         //
         //
@@ -127,14 +211,6 @@ namespace InterfaceTIV.Vista
         private void btnAlimentos_Click(object sender, EventArgs e)
         {
             ocultarVentana(ref panelAlimentos, ref panelHome);
-        }
-        //
-        //
-        // eventos de panel de Alimentos para Abrir otros Paneles
-        private void btnRegresarAlimentos_Click(object sender, EventArgs e)
-        {
-            ocultarVentana(ref panelHome, ref panelAlimentos);
-            focus();
         }
         private void btnComidas_Click(object sender, EventArgs e)
         {
@@ -157,7 +233,16 @@ namespace InterfaceTIV.Vista
         //
         //
         //
+        //
+        //
+        //
+        //
         // Eventos de los botones Regresar de cada Panel
+        private void btnRegresarAlimentos_Click(object sender, EventArgs e)
+        {
+            ocultarVentana(ref panelHome, ref panelAlimentos);
+            focus();
+        }
         private void btnRegresarPanelActividades_Click(object sender, EventArgs e)
         {
             ocultarVentana(ref panelHome, ref panelActividades);
@@ -196,32 +281,36 @@ namespace InterfaceTIV.Vista
         //
         //
         //
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //
+        //
+        //
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-
+        //////////////////////////////////////ENEVNTOS DE BOTONES SEGUN EN PANEL DONDE SE ENCUENTRAN /////////////////////////////////
+        //
+        //
+        //
+        //
         //
         //
         //
         // eventos del panel HOME
-
         private void btnActividades_Click(object sender, EventArgs e)
         {
-            ocultarVentana(ref panelAutomatico, ref panelHome);
+            ventanaAUTOMATICA(ref panelAutomatico, ref panelHome);
 
         }
-
         private void btnEntretenimiento_Click(object sender, EventArgs e)
         {
-            ocultarVentana(ref panelAutomatico, ref panelHome);
+            ventanaAUTOMATICA(ref panelAutomatico, ref panelHome);
         }
-
         private void btnControlRemoto_Click(object sender, EventArgs e)
         {
-            ocultarVentana(ref panelControlRemoto, ref panelHome);
+            ventanaAUTOMATICA(ref panelControlRemoto, ref panelHome);
         }
-
         private void btnSilla_Click(object sender, EventArgs e)
         {
             ocultarVentana(ref panelSilla, ref panelHome);
@@ -240,52 +329,85 @@ namespace InterfaceTIV.Vista
 
             //cambio especial del swich para cambia a impresion Serial
         }                   //aqui el evento para cambiar a impresion serial
-
-        
+        //
+        //
+        //
+        //
         //
         //
         //
         //eventos del panel Actividades
-        
+        //
+        //
+        //
+        //
         //
         //
         //
         //eventos del panel de Entretenimiento
-        
+        //
+        //
+        //
+        //
         //
         //
         //
         //Eventos del Panel Control Remoto
-        
+        //
+        //
+        //
+        //
         //
         //
         //
         //Eventos del panel de  la silla
+        private void btnFlechaArriba_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void btnFlechaDerecha_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void btnFlechaIzquierda_Click(object sender, EventArgs e)
+        {
 
+        }
+        //
+        //
+        //
+        //
+        //
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
         /////////////////////////////////////////////////////ANIMACIONES//////////////////////////////////////////////////////////////
         //
         //
-        //Eventos de Animacion del Sistema
         //
-        public static void CambiarTamañoControl(ref Button c)
+        //
+        //
+        //
+        //
+        //Eventos de Animacion del Sistema
+        public  void CambiarTamañoControl(ref Button c)
         {
             c.Height = c.Size.Height + 20;
             c.Width = c.Size.Width + 20;
             c.Location = new Point(c.Location.X - 10, c.Location.Y - 10);
             
         }                   //Animacion para acer mas grande el boton con el Hover
-        public static void RegresarTamañoControl(ref Button c)
+        public  void RegresarTamañoControl(ref Button c)
         {
             c.Height = c.Size.Height - 20;
             c.Width = c.Size.Width - 20;
             c.Location = new Point(c.Location.X + 10, c.Location.Y + 10);
+            
 
         }                  //Animacion para regresar el tamano al boton al perder el Hover
+        //
         //
         //
         //
@@ -384,6 +506,7 @@ namespace InterfaceTIV.Vista
         //
         //
         //
+        //
         //ANIMACION DEL PANEL ALIMENTOS
         private void btnRegresarAlimentos_MouseHover(object sender, EventArgs e)
         {
@@ -436,6 +559,9 @@ namespace InterfaceTIV.Vista
         //
         //
         //
+        //
+        //
+        //
         //ANIMACION PANEL DE SILLA
         private void btnRegresarSilla_MouseHover(object sender, EventArgs e)
         {
@@ -448,10 +574,215 @@ namespace InterfaceTIV.Vista
             RegresarTamañoControl(ref btnRegresarSilla);
             btnRegresarSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnRegresar;
         }
-        
+
+        private void btnFlechaArriba_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnFlechaArriba);
+            btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArribaClick;
+        }
+
+        private void btnFlechaArriba_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnFlechaArriba);
+            btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
+        }
+
+        private void btnFlechaDerecha_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnFlechaDerecha);
+            btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerechaClick;
+        }
+
+        private void btnFlechaDerecha_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnFlechaDerecha);
+            btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+        }
+
+        private void btnFlechaIzquierda_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnFlechaIzquierda);
+            btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierdaClick;
+        }
+
+        private void btnFlechaIzquierda_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnFlechaIzquierda);
+            btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
+        }
         //
         //
         //
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //
+        //
+        //
+        //
+        //ANIMACION DEL PANEL AUTOMATICO
+        private void btnRegresarAutomatico_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnRegresarAutomatico);
+            btnRegresarAutomatico.BackgroundImage = InterfaceTIV.Properties.Resources.btnRegresar;
+        }
+        private void btnRegresarAutomatico_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnRegresarAutomatico);
+            btnRegresarAutomatico.BackgroundImage = InterfaceTIV.Properties.Resources.btnRegresar;
+        }
+        private void btnMostrarMasDER_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnMostrarMasDER);
+            btnMostrarMasDER.BackgroundImage = InterfaceTIV.Properties.Resources.btnCargarMasDER;
+        }
+        private void btnMostrarMasDER_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnMostrarMasDER);
+            btnMostrarMasDER.BackgroundImage = InterfaceTIV.Properties.Resources.btnCargarMasDER;
+        }
+        private void btnMostrarMenosIZQ_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnMostrarMenosIZQ);
+            btnMostrarMenosIZQ.BackgroundImage = InterfaceTIV.Properties.Resources.btnCargarMenosIZQ;
+        }
+        private void btnMostrarMenosIZQ_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnMostrarMenosIZQ);
+            btnMostrarMenosIZQ.BackgroundImage = InterfaceTIV.Properties.Resources.btnCargarMenosIZQ;
+        }
+        private void btnAgregarMAS_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnAgregarMAS);
+            btnAgregarMAS.BackgroundImage = InterfaceTIV.Properties.Resources.btnAgregar;
+        }
+        private void btnAgregarMAS_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnAgregarMAS);
+            btnAgregarMAS.BackgroundImage = InterfaceTIV.Properties.Resources.btnAgregar;
+        }
+        private void imgUNO_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnUNO);
+            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void imgUNO_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnUNO);
+            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void btnUNO_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnUNO);
+            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void btnUNO_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnUNO);
+            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void imgDOS_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnDOS);
+            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void imgDOS_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnDOS);
+            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void btnDOS_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnDOS);
+            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void btnDOS_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnDOS);
+            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void imgTRES_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnTRES);
+            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void imgTRES_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnTRES);
+            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void btnTRES_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnTRES);
+            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void btnTRES_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnTRES);
+            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void imgCUATRO_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnCUATRO);
+            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void imgCUATRO_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnCUATRO);
+            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void btnCUATRO_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnCUATRO);
+            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void btnCUATRO_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnCUATRO);
+            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void imgCINCO_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnCINCO);
+            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void imgCINCO_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnCINCO);
+            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void btnCINCO_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnCINCO);
+            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void btnCINCO_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnCINCO);
+            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void imgSEIS_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnSEIS);
+            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void imgSEIS_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnSEIS);
+            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        private void btnSEIS_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnSEIS);
+            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+        }
+        private void btnSEIS_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnSEIS);
+            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+        }
+        //
+        //
+        //
+        //
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }
