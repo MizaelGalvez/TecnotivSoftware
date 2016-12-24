@@ -21,10 +21,12 @@ namespace InterfaceTIV.Vista
             lblBienvenida.Text = "Bienvenido " + Acciones.usuario(1);
             var usuario = Acciones.usuario(1);
             var contraseña = Acciones.contraseña(1);
+            
 
             MetodosHTTP primer = new MetodosHTTP();
             primer.user = usuario;
             primer.pass = contraseña;
+            Console.WriteLine(usuario,contraseña);
             var activo = primer.VerificarUsuario();
 
             this.Show();
@@ -93,6 +95,11 @@ namespace InterfaceTIV.Vista
 
             verificar(activo);
             
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -16,6 +16,9 @@ namespace InterfaceTIV.Model
         [StringLength(45)]
         public string lbl_NombreActividad { get; set; }
 
+        [StringLength(145)]
+        public string img_Ruta { get; set; }
+
         public bool? bactivo { get; set; }
     }
 }

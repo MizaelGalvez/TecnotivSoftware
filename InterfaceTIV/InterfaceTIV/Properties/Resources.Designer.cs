@@ -173,6 +173,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnCerrar {
+            get {
+                object obj = ResourceManager.GetObject("btnCerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnComida {
             get {
                 object obj = ResourceManager.GetObject("btnComida", resourceCulture);

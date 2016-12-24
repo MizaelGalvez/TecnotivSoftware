@@ -14,8 +14,13 @@ namespace InterfaceTIV.Model
 {
     class Acciones
     {
-        // vista Configuracion
-
+        /////////////////////////////////////////////////vista Configuracion/////////////////////////////////////////////////
+        // 
+        //
+        //
+        //
+        //
+        //
         public static void Guardar(configuracion nEntrada)
         {
             try
@@ -83,7 +88,7 @@ namespace InterfaceTIV.Model
 
                     foreach (var result in user)
                     {
-                        Console.WriteLine(valor);
+                        valor = result.ToString();
                     }
 
 
@@ -125,7 +130,7 @@ namespace InterfaceTIV.Model
                 throw;
             }
         }
-
+        
         public static bool isChecked_diadema(int Id)
         {
             bool valor = false;
@@ -265,10 +270,366 @@ namespace InterfaceTIV.Model
                 throw;
             }
         }
+        //
+        //
+        //
+        //
+        //
+        //
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-        //Vista Configuracion
 
-       
 
+        //////////////////////////////////////////////Obtener Valores para PANEL AUTOMATICO///////////////////////////////////
+        //
+        //
+        //
+        //
+        //
+        // 
+        public static string[,] ObtenerComidas()
+        {
+            
+            bool bactivo = true;
+            string valor = "";
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    var user = (from dato in ctx.comidas
+                                where dato.bactivo == bactivo
+                                select dato.lbl_Nombre);
+
+
+                    int i = 0;
+                    string[,] Datos = new string[user.Count(), 3];
+                    
+                    foreach (var result in user )
+                    {
+                          valor = result.ToString();
+                          Datos[i,0] = valor;
+                          i++;
+                    }
+
+                    using (var ctx2 = new Model1())
+                    {
+                        var user1 = (from dato2 in ctx2.comidas
+                                    where dato2.bactivo == bactivo
+                                   select dato2.img_Ruta);
+                        
+                        i = 0;
+                        
+                        foreach (var result2 in user1)
+                        {
+                            valor = result2.ToString();
+                            Datos[i, 1] = valor;
+                            i++;
+                        }
+
+                        using (var ctx3 = new Model1())
+                        {
+                            var user3 = (from dato3 in ctx3.comidas
+                                         where dato3.bactivo == bactivo
+                                         select dato3.lbl_Descripcion);
+
+                            i = 0;
+
+                            foreach (var result3 in user3)
+                            {
+                                valor = result3.ToString();
+                                Datos[i, 2] = valor;
+                                i++;
+                            }
+
+                            return Datos;
+
+                        }
+
+                    }
+
+
+
+                }
+               
+                
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static string[,] ObtenerBebidas()
+        {
+
+            bool bactivo = true;
+            string valor = "";
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    var user = (from dato in ctx.bebidas
+                                where dato.bactivo == bactivo
+                                select dato.lbl_Nombre);
+
+
+                    int i = 0;
+                    string[,] Datos = new string[user.Count(), 3];
+
+                    foreach (var result in user)
+                    {
+                        valor = result.ToString();
+                        Datos[i, 0] = valor;
+                        i++;
+                    }
+
+                    using (var ctx2 = new Model1())
+                    {
+                        var user1 = (from dato2 in ctx2.bebidas
+                                     where dato2.bactivo == bactivo
+                                     select dato2.img_Ruta);
+
+                        i = 0;
+
+                        foreach (var result2 in user1)
+                        {
+                            valor = result2.ToString();
+                            Datos[i, 1] = valor;
+                            i++;
+                        }
+
+                        using (var ctx3 = new Model1())
+                        {
+                            var user3 = (from dato3 in ctx3.bebidas
+                                         where dato3.bactivo == bactivo
+                                         select dato3.lbl_Descripcion);
+
+                            i = 0;
+
+                            foreach (var result3 in user3)
+                            {
+                                valor = result3.ToString();
+                                Datos[i, 2] = valor;
+                                i++;
+                            }
+
+                            return Datos;
+
+                        }
+
+                    }
+
+
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static string[,] ObtenerPostres()
+        {
+
+            bool bactivo = true;
+            string valor = "";
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    var user = (from dato in ctx.postres
+                                where dato.bactivo == bactivo
+                                select dato.lbl_Nombre);
+
+
+                    int i = 0;
+                    string[,] Datos = new string[user.Count(), 3];
+
+                    foreach (var result in user)
+                    {
+                        valor = result.ToString();
+                        Datos[i, 0] = valor;
+                        i++;
+                    }
+
+                    using (var ctx2 = new Model1())
+                    {
+                        var user1 = (from dato2 in ctx2.postres
+                                     where dato2.bactivo == bactivo
+                                     select dato2.img_Ruta);
+
+                        i = 0;
+
+                        foreach (var result2 in user1)
+                        {
+                            valor = result2.ToString();
+                            Datos[i, 1] = valor;
+                            i++;
+                        }
+
+                        using (var ctx3 = new Model1())
+                        {
+                            var user3 = (from dato3 in ctx3.postres
+                                         where dato3.bactivo == bactivo
+                                         select dato3.lbl_Descripcion);
+
+                            i = 0;
+
+                            foreach (var result3 in user3)
+                            {
+                                valor = result3.ToString();
+                                Datos[i, 2] = valor;
+                                i++;
+                            }
+
+                            return Datos;
+
+                        }
+
+                    }
+
+
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static string[,] ObtenerActividades()
+        {
+
+            bool bactivo = true;
+            string valor = "";
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    var user = (from dato in ctx.actitidades
+                                where dato.bactivo == bactivo
+                                select dato.lbl_NombreActividad);
+
+
+                    int i = 0;
+                    string[,] Datos = new string[user.Count(), 3];
+
+                    foreach (var result in user)
+                    {
+                        valor = result.ToString();
+                        Datos[i, 0] = valor;
+                        i++;
+                    }
+
+                    using (var ctx2 = new Model1())
+                    {
+                        var user1 = (from dato2 in ctx2.actitidades
+                                     where dato2.bactivo == bactivo
+                                     select dato2.img_Ruta);
+
+                        i = 0;
+
+                        foreach (var result2 in user1)
+                        {
+                            valor = result2.ToString();
+                            Datos[i, 1] = valor;
+                            i++;
+                        }
+
+                        return Datos;
+
+                    }
+
+
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static string[,] ObtenerEntretenimiento()
+        {
+
+            bool bactivo = true;
+            string valor = "";
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    var user = (from dato in ctx.internet
+                                where dato.bactivo == bactivo
+                                select dato.lbl_Nombre);
+
+
+                    int i = 0;
+                    string[,] Datos = new string[user.Count(), 3];
+
+                    foreach (var result in user)
+                    {
+                        valor = result.ToString();
+                        Datos[i, 0] = valor;
+                        i++;
+                    }
+
+                    using (var ctx2 = new Model1())
+                    {
+                        var user1 = (from dato2 in ctx2.internet
+                                     where dato2.bactivo == bactivo
+                                     select dato2.img_Ruta);
+
+                        i = 0;
+
+                        foreach (var result2 in user1)
+                        {
+                            valor = result2.ToString();
+                            Datos[i, 1] = valor;
+                            i++;
+                        }
+
+                        using (var ctx3 = new Model1())
+                        {
+                            var user3 = (from dato3 in ctx3.internet
+                                         where dato3.bactivo == bactivo
+                                         select dato3.lbl_Url);
+
+                            i = 0;
+
+                            foreach (var result3 in user3)
+                            {
+                                valor = result3.ToString();
+                                Datos[i, 2] = valor;
+                                i++;
+                            }
+
+                            return Datos;
+
+                        }
+
+                    }
+
+
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        //
+        //
+        //
+        //
+        //
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }

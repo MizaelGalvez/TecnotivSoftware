@@ -21,5 +21,7 @@ namespace InterfaceTIV.Model
 
         [StringLength(145)]
         public string img_Ruta { get; set; }
+
+        public bool? bactivo { get; set; }
     }
 }

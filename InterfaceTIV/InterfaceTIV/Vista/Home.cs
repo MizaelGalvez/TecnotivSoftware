@@ -30,18 +30,19 @@ namespace InterfaceTIV.Vista
         int cambioPanel = 0;                                                       //variable para controlar el panel automatico, si regresara atras o al de alimentos segun sea necesario
         //
         //
+        string descripUNO = "";
+        string descripDOS = "";
+        string descripTRES = "";
+        string descripCUATRO = "";
+        string descripCINCO = "";
+        string descripSEIS = "";
         //
-        int altoBTNregresar=0;
-        int anchoBTNregresar=0;
-
-        int altoBTNautomatico=0;
-        int anchoBTNautomatico=0;
-
-        int altoBTNmostrarmas=0;
-        int anchoBTNmostrarmas=0;
-
-        int altoBTNagregar=0;
-        int anchoBTNagragar=0;
+        //
+        int ancho;
+        int alto;
+        int X;
+        int Y;
+        //
         //
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -56,7 +57,6 @@ namespace InterfaceTIV.Vista
         {
             InitializeComponent();
             focus();
-            obtenerTamaños();
 
         }
         public void focus(){ txtComando.Text = ""; txtComando.Select();}           //Metodo Llamado en Cada Accion para regresar al Focus donde se reciben los parametros de la diadema
@@ -122,7 +122,7 @@ namespace InterfaceTIV.Vista
         {
             focus();
         }                     //Eventos de focus al elemento necesario, cuando da click en otra area de la ventana
-        private void alimentoNotificador(int activo, string Texto)
+        private void Notificador(int activo, string Texto, string Descripcion)
         {
 
             MetodosHTTP datos = new MetodosHTTP();
@@ -132,7 +132,7 @@ namespace InterfaceTIV.Vista
             datos.idActividad = activo;
             datos.txtActividad = Texto;
             datos.idtexto = 0;
-            datos.txtTecto = "";
+            datos.txtTecto = Descripcion;
             datos.EnviarNotificacion();
 
         }              //metodo para enviar el datos del texto del boton. sera necesario adaptarlo para utilizar como modificador 
@@ -147,34 +147,181 @@ namespace InterfaceTIV.Vista
         //
         //
         //
-        //PRUEBAAAAA TENER Y REGRESAR TAMAÑOS
-        public void obtenerTamaños() {
-            this.altoBTNregresar = btnRegresarAutomatico.Height;
-            this.anchoBTNregresar = btnRegresarAutomatico.Width;
-
-            this.altoBTNautomatico = btnUNO.Height;
-            this.anchoBTNautomatico = btnUNO.Width;
-
-            this.altoBTNmostrarmas = btnMostrarMasDER.Height;
-            this.anchoBTNmostrarmas = btnMostrarMasDER.Width;
-
-            this.altoBTNagregar = btnAgregarMAS.Height;
-            this.anchoBTNagragar = btnAgregarMAS.Width;
-        }
-        public void ajustarTamaños()
-        {
-            btnAgregarMAS.Height=altoBTNagregar;
-            btnAgregarMAS.Width=anchoBTNagragar;
-        }
-        //PRUEBAAAAAA
         //
         //
         //
         //
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        ///////////////////////////////////////////////////LLenar el PANEL AUTOMATICO///////////////////////////////////////////////////////
+        //
+        //
+        //
+        //
+        public void llenadoAUTOMATICO(string[,] Datos) {
 
 
+            string img;
+            int longitud = Datos.GetLength(0);
+            int incremento = 0;
+
+            btnUNO.Hide();
+            imgUNO.Hide();
+            btnDOS.Hide();
+            imgDOS.Hide();
+            btnTRES.Hide();
+            imgTRES.Hide();
+            btnCUATRO.Hide();
+            imgCUATRO.Hide();
+            btnCINCO.Hide();
+            imgCINCO.Hide();
+            btnSEIS.Hide();
+            imgSEIS.Hide();
+
+            btnMostrarMasDER.Hide();
+            btnMostrarMenosIZQ.Hide();
+
+            
+            if (longitud>=1)
+            {
+                btnUNO.Text = Datos[incremento, 0];
+                img = Datos[incremento, 1];
+                try
+                {
+                    imgUNO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img+ ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+                    btnUNO.Show();
+                    imgUNO.Show();
+                    descripUNO = Datos[incremento, 2];
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                incremento++;
+            }
+            if (longitud >= 2)
+            {
+                btnDOS.Text = Datos[incremento, 0];
+                img = Datos[incremento, 1];
+                try
+                {
+                    imgDOS.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+                    btnDOS.Show();
+                    imgDOS.Show();
+                    descripDOS = Datos[incremento, 2];
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                incremento++;
+            }
+            if (longitud >= 3)
+            {
+                btnTRES.Text = Datos[incremento, 0];
+                img = Datos[incremento, 1];
+                try
+                {
+                    imgTRES.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+                    btnTRES.Show();
+                    imgTRES.Show();
+                    descripTRES = Datos[incremento, 2];
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                incremento++;
+            }
+            if (longitud >= 4)
+            {
+                btnCUATRO.Text = Datos[incremento, 0];
+                img = Datos[incremento, 1];
+                try
+                {
+                    imgCUATRO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+                    btnCUATRO.Show();
+                    imgCUATRO.Show();
+                    descripCUATRO = Datos[incremento, 2];
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                incremento++;
+            }
+            if (longitud >= 5)
+            {
+                btnCINCO.Text = Datos[incremento, 0];
+                img = Datos[incremento, 1];
+                try
+                {
+                    imgCINCO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+                    btnCINCO.Show();
+                    imgCINCO.Show();
+                    descripCINCO = Datos[incremento, 2];
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                incremento++;
+            }
+            if (longitud >= 6)
+            {
+                btnSEIS.Text = Datos[incremento, 0];
+                img = Datos[incremento, 1];
+                try
+                {
+                    imgSEIS.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+                    btnSEIS.Show();
+                    imgSEIS.Show();
+                    descripSEIS = Datos[incremento, 2];
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                incremento++;
+            }
+
+
+
+
+        }
+        public void vaciarAUTOMATICO() {
+            try
+            {
+                btnUNO.Text = "";
+                imgUNO.BackgroundImage = InterfaceTIV.Properties.Resources.imgNO;
+                btnDOS.Text = "";
+                imgDOS.BackgroundImage = InterfaceTIV.Properties.Resources.imgNO;
+                btnTRES.Text = "";
+                imgTRES.BackgroundImage = InterfaceTIV.Properties.Resources.imgNO;
+                btnCUATRO.Text = "";
+                imgCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.imgNO;
+                btnCINCO.Text = "";
+                imgCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.imgNO;
+                btnSEIS.Text = "";
+                imgSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.imgNO;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        //
+        //
+        //
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         ///////////////////////////////////////////////////ABRIR VENTANAS NUEVAS///////////////////////////////////////////////////////
         //
@@ -189,10 +336,12 @@ namespace InterfaceTIV.Vista
             VistaConfiguracion.Show();
 
         }         //Creando la Ventana de Configuracion
-        //
-        //
-        //
-        //
+
+
+        private void btnAgregarMAS_Click(object sender, EventArgs e)
+        {
+
+        }            //Creando la Ventana Para AGREGAR nuevos Registros
         //
         //
         //
@@ -214,20 +363,23 @@ namespace InterfaceTIV.Vista
         }
         private void btnComidas_Click(object sender, EventArgs e)
         {
+            string[,] Datos =  Acciones.ObtenerComidas();
+            llenadoAUTOMATICO(Datos);
             ocultarVentana(ref panelAutomatico, ref panelAlimentos);
-            // alimentoNotificador(1, btnComidas.Text);
             cambioPanel = 1;
         }
         private void btnBebidas_Click(object sender, EventArgs e)
         {
+            string[,] Datos = Acciones.ObtenerBebidas();
+            llenadoAUTOMATICO(Datos);
             ocultarVentana(ref panelAutomatico, ref panelAlimentos);
-            //alimentoNotificador(2, btnBebidas.Text);
             cambioPanel = 1;
         }
         private void btnPostres_Click(object sender, EventArgs e)
         {
+            string[,] Datos = Acciones.ObtenerPostres();
+            llenadoAUTOMATICO(Datos);
             ocultarVentana(ref panelAutomatico, ref panelAlimentos);
-            //alimentoNotificador(3, btnPostres.Text);
             cambioPanel = 1;
         }
         //
@@ -269,12 +421,14 @@ namespace InterfaceTIV.Vista
             if (cambioPanel==1)
             {
                 ocultarVentana(ref panelAlimentos, ref panelAutomatico);
+                vaciarAUTOMATICO();
                 cambioPanel = 0;
                 focus();
             }
             else
             {
                 ocultarVentana(ref panelHome, ref panelAutomatico);
+                vaciarAUTOMATICO();
                 focus();
             }
         }
@@ -300,11 +454,15 @@ namespace InterfaceTIV.Vista
         // eventos del panel HOME
         private void btnActividades_Click(object sender, EventArgs e)
         {
+            string[,] Datos = Acciones.ObtenerActividades();
+            llenadoAUTOMATICO(Datos);
             ventanaAUTOMATICA(ref panelAutomatico, ref panelHome);
 
         }
         private void btnEntretenimiento_Click(object sender, EventArgs e)
         {
+            string[,] Datos = Acciones.ObtenerEntretenimiento();
+            llenadoAUTOMATICO(Datos);
             ventanaAUTOMATICA(ref panelAutomatico, ref panelHome);
         }
         private void btnControlRemoto_Click(object sender, EventArgs e)
@@ -336,16 +494,66 @@ namespace InterfaceTIV.Vista
         //
         //
         //
-        //eventos del panel Actividades
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //eventos del panel de Entretenimiento
-        //
+        //eventos del panel AUTOMATICO
+        private void imgUNO_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnUNO.Text, descripUNO);
+        }
+
+        private void btnUNO_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnUNO.Text, descripUNO);
+        }
+
+        private void imgDOS_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnDOS.Text, descripDOS);
+        }
+
+        private void btnDOS_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnDOS.Text, descripDOS);
+        }
+
+        private void imgTRES_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnTRES.Text, descripTRES);
+        }
+
+        private void btnTRES_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnTRES.Text, descripTRES);
+        }
+
+        private void imgCUATRO_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnCUATRO.Text, descripCUATRO);
+        }
+
+        private void btnCUATRO_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnCUATRO.Text, descripCUATRO);
+        }
+
+        private void imgCINCO_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnCINCO.Text, descripCINCO);
+        }
+
+        private void btnCINCO_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnCINCO.Text, descripCINCO);
+        }
+
+        private void imgSEIS_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnSEIS.Text, descripSEIS);
+        }
+
+        private void btnSEIS_Click(object sender, EventArgs e)
+        {
+            Notificador(1, btnSEIS.Text, descripSEIS);
+        }
         //
         //
         //
@@ -394,6 +602,10 @@ namespace InterfaceTIV.Vista
         //Eventos de Animacion del Sistema
         public  void CambiarTamañoControl(ref Button c)
         {
+            alto = c.Height;
+            ancho = c.Width;
+            X = c.Location.X;
+            Y = c.Location.Y;
             c.Height = c.Size.Height + 20;
             c.Width = c.Size.Width + 20;
             c.Location = new Point(c.Location.X - 10, c.Location.Y - 10);
@@ -401,11 +613,10 @@ namespace InterfaceTIV.Vista
         }                   //Animacion para acer mas grande el boton con el Hover
         public  void RegresarTamañoControl(ref Button c)
         {
-            c.Height = c.Size.Height - 20;
-            c.Width = c.Size.Width - 20;
-            c.Location = new Point(c.Location.X + 10, c.Location.Y + 10);
+            c.Height = alto;
+            c.Width = ancho;
+            c.Location = new Point(X,Y);
             
-
         }                  //Animacion para regresar el tamano al boton al perder el Hover
         //
         //
@@ -778,6 +989,7 @@ namespace InterfaceTIV.Vista
             RegresarTamañoControl(ref btnSEIS);
             btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
+        
         //
         //
         //

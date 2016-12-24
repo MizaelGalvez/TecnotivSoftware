@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private int Valor = 1;
     private String idActividad = "";
     private String txtActividad="";
+    private String txtDescripcion="";
     private int lanzador = 0;
 
 
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     btnapagarEnceder.setText("!!!");
                     lblencenderapagar.setText("No Detener Avisos ");
                     lblencenderapagar.setTextSize(18);
-
+                    imgImagen.setImageDrawable(getResources().getDrawable(R.drawable.logo));
                 }
             }
         });
@@ -104,9 +105,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                lbltextocabesera.setText("Gracias !!!!");
-                imgImagen.setImageDrawable(getResources().getDrawable(R.drawable.ok));
-
+                Toast.makeText(MainActivity.this, txtDescripcion, Toast.LENGTH_LONG).show();
+                btnAtendido.setVisibility(View.GONE);
             }
         });
 
@@ -131,10 +131,10 @@ public class MainActivity extends AppCompatActivity {
                     PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
 
-                    builder.setContentTitle(texto)
-                            .setContentText("Hola, necesito "+texto)
+                    builder.setContentTitle("Nesesito Algo !!!")
+                            .setContentText("Me Gustaria lo Siguente : "+texto+ ". Muchas Gracias Por Tu Atencion !!!")
                             .setSmallIcon(R.drawable.logo)
-                            .setVibrate(new long[]{100, 100, 100, 400})
+                            .setVibrate(new long[]{100, 100, 400})
                             .setAutoCancel(true);
 
                     builder.setContentIntent(pendingIntent);
@@ -143,8 +143,9 @@ public class MainActivity extends AppCompatActivity {
                     NotificationManager manager = (NotificationManager) getSystemService(MainActivity.this.NOTIFICATION_SERVICE);
                     manager.notify(0, builder.build());
 
-                    imgImagen.setImageDrawable(getResources().getDrawable(R.drawable.comidas));
-                    lbltextocabesera.setText("Menu Comidas");
+                    imgImagen.setImageDrawable(getResources().getDrawable(R.drawable.hola));
+                    lbltextocabesera.setText(texto);
+                    btnAtendido.setVisibility(View.VISIBLE);
                     break;
                 case "2":
                     Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
@@ -244,6 +245,7 @@ public class MainActivity extends AppCompatActivity {
 
                 idActividad = JArrayObject.getJSONObject(0).getString("idActividad");
                 txtActividad = JArrayObject.getJSONObject(0).getString("txtActividad");
+                txtDescripcion = JArrayObject.getJSONObject(0).getString("txtTecto");
 
                 if (idActividad.equals("0")){
                     new CountDownTimer(3000, 1000) {

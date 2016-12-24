@@ -37,7 +37,7 @@
         android:layout_marginRight="40dp" />
 
     <Button
-        android:text="Atendido"
+        android:text="Recomendaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnAtendido"
@@ -45,7 +45,8 @@
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
         android:textColor="@color/Textoclaro"
-        android:layout_marginBottom="18dp" />
+        android:layout_marginBottom="18dp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/lblNonotificar"

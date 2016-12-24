@@ -145,6 +145,7 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\btnCerrar.png" />
     <None Include="Resources\btnCargarMenosIZQ.png" />
     <None Include="Resources\btnCargarMasDER.png" />
     <None Include="Resources\imgNO.png" />

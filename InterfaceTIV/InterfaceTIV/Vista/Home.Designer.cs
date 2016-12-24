@@ -498,25 +498,30 @@
             this.panelControlRemoto.Controls.Add(this.btnLuces);
             this.panelControlRemoto.Controls.Add(this.btnAcondicionado);
             this.panelControlRemoto.Controls.Add(this.btnTelevision);
-            this.panelControlRemoto.Location = new System.Drawing.Point(818, 628);
+            this.panelControlRemoto.Location = new System.Drawing.Point(816, 636);
             this.panelControlRemoto.Name = "panelControlRemoto";
-            this.panelControlRemoto.Size = new System.Drawing.Size(868, 371);
+            this.panelControlRemoto.Size = new System.Drawing.Size(936, 427);
             this.panelControlRemoto.TabIndex = 10;
             this.panelControlRemoto.Visible = false;
             // 
             // btnRegresarRemoto
             // 
-            this.btnRegresarRemoto.Location = new System.Drawing.Point(781, 3);
+            this.btnRegresarRemoto.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
+            this.btnRegresarRemoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegresarRemoto.FlatAppearance.BorderSize = 0;
+            this.btnRegresarRemoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarRemoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarRemoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresarRemoto.Location = new System.Drawing.Point(814, 16);
             this.btnRegresarRemoto.Name = "btnRegresarRemoto";
-            this.btnRegresarRemoto.Size = new System.Drawing.Size(75, 41);
+            this.btnRegresarRemoto.Size = new System.Drawing.Size(102, 76);
             this.btnRegresarRemoto.TabIndex = 5;
-            this.btnRegresarRemoto.Text = "Regresar";
             this.btnRegresarRemoto.UseVisualStyleBackColor = true;
             this.btnRegresarRemoto.Click += new System.EventHandler(this.btnRegresarRemoto_Click);
             // 
             // btnLuces
             // 
-            this.btnLuces.Location = new System.Drawing.Point(614, 115);
+            this.btnLuces.Location = new System.Drawing.Point(632, 164);
             this.btnLuces.Name = "btnLuces";
             this.btnLuces.Size = new System.Drawing.Size(210, 130);
             this.btnLuces.TabIndex = 4;
@@ -525,7 +530,7 @@
             // 
             // btnAcondicionado
             // 
-            this.btnAcondicionado.Location = new System.Drawing.Point(330, 115);
+            this.btnAcondicionado.Location = new System.Drawing.Point(352, 164);
             this.btnAcondicionado.Name = "btnAcondicionado";
             this.btnAcondicionado.Size = new System.Drawing.Size(210, 130);
             this.btnAcondicionado.TabIndex = 3;
@@ -534,7 +539,7 @@
             // 
             // btnTelevision
             // 
-            this.btnTelevision.Location = new System.Drawing.Point(49, 115);
+            this.btnTelevision.Location = new System.Drawing.Point(61, 164);
             this.btnTelevision.Name = "btnTelevision";
             this.btnTelevision.Size = new System.Drawing.Size(210, 130);
             this.btnTelevision.TabIndex = 1;
@@ -670,7 +675,7 @@
             this.panelAutomatico.Controls.Add(this.btnUNO);
             this.panelAutomatico.Controls.Add(this.imgUNO);
             this.panelAutomatico.Controls.Add(this.btnRegresarAutomatico);
-            this.panelAutomatico.Location = new System.Drawing.Point(889, 573);
+            this.panelAutomatico.Location = new System.Drawing.Point(889, 571);
             this.panelAutomatico.Name = "panelAutomatico";
             this.panelAutomatico.Size = new System.Drawing.Size(926, 506);
             this.panelAutomatico.TabIndex = 10;
@@ -689,6 +694,7 @@
             this.btnAgregarMAS.Size = new System.Drawing.Size(38, 35);
             this.btnAgregarMAS.TabIndex = 19;
             this.btnAgregarMAS.UseVisualStyleBackColor = true;
+            this.btnAgregarMAS.Click += new System.EventHandler(this.btnAgregarMAS_Click);
             this.btnAgregarMAS.MouseLeave += new System.EventHandler(this.btnAgregarMAS_MouseLeave);
             this.btnAgregarMAS.MouseHover += new System.EventHandler(this.btnAgregarMAS_MouseHover);
             // 
@@ -732,11 +738,14 @@
             this.btnSEIS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSEIS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSEIS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSEIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSEIS.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSEIS.Location = new System.Drawing.Point(595, 355);
             this.btnSEIS.Name = "btnSEIS";
             this.btnSEIS.Size = new System.Drawing.Size(210, 60);
             this.btnSEIS.TabIndex = 15;
             this.btnSEIS.UseVisualStyleBackColor = true;
+            this.btnSEIS.Click += new System.EventHandler(this.btnSEIS_Click);
             this.btnSEIS.MouseLeave += new System.EventHandler(this.btnSEIS_MouseLeave);
             this.btnSEIS.MouseHover += new System.EventHandler(this.btnSEIS_MouseHover);
             // 
@@ -749,6 +758,7 @@
             this.imgSEIS.Size = new System.Drawing.Size(171, 113);
             this.imgSEIS.TabIndex = 16;
             this.imgSEIS.TabStop = false;
+            this.imgSEIS.Click += new System.EventHandler(this.imgSEIS_Click);
             this.imgSEIS.MouseLeave += new System.EventHandler(this.imgSEIS_MouseLeave);
             this.imgSEIS.MouseHover += new System.EventHandler(this.imgSEIS_MouseHover);
             // 
@@ -760,11 +770,14 @@
             this.btnCINCO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCINCO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCINCO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCINCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCINCO.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCINCO.Location = new System.Drawing.Point(357, 355);
             this.btnCINCO.Name = "btnCINCO";
             this.btnCINCO.Size = new System.Drawing.Size(210, 60);
             this.btnCINCO.TabIndex = 13;
             this.btnCINCO.UseVisualStyleBackColor = true;
+            this.btnCINCO.Click += new System.EventHandler(this.btnCINCO_Click);
             this.btnCINCO.MouseLeave += new System.EventHandler(this.btnCINCO_MouseLeave);
             this.btnCINCO.MouseHover += new System.EventHandler(this.btnCINCO_MouseHover);
             // 
@@ -777,6 +790,7 @@
             this.imgCINCO.Size = new System.Drawing.Size(171, 113);
             this.imgCINCO.TabIndex = 14;
             this.imgCINCO.TabStop = false;
+            this.imgCINCO.Click += new System.EventHandler(this.imgCINCO_Click);
             this.imgCINCO.MouseLeave += new System.EventHandler(this.imgCINCO_MouseLeave);
             this.imgCINCO.MouseHover += new System.EventHandler(this.imgCINCO_MouseHover);
             // 
@@ -788,11 +802,14 @@
             this.btnCUATRO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCUATRO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCUATRO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCUATRO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCUATRO.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCUATRO.Location = new System.Drawing.Point(120, 355);
             this.btnCUATRO.Name = "btnCUATRO";
             this.btnCUATRO.Size = new System.Drawing.Size(210, 60);
             this.btnCUATRO.TabIndex = 11;
             this.btnCUATRO.UseVisualStyleBackColor = true;
+            this.btnCUATRO.Click += new System.EventHandler(this.btnCUATRO_Click);
             this.btnCUATRO.MouseLeave += new System.EventHandler(this.btnCUATRO_MouseLeave);
             this.btnCUATRO.MouseHover += new System.EventHandler(this.btnCUATRO_MouseHover);
             // 
@@ -805,6 +822,7 @@
             this.imgCUATRO.Size = new System.Drawing.Size(171, 113);
             this.imgCUATRO.TabIndex = 12;
             this.imgCUATRO.TabStop = false;
+            this.imgCUATRO.Click += new System.EventHandler(this.imgCUATRO_Click);
             this.imgCUATRO.MouseLeave += new System.EventHandler(this.imgCUATRO_MouseLeave);
             this.imgCUATRO.MouseHover += new System.EventHandler(this.imgCUATRO_MouseHover);
             // 
@@ -816,11 +834,14 @@
             this.btnTRES.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTRES.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTRES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTRES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTRES.ForeColor = System.Drawing.SystemColors.Control;
             this.btnTRES.Location = new System.Drawing.Point(595, 188);
             this.btnTRES.Name = "btnTRES";
             this.btnTRES.Size = new System.Drawing.Size(210, 60);
             this.btnTRES.TabIndex = 9;
             this.btnTRES.UseVisualStyleBackColor = true;
+            this.btnTRES.Click += new System.EventHandler(this.btnTRES_Click);
             this.btnTRES.MouseLeave += new System.EventHandler(this.btnTRES_MouseLeave);
             this.btnTRES.MouseHover += new System.EventHandler(this.btnTRES_MouseHover);
             // 
@@ -833,6 +854,7 @@
             this.imgTRES.Size = new System.Drawing.Size(171, 113);
             this.imgTRES.TabIndex = 10;
             this.imgTRES.TabStop = false;
+            this.imgTRES.Click += new System.EventHandler(this.imgTRES_Click);
             this.imgTRES.MouseLeave += new System.EventHandler(this.imgTRES_MouseLeave);
             this.imgTRES.MouseHover += new System.EventHandler(this.imgTRES_MouseHover);
             // 
@@ -844,11 +866,14 @@
             this.btnDOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDOS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDOS.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDOS.Location = new System.Drawing.Point(357, 188);
             this.btnDOS.Name = "btnDOS";
             this.btnDOS.Size = new System.Drawing.Size(210, 60);
             this.btnDOS.TabIndex = 7;
             this.btnDOS.UseVisualStyleBackColor = true;
+            this.btnDOS.Click += new System.EventHandler(this.btnDOS_Click);
             this.btnDOS.MouseLeave += new System.EventHandler(this.btnDOS_MouseLeave);
             this.btnDOS.MouseHover += new System.EventHandler(this.btnDOS_MouseHover);
             // 
@@ -861,6 +886,7 @@
             this.imgDOS.Size = new System.Drawing.Size(171, 113);
             this.imgDOS.TabIndex = 8;
             this.imgDOS.TabStop = false;
+            this.imgDOS.Click += new System.EventHandler(this.imgDOS_Click);
             this.imgDOS.MouseLeave += new System.EventHandler(this.imgDOS_MouseLeave);
             this.imgDOS.MouseHover += new System.EventHandler(this.imgDOS_MouseHover);
             // 
@@ -872,11 +898,14 @@
             this.btnUNO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnUNO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUNO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUNO.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUNO.Location = new System.Drawing.Point(120, 188);
             this.btnUNO.Name = "btnUNO";
             this.btnUNO.Size = new System.Drawing.Size(210, 60);
             this.btnUNO.TabIndex = 1;
             this.btnUNO.UseVisualStyleBackColor = true;
+            this.btnUNO.Click += new System.EventHandler(this.btnUNO_Click);
             this.btnUNO.MouseLeave += new System.EventHandler(this.btnUNO_MouseLeave);
             this.btnUNO.MouseHover += new System.EventHandler(this.btnUNO_MouseHover);
             // 
@@ -889,6 +918,7 @@
             this.imgUNO.Size = new System.Drawing.Size(171, 113);
             this.imgUNO.TabIndex = 6;
             this.imgUNO.TabStop = false;
+            this.imgUNO.Click += new System.EventHandler(this.imgUNO_Click);
             this.imgUNO.MouseLeave += new System.EventHandler(this.imgUNO_MouseLeave);
             this.imgUNO.MouseHover += new System.EventHandler(this.imgUNO_MouseHover);
             // 
@@ -923,7 +953,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(940, 556);
+            this.ClientSize = new System.Drawing.Size(940, 560);
             this.Controls.Add(this.panelSilla);
             this.Controls.Add(this.panelAutomatico);
             this.Controls.Add(this.panel1);
