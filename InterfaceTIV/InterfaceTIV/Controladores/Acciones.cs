@@ -118,6 +118,7 @@ namespace InterfaceTIV.Model
                     foreach (var result in user)
                     {           
                         valor = (int)result;
+                        Console.WriteLine(valor);
                     }
 
 
@@ -147,6 +148,7 @@ namespace InterfaceTIV.Model
 
                     foreach (var result in user)
                     {
+                        
                         if ((int)result == 1 )
                         {
 

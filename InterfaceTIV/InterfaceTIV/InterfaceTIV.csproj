@@ -95,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Vista\AgregarContenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarContenido.Designer.cs">
+      <DependentUpon>AgregarContenido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\AgregarContenido.resx">
+      <DependentUpon>AgregarContenido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +154,11 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\btnHabitacion.png" />
+    <None Include="Resources\btnAgregarRuta.png" />
+    <None Include="Resources\brnBaño.png" />
+    <None Include="Resources\btnRutas.png" />
+    <None Include="Resources\FondoMAPA.png" />
     <None Include="Resources\btnCerrar.png" />
     <None Include="Resources\btnCargarMenosIZQ.png" />
     <None Include="Resources\btnCargarMasDER.png" />

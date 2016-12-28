@@ -83,6 +83,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brnBaño {
+            get {
+                object obj = ResourceManager.GetObject("brnBaño", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnActividadesClick {
             get {
                 object obj = ResourceManager.GetObject("btnActividadesClick", resourceCulture);
@@ -96,6 +106,16 @@ namespace InterfaceTIV.Properties {
         internal static System.Drawing.Bitmap btnAgregar {
             get {
                 object obj = ResourceManager.GetObject("btnAgregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnAgregarRuta {
+            get {
+                object obj = ResourceManager.GetObject("btnAgregarRuta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +323,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnHabitacion {
+            get {
+                object obj = ResourceManager.GetObject("btnHabitacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnHablarClick {
             get {
                 object obj = ResourceManager.GetObject("btnHablarClick", resourceCulture);
@@ -423,9 +453,29 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnRutas {
+            get {
+                object obj = ResourceManager.GetObject("btnRutas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnSillaClick {
             get {
                 object obj = ResourceManager.GetObject("btnSillaClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoMAPA {
+            get {
+                object obj = ResourceManager.GetObject("FondoMAPA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

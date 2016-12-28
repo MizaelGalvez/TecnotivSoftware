@@ -43,6 +43,9 @@ namespace InterfaceTIV.Vista
         int X;
         int Y;
         //
+        int animacion;
+        int tipoGuardado = 0;
+        //
         //
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -177,10 +180,7 @@ namespace InterfaceTIV.Vista
             imgCINCO.Hide();
             btnSEIS.Hide();
             imgSEIS.Hide();
-
-            btnMostrarMasDER.Hide();
-            btnMostrarMenosIZQ.Hide();
-
+            
             
             if (longitud>=1)
             {
@@ -336,12 +336,16 @@ namespace InterfaceTIV.Vista
             VistaConfiguracion.Show();
 
         }         //Creando la Ventana de Configuracion
-
-
         private void btnAgregarMAS_Click(object sender, EventArgs e)
         {
-
+            AgregarContenido agregarContenido = new AgregarContenido();
+            agregarContenido.TipoGuardado = tipoGuardado;
+            agregarContenido.Show(); 
         }            //Creando la Ventana Para AGREGAR nuevos Registros
+        private void btnHablar_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Intel\ACAT\ACATTalk");
+        }                //Abriendo la Aplicacion de ACAT
         //
         //
         //
@@ -402,7 +406,7 @@ namespace InterfaceTIV.Vista
         }
         private void btnRegresarEntretenimiento_Click(object sender, EventArgs e)
         {
-            ocultarVentana(ref panelHome, ref panelEntretenimiento);
+            ocultarVentana(ref panelSilla, ref panelRUTA);
             focus();
         }
         private void btnRegresarRemoto_Click(object sender, EventArgs e)
@@ -581,6 +585,10 @@ namespace InterfaceTIV.Vista
         {
 
         }
+        private void btnRutas_Click(object sender, EventArgs e)
+        {
+            ocultarVentana(ref panelRUTA, ref panelSilla);
+        }
         //
         //
         //
@@ -602,6 +610,7 @@ namespace InterfaceTIV.Vista
         //Eventos de Animacion del Sistema
         public  void CambiarTamañoControl(ref Button c)
         {
+            animacion = 1;
             alto = c.Height;
             ancho = c.Width;
             X = c.Location.X;
@@ -613,9 +622,14 @@ namespace InterfaceTIV.Vista
         }                   //Animacion para acer mas grande el boton con el Hover
         public  void RegresarTamañoControl(ref Button c)
         {
-            c.Height = alto;
-            c.Width = ancho;
-            c.Location = new Point(X,Y);
+            if (animacion==1)
+            {
+                c.Height = alto;
+                c.Width = ancho;
+                c.Location = new Point(X, Y);
+                animacion = 0;
+            }
+            
             
         }                  //Animacion para regresar el tamano al boton al perder el Hover
         //
@@ -821,6 +835,14 @@ namespace InterfaceTIV.Vista
             RegresarTamañoControl(ref btnFlechaIzquierda);
             btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
         }
+        private void btnRutas_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnRutas);
+        }
+        private void btnRutas_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnRutas);
+        }
         //
         //
         //
@@ -989,9 +1011,41 @@ namespace InterfaceTIV.Vista
             RegresarTamañoControl(ref btnSEIS);
             btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
-        
         //
         //
+        //
+        //
+        //
+        //Animacion panel RUTAS
+        private void btnRegresarRutas_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnRegresarRutas);
+        }
+
+        private void btnRegresarRutas_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnRegresarRutas);
+        }
+
+        private void btnIRbaño_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnIRbaño);
+        }
+
+        private void btnIRbaño_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnIRbaño);
+        }
+
+        private void btnIRhabitacion_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnIRhabitacion);
+        }
+
+        private void btnIRhabitacion_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnIRhabitacion);
+        }
         //
         //
         //

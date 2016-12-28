@@ -74,6 +74,9 @@ namespace InterfaceTIV.Controladores
                     break;
 
                 case "C":
+                    
+
+
                     break;
                 default:
                     break;
