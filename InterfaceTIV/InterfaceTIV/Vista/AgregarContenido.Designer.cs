@@ -67,7 +67,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel4.Location = new System.Drawing.Point(588, 3);
+            this.panel4.Location = new System.Drawing.Point(588, -2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 325);
             this.panel4.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.txtNombre.Location = new System.Drawing.Point(23, 61);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(192, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 1;
             // 
             // label2
             // 
@@ -125,7 +125,7 @@
             this.btnSeleccionarImagen.Location = new System.Drawing.Point(23, 253);
             this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
             this.btnSeleccionarImagen.Size = new System.Drawing.Size(204, 45);
-            this.btnSeleccionarImagen.TabIndex = 9;
+            this.btnSeleccionarImagen.TabIndex = 4;
             this.btnSeleccionarImagen.Text = "Seleccionar Imagen";
             this.btnSeleccionarImagen.UseVisualStyleBackColor = false;
             this.btnSeleccionarImagen.Click += new System.EventHandler(this.btnSeleccionarImagen_Click);
@@ -143,7 +143,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(320, 238);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(204, 45);
-            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Aceptar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -184,7 +184,7 @@
             this.btnGmail.Location = new System.Drawing.Point(29, 198);
             this.btnGmail.Name = "btnGmail";
             this.btnGmail.Size = new System.Drawing.Size(51, 32);
-            this.btnGmail.TabIndex = 6;
+            this.btnGmail.TabIndex = 3;
             this.btnGmail.UseVisualStyleBackColor = true;
             this.btnGmail.Click += new System.EventHandler(this.btnGmail_Click);
             // 
@@ -218,7 +218,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(23, 119);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(192, 20);
-            this.txtDescripcion.TabIndex = 13;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // label4
             // 

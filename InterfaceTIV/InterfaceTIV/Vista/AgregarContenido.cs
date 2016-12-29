@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterfaceTIV.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,9 +25,10 @@ namespace InterfaceTIV.Vista
         {
             InitializeComponent();
             btnGuardar.Enabled = false;
+            txtNombre.Select();
         }
         public int TipoGuardado { get; set; }
-        
+        public string panelReferencia { get; set; }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,16 +37,12 @@ namespace InterfaceTIV.Vista
         {
             metodos.abrirNavgador(@"https://www.gmail.com/");
         }
-
         private void btnOutlook_Click(object sender, EventArgs e)
         {
             metodos.abrirNavgador(@"https://www.outlook.com/");
         }
-
         private void btnSeleccionarImagen_Click(object sender, EventArgs e)
         {
-            
-            Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = @"C:\Users\Symonds-Pc\Downloads";
@@ -54,36 +52,37 @@ namespace InterfaceTIV.Vista
             {
                 try
                 {
+                    imgPreview.BackgroundImage = Properties.Resources.imgNO;
                     filePath = openFileDialog1.FileName;
-                    string destinationFile = @"C:\Users\Symonds-Pc\Downloads" + txtNombre.Text + ".jpg";
-                    File.Move(filePath, destinationFile);
-
-                    imgPreview.BackgroundImage = Image.FromFile(destinationFile);
+                    imgPreview.BackgroundImage = Image.FromFile(filePath);
                     //Console.WriteLine(filePath);
                     btnGuardar.Enabled = true;
                     
-
-
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            imgPreview.BackgroundImage = Properties.Resources.imgNO;
+
             if (txtNombre.Text.Equals("") || txtDescripcion.Text.Equals(""))
             {
                 MessageBox.Show("Escribir en Ambos Espacios ");
             }
             else
             {
-                Console.WriteLine(filePath);
-                
+                //Console.WriteLine(filePath);
                 try
                 {
-                    System.IO.File.Delete(filePath);
+
+                    string destinationFile = @"C:\Users\Symonds-Pc\Pictures\" + txtNombre.Text + ".jpg";
+                    File.Copy(filePath, destinationFile, true);
+
+                    GuardarDatos(panelReferencia);
+
                 }
                 catch (System.IO.IOException ex)
                 {
@@ -91,7 +90,98 @@ namespace InterfaceTIV.Vista
                     return;
                 }
                 
+
+
             }
         }
+
+        private void hoverlogo() {
+
+            try
+            {
+                Cursor.Position = new Point(80, 75);
+            }
+            catch
+            {
+            }
+
+        }
+
+        public void GuardarDatos(string cambioPanel)
+        {
+            switch (cambioPanel)
+            {
+                case "comidas":
+
+                    comidas nEntrada = new comidas();
+                    nEntrada.lbl_Descripcion = txtDescripcion.Text;
+                    nEntrada.lbl_Nombre = txtNombre.Text;
+                    nEntrada.img_Ruta = txtNombre.Text;
+                    nEntrada.bactivo = true;
+
+                    Acciones.GuardarComida(nEntrada);
+
+                    hoverlogo();
+                    this.Close();
+
+                    break;
+                case "bebidas":
+                    bebidas nEntrada2 = new bebidas();
+                    nEntrada2.lbl_Descripcion = txtDescripcion.Text;
+                    nEntrada2.lbl_Nombre = txtNombre.Text;
+                    nEntrada2.img_Ruta = txtNombre.Text;
+                    nEntrada2.bactivo = true;
+
+                    Acciones.GuardarBebidas(nEntrada2);
+
+                    hoverlogo();
+                    this.Close();
+                    break;
+                case "postres":
+                    postres nEntrada3 = new postres();
+                    nEntrada3.lbl_Descripcion = txtDescripcion.Text;
+                    nEntrada3.lbl_Nombre = txtNombre.Text;
+                    nEntrada3.img_Ruta = txtNombre.Text;
+                    nEntrada3.bactivo = true;
+
+                    Acciones.GuardarPostres(nEntrada3);
+
+                    hoverlogo();
+                    this.Close();
+                    break;
+                case "actividades":
+                    actitidades nEntrada4 = new actitidades();
+                    nEntrada4.lbl_NombreActividad = txtNombre.Text;
+                    nEntrada4.img_Ruta = txtNombre.Text;
+                    nEntrada4.bactivo = true;
+
+                    Acciones.GuardarActividades(nEntrada4);
+
+                    hoverlogo();
+                    this.Close();
+                    break;
+                case "entretenimiento":
+                    internet nEntrada5 = new internet();
+                    nEntrada5.lbl_Url = txtDescripcion.Text;
+                    nEntrada5.lbl_Nombre = txtNombre.Text;
+                    nEntrada5.img_Ruta = txtNombre.Text;
+                    nEntrada5.bactivo = true;
+
+                    Acciones.GuardarInternet(nEntrada5);
+
+                    hoverlogo();
+                    this.Close();
+                    break;
+                case "":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+
+
+
     }
 }

@@ -633,5 +633,129 @@ namespace InterfaceTIV.Model
         //
         //
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////Guardados de los diferentes Paneles///////////////////////////////////
+        //
+        //
+        //
+        //
+        //
+        //
+        public static void GuardarComida(comidas nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idComidas > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void GuardarBebidas(bebidas nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idBebidas > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void GuardarPostres(postres nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idPostres > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void GuardarActividades(actitidades nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idActitidades > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void GuardarInternet(internet nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idInternet > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        //
+        //
+        //
+        //
+        //
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }

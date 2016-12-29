@@ -28,7 +28,7 @@ namespace InterfaceTIV.Vista
         //
         //
         int cambio = 0;                                                            //Variable para el Swicheo de diadema, ratos, silla etc...
-        int cambioPanel = 0;                                                       //variable para controlar el panel automatico, si regresara atras o al de alimentos segun sea necesario
+        public string cambioPanel = "";                                                   //variable para controlar el panel automatico, si regresara atras o al de alimentos segun sea necesario
         //
         //
         string descripUNO = "";
@@ -48,6 +48,12 @@ namespace InterfaceTIV.Vista
         int tipoGuardado = 0;
         //
         //
+        //
+        //
+        //
+        //
+        //
+        //
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -61,9 +67,22 @@ namespace InterfaceTIV.Vista
         {
             InitializeComponent();
             focus();
+            try
+            {
+                //this.Cursor = new Cursor(@"C:\Users\Symonds-Pc\Downloads\favicon.ico");
+                //Cursor.Position = new Point(80,75);
+                
+            }
+            catch
+            {
+            }
+            
 
         }
-        public void focus(){ txtComando.Text = ""; txtComando.Select();}           //Metodo Llamado en Cada Accion para regresar al Focus donde se reciben los parametros de la diadema
+        public void focus(){
+            txtComando.Text = "";
+            txtComando.Select();  
+        }                                                     //Metodo Llamado en Cada Accion para regresar al Focus donde se reciben los parametros de la diadema
         public void enviar(string valor) {
             
                 Console.WriteLine(valor);
@@ -129,17 +148,27 @@ namespace InterfaceTIV.Vista
         private void Notificador(int activo, string Texto, string Descripcion)
         {
 
-            MetodosHTTP datos = new MetodosHTTP();
-            datos.user = Acciones.usuario(1);
-            datos.idAlimento = 0;
-            datos.txtAlimento = "";
-            datos.idActividad = activo;
-            datos.txtActividad = Texto;
-            datos.idtexto = 0;
-            datos.txtTecto = Descripcion;
-            datos.EnviarNotificacion();
+            if (cambioPanel.Equals("entretenimiento"))
+            {
+                abrirNavgador(Descripcion);
+            }
+            else
+            {
+                MetodosHTTP datos = new MetodosHTTP();
+                datos.user = Acciones.usuario(1);
+                datos.idAlimento = 0;
+                datos.txtAlimento = "";
+                datos.idActividad = activo;
+                datos.txtActividad = Texto;
+                datos.idtexto = 0;
+                datos.txtTecto = Descripcion;
+                datos.EnviarNotificacion();
+            }
 
-        }              //metodo para enviar el datos del texto del boton. sera necesario adaptarlo para utilizar como modificador 
+
+           
+
+        }  //metodo para enviar el datos del texto del boton. sera necesario adaptarlo para utilizar como modificador 
         public void ventanaAUTOMATICA(ref Panel Abrir, ref Panel Cerrar)
         {
             Cerrar.Hide();
@@ -147,7 +176,36 @@ namespace InterfaceTIV.Vista
             Abrir.Location = new Point(2, 55);
             focus();
 
-        }           //Abrir Ventana Automatica con los valores necesarios para llenarla            
+        }        //Abrir Ventana Automatica con los valores necesarios para llenarla            
+        public void BuscarDatosRecargar(string cambioPanel) {
+            switch (cambioPanel)
+            {
+                case "comidas":
+                    string[,] Datos1 = Acciones.ObtenerComidas();
+                    llenadoAUTOMATICO(Datos1);
+                    break;
+                case "bebidas":
+                    string[,] Datos2 = Acciones.ObtenerBebidas();
+                    llenadoAUTOMATICO(Datos2);
+                    break;
+                case "postres":
+                    string[,] Datos3 = Acciones.ObtenerPostres();
+                    llenadoAUTOMATICO(Datos3);
+                    break;
+                case "actividades":
+                    string[,] Datos4 = Acciones.ObtenerActividades();
+                    llenadoAUTOMATICO(Datos4);
+                    break;
+                case "entretenimiento":
+                    string[,] Datos5 = Acciones.ObtenerEntretenimiento();
+                    llenadoAUTOMATICO(Datos5);
+                    break;
+                case "":
+                    break;
+                default:
+                    break;
+            }
+        }
         //
         //
         //
@@ -341,7 +399,9 @@ namespace InterfaceTIV.Vista
         {
             AgregarContenido agregarContenido = new AgregarContenido();
             agregarContenido.TipoGuardado = tipoGuardado;
-            agregarContenido.Show(); 
+            agregarContenido.Show();
+            agregarContenido.panelReferencia = cambioPanel;
+            
         }            //Creando la Ventana Para AGREGAR nuevos Registros
         private void btnHablar_Click(object sender, EventArgs e)
         {
@@ -349,12 +409,18 @@ namespace InterfaceTIV.Vista
         }                //Abriendo la Aplicacion de ACAT
         public void abrirNavgador(string url) {
             Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", url);
+            
+                    WebNavegador web = new WebNavegador();
+                    web.Show();
+                    web.SetDesktopLocation(0, 0);
+                    web.Activate();
+
+            
         }
         //
         //
         //
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
         ///////////////////////////////////////////////////ABRIR/CERRAR PANELES////////////////////////////////////////////////////////
         //
@@ -373,21 +439,21 @@ namespace InterfaceTIV.Vista
             string[,] Datos =  Acciones.ObtenerComidas();
             llenadoAUTOMATICO(Datos);
             ocultarVentana(ref panelAutomatico, ref panelAlimentos);
-            cambioPanel = 1;
+            cambioPanel = "comidas";
         }
         private void btnBebidas_Click(object sender, EventArgs e)
         {
             string[,] Datos = Acciones.ObtenerBebidas();
             llenadoAUTOMATICO(Datos);
             ocultarVentana(ref panelAutomatico, ref panelAlimentos);
-            cambioPanel = 1;
+            cambioPanel = "bebidas";
         }
         private void btnPostres_Click(object sender, EventArgs e)
         {
             string[,] Datos = Acciones.ObtenerPostres();
             llenadoAUTOMATICO(Datos);
             ocultarVentana(ref panelAutomatico, ref panelAlimentos);
-            cambioPanel = 1;
+            cambioPanel = "postres";
         }
         //
         //
@@ -399,41 +465,48 @@ namespace InterfaceTIV.Vista
         // Eventos de los botones Regresar de cada Panel
         private void btnRegresarAlimentos_Click(object sender, EventArgs e)
         {
+            cambioPanel = "";
             ocultarVentana(ref panelHome, ref panelAlimentos);
             focus();
         }
         private void btnRegresarPanelActividades_Click(object sender, EventArgs e)
         {
+            cambioPanel = "";
             ocultarVentana(ref panelHome, ref panelActividades);
             focus();
         }
         private void btnRegresarEntretenimiento_Click(object sender, EventArgs e)
         {
+            cambioPanel = "";
+            cambio = 1;
             ocultarVentana(ref panelSilla, ref panelRUTA);
             focus();
-        }
+        } //regresar del panel Rutas
         private void btnRegresarRemoto_Click(object sender, EventArgs e)
         {
+            cambioPanel = "";
             ocultarVentana(ref panelHome, ref panelControlRemoto);
             focus();
         }
         private void btnRegresarSilla_Click(object sender, EventArgs e)
         {
+            cambioPanel = "";
             ocultarVentana(ref panelHome, ref panelSilla);
             cambio = 0;
             focus();
         }
         private void btnRegresarAutomatico_Click(object sender, EventArgs e)
         {
-            if (cambioPanel==1)
+            if (cambioPanel.Equals("comidas") || cambioPanel.Equals("bebidas") || cambioPanel.Equals("postres"))
             {
+                cambioPanel = "";
                 ocultarVentana(ref panelAlimentos, ref panelAutomatico);
                 vaciarAUTOMATICO();
-                cambioPanel = 0;
                 focus();
             }
             else
             {
+                cambioPanel = "";
                 ocultarVentana(ref panelHome, ref panelAutomatico);
                 vaciarAUTOMATICO();
                 focus();
@@ -464,6 +537,7 @@ namespace InterfaceTIV.Vista
             string[,] Datos = Acciones.ObtenerActividades();
             llenadoAUTOMATICO(Datos);
             ventanaAUTOMATICA(ref panelAutomatico, ref panelHome);
+            cambioPanel = "actividades";
 
         }
         private void btnEntretenimiento_Click(object sender, EventArgs e)
@@ -471,15 +545,19 @@ namespace InterfaceTIV.Vista
             string[,] Datos = Acciones.ObtenerEntretenimiento();
             llenadoAUTOMATICO(Datos);
             ventanaAUTOMATICA(ref panelAutomatico, ref panelHome);
+            cambioPanel = "entretenimiento";
         }
         private void btnControlRemoto_Click(object sender, EventArgs e)
         {
             ventanaAUTOMATICA(ref panelControlRemoto, ref panelHome);
+            cambioPanel = "controlremoto";
         }
         private void btnSilla_Click(object sender, EventArgs e)
         {
             ocultarVentana(ref panelSilla, ref panelHome);
             cambio = 1;
+            cambioPanel = "silla";
+
 
             try
             {
@@ -489,9 +567,7 @@ namespace InterfaceTIV.Vista
             {
                 Console.Write("Error clase MovimientoInterface al Mover Mause");
             }
-
-
-
+            
             //cambio especial del swich para cambia a impresion Serial
         }                   //aqui el evento para cambiar a impresion serial
         //
@@ -591,6 +667,7 @@ namespace InterfaceTIV.Vista
         private void btnRutas_Click(object sender, EventArgs e)
         {
             ocultarVentana(ref panelRUTA, ref panelSilla);
+            cambio = 0;
         }
         //
         //
@@ -1048,6 +1125,15 @@ namespace InterfaceTIV.Vista
         private void btnIRhabitacion_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnIRhabitacion);
+        }
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void pictureBox8_MouseHover(object sender, EventArgs e)
+        {
+            BuscarDatosRecargar(cambioPanel);
+            focus();
         }
         //
         //
