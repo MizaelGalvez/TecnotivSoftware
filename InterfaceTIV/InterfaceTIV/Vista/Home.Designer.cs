@@ -127,6 +127,7 @@
             // 
             // panelHome
             // 
+            this.panelHome.Controls.Add(this.pictureBox8);
             this.panelHome.Controls.Add(this.btnSeleccion);
             this.panelHome.Controls.Add(this.btnSilla);
             this.panelHome.Controls.Add(this.btnHablar);
@@ -865,7 +866,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgLogo;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(4, 35);
+            this.pictureBox8.Location = new System.Drawing.Point(-5, -6);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(136, 114);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1066,7 +1067,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(940, 559);
-            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.panelSilla);
             this.Controls.Add(this.panelRUTA);
             this.Controls.Add(this.panelAutomatico);

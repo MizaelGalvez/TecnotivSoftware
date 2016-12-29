@@ -13,6 +13,7 @@ using InterfaceTIV.Controladores;
 using Emotiv;
 using System.IO.Ports;
 using InterfaceTIV.Model;
+using System.Diagnostics;
 
 namespace InterfaceTIV.Vista
 {
@@ -344,9 +345,11 @@ namespace InterfaceTIV.Vista
         }            //Creando la Ventana Para AGREGAR nuevos Registros
         private void btnHablar_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\Intel\ACAT\ACATTalk");
+            Process.Start(@"C:\Intel\ACAT\ACATTalk");
         }                //Abriendo la Aplicacion de ACAT
-        //
+        public void abrirNavgador(string url) {
+            Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", url);
+        }
         //
         //
         //

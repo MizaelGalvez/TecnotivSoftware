@@ -119,6 +119,12 @@
     <Compile Include="Vista\InicioCarga.Designer.cs">
       <DependentUpon>InicioCarga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\WebNavegador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\WebNavegador.Designer.cs">
+      <DependentUpon>WebNavegador.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="Vista\InicioCarga.resx">
       <DependentUpon>InicioCarga.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\WebNavegador.resx">
+      <DependentUpon>WebNavegador.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cabezeras\edk.dll" />
@@ -154,6 +163,8 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\btnHotmail.png" />
+    <None Include="Resources\btnGmail.png" />
     <None Include="Resources\btnHabitacion.png" />
     <None Include="Resources\btnAgregarRuta.png" />
     <None Include="Resources\brnBaño.png" />

@@ -25,42 +25,50 @@ namespace InterfaceTIV.Controladores
 
         public string VerificarUsuario()
         {
-           
-            string sURL;
-            
-            sURL = String.Format("http://138.197.144.25/gets/VerificarUsuario.php?user="+user +"&pass="+pass);
-            
+            try
+            {
+                string sURL;
 
-            WebRequest wrGETURL;
-            wrGETURL = WebRequest.Create(sURL);
-            
-            Stream objStream;
-            objStream = wrGETURL.GetResponse().GetResponseStream();
+                sURL = String.Format("http://138.197.144.25/gets/VerificarUsuario.php?user=" + user + "&pass=" + pass);
 
-            StreamReader objReader = new StreamReader(objStream);
-            
-            string sLine = "";
-            int i = 0;
 
-            
+                WebRequest wrGETURL;
+                wrGETURL = WebRequest.Create(sURL);
+
+                Stream objStream;
+                objStream = wrGETURL.GetResponse().GetResponseStream();
+
+                StreamReader objReader = new StreamReader(objStream);
+
+                string sLine = "";
+                int i = 0;
+
+
                 i++;
                 sLine = objReader.ReadLine();
-                
+
                 var definition = new { bActivo = "" };
 
                 string json = sLine;
 
                 json = json.TrimStart('[');
                 json = json.TrimEnd(']');
-                
-            
+
+
                 Console.WriteLine(json);
 
                 var activo = JsonConvert.DeserializeAnonymousType(json, definition);
-                
+
                 Console.WriteLine(activo.bActivo);
-              
-            return activo.bActivo;
+
+                return activo.bActivo;
+            }
+            catch (Exception)
+            {
+
+                return "0";
+            }
+            
 
         }
 

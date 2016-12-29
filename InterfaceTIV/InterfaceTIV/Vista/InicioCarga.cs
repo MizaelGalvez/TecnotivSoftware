@@ -54,7 +54,22 @@ namespace InterfaceTIV.Vista
 
                 this.Close();
 
-                
+
+            }
+            else
+            {
+                MessageBox.Show("Error: no se Puede Verificar el Usuario, Algunas Funciones estan Desabilitadas");
+
+                progressBar1.Increment(100);
+
+
+                Home HOME = new Home();
+                HOME.Show();
+                HOME.SetDesktopLocation(0, 0);
+                HOME.Activate();
+
+
+                this.Close();
             }
 
         }
