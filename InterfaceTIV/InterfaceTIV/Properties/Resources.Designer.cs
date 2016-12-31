@@ -333,6 +333,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnGuardarRuta {
+            get {
+                object obj = ResourceManager.GetObject("btnGuardarRuta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnHabitacion {
             get {
                 object obj = ResourceManager.GetObject("btnHabitacion", resourceCulture);
@@ -426,6 +436,16 @@ namespace InterfaceTIV.Properties {
         internal static System.Drawing.Bitmap btnimgSilla {
             get {
                 object obj = ResourceManager.GetObject("btnimgSilla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnIniciarRuta {
+            get {
+                object obj = ResourceManager.GetObject("btnIniciarRuta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

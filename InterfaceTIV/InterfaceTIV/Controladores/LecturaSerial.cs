@@ -15,6 +15,10 @@ namespace InterfaceTIV.Controladores
     {
         public int sensor{ get; set; }
         public string valor { get; set; }
+        public string panelReferencia { get; set; }
+        public int contador { get; set; }
+
+
         public void Lectura()
         {
             
@@ -35,10 +39,8 @@ namespace InterfaceTIV.Controladores
                 _serialPort.PortName = item;
             }
 
-            if (sensor == 1)  //TODO arreglar la impresion serial
+            if (sensor == 2)  //TODO arreglar la impresion serial
             {
-            
-
                 //try
                 //{
                 //    _serialPort.Open();
@@ -47,18 +49,18 @@ namespace InterfaceTIV.Controladores
                 //}
                 //catch
                 //{
-                //    Console.Write("error al abrir");
+                //    Console.Write("error");
                 //}
-                
             }
             else
             {
 
                 MovimientoInterface movimiento = new MovimientoInterface();
                 movimiento.valor = valor;
+                movimiento.panelReferencia = panelReferencia;
+                movimiento.contador = contador;
                 movimiento.MoverCursor();
-
-
+                
             }
             
         }

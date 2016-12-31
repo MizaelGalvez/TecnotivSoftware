@@ -56,26 +56,8 @@ namespace InterfaceTIV.Vista
 
 
             }
-            else
-            {
-                MessageBox.Show("Error: no se Puede Verificar el Usuario, Algunas Funciones estan Desabilitadas");
-
-                progressBar1.Increment(100);
-
-
-                Home HOME = new Home();
-                HOME.Show();
-                HOME.SetDesktopLocation(0, 0);
-                HOME.Activate();
-
-
-                this.Close();
-            }
-
         }
-
-
-
+        
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -104,6 +86,11 @@ namespace InterfaceTIV.Vista
             nEntrada.idConfiguracion = 1;
             nEntrada.lbl_Usuario = txtUsuario.Text;
             nEntrada.txtContraseña = txtContraseña.Text;
+            nEntrada.lbl_idioma = 1;                             //TODO: colocar un combo box para seleccionar idioma, español o ingles
+            nEntrada.uso_diadema = 0;
+            nEntrada.uso_Mause = 0;
+            nEntrada.uso_Sensor = 0;
+            nEntrada.uso_silla = 1;
 
             Acciones.Guardar(nEntrada);
 

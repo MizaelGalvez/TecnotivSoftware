@@ -107,6 +107,12 @@
     <Compile Include="Vista\Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\GuardarRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\GuardarRuta.Designer.cs">
+      <DependentUpon>GuardarRuta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="Vista\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\GuardarRuta.resx">
+      <DependentUpon>GuardarRuta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +172,8 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\btnGuardarRuta.png" />
+    <None Include="Resources\btnIniciarRuta.png" />
     <None Include="Resources\btnHotmail.png" />
     <None Include="Resources\btnGmail.png" />
     <None Include="Resources\btnHabitacion.png" />
