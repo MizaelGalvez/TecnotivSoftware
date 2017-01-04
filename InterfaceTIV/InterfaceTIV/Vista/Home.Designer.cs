@@ -30,16 +30,6 @@
         {
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
-            this.panelRUTA = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnRuta2 = new System.Windows.Forms.Button();
-            this.btnRuta5 = new System.Windows.Forms.Button();
-            this.btnRuta4 = new System.Windows.Forms.Button();
-            this.btnRuta3 = new System.Windows.Forms.Button();
-            this.btnRuta1 = new System.Windows.Forms.Button();
-            this.btnIRhabitacion = new System.Windows.Forms.Button();
-            this.btnRegresarRutas = new System.Windows.Forms.Button();
-            this.btnIRbaño = new System.Windows.Forms.Button();
             this.btnSeleccion = new System.Windows.Forms.Button();
             this.btnSilla = new System.Windows.Forms.Button();
             this.btnHablar = new System.Windows.Forms.Button();
@@ -76,6 +66,7 @@
             this.panelComando = new System.Windows.Forms.Panel();
             this.txtComando = new System.Windows.Forms.TextBox();
             this.panelAutomatico = new System.Windows.Forms.Panel();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.btnAgregarMAS = new System.Windows.Forms.Button();
             this.btnMostrarMasDER = new System.Windows.Forms.Button();
             this.btnMostrarMenosIZQ = new System.Windows.Forms.Button();
@@ -92,11 +83,19 @@
             this.btnUNO = new System.Windows.Forms.Button();
             this.imgUNO = new System.Windows.Forms.PictureBox();
             this.btnRegresarAutomatico = new System.Windows.Forms.Button();
+            this.panelRUTA = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnRuta2 = new System.Windows.Forms.Button();
+            this.btnRuta5 = new System.Windows.Forms.Button();
+            this.btnRuta4 = new System.Windows.Forms.Button();
+            this.btnRuta3 = new System.Windows.Forms.Button();
+            this.btnRuta1 = new System.Windows.Forms.Button();
+            this.btnIRhabitacion = new System.Windows.Forms.Button();
+            this.btnRegresarRutas = new System.Windows.Forms.Button();
+            this.btnIRbaño = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelHome.SuspendLayout();
-            this.panelRUTA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelAlimentos.SuspendLayout();
             this.panelActividades.SuspendLayout();
             this.panelControlRemoto.SuspendLayout();
@@ -110,6 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgTRES)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDOS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUNO)).BeginInit();
+            this.panelRUTA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,6 +130,7 @@
             // 
             // panelHome
             // 
+            this.panelHome.BackColor = System.Drawing.Color.Transparent;
             this.panelHome.Controls.Add(this.btnSeleccion);
             this.panelHome.Controls.Add(this.btnSilla);
             this.panelHome.Controls.Add(this.btnHablar);
@@ -141,180 +143,9 @@
             this.panelHome.Size = new System.Drawing.Size(924, 451);
             this.panelHome.TabIndex = 8;
             // 
-            // panelRUTA
-            // 
-            this.panelRUTA.BackgroundImage = global::InterfaceTIV.Properties.Resources.FondoMAPA;
-            this.panelRUTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelRUTA.Controls.Add(this.pictureBox2);
-            this.panelRUTA.Controls.Add(this.btnRuta2);
-            this.panelRUTA.Controls.Add(this.btnRuta5);
-            this.panelRUTA.Controls.Add(this.btnRuta4);
-            this.panelRUTA.Controls.Add(this.btnRuta3);
-            this.panelRUTA.Controls.Add(this.btnRuta1);
-            this.panelRUTA.Controls.Add(this.btnIRhabitacion);
-            this.panelRUTA.Controls.Add(this.btnRegresarRutas);
-            this.panelRUTA.Controls.Add(this.btnIRbaño);
-            this.panelRUTA.Location = new System.Drawing.Point(890, 557);
-            this.panelRUTA.Name = "panelRUTA";
-            this.panelRUTA.Size = new System.Drawing.Size(936, 509);
-            this.panelRUTA.TabIndex = 11;
-            this.panelRUTA.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgLogo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-2, -13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(136, 114);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnRuta2
-            // 
-            this.btnRuta2.BackColor = System.Drawing.Color.Green;
-            this.btnRuta2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRuta2.FlatAppearance.BorderSize = 0;
-            this.btnRuta2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
-            this.btnRuta2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnRuta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRuta2.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRuta2.Location = new System.Drawing.Point(218, 135);
-            this.btnRuta2.Name = "btnRuta2";
-            this.btnRuta2.Size = new System.Drawing.Size(126, 88);
-            this.btnRuta2.TabIndex = 16;
-            this.btnRuta2.Text = "COMEDOR";
-            this.btnRuta2.UseVisualStyleBackColor = false;
-            // 
-            // btnRuta5
-            // 
-            this.btnRuta5.BackColor = System.Drawing.Color.Transparent;
-            this.btnRuta5.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
-            this.btnRuta5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRuta5.FlatAppearance.BorderSize = 0;
-            this.btnRuta5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRuta5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRuta5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuta5.Location = new System.Drawing.Point(720, 208);
-            this.btnRuta5.Name = "btnRuta5";
-            this.btnRuta5.Size = new System.Drawing.Size(144, 135);
-            this.btnRuta5.TabIndex = 15;
-            this.btnRuta5.UseVisualStyleBackColor = false;
-            this.btnRuta5.Click += new System.EventHandler(this.btnRuta5_Click);
-            this.btnRuta5.MouseLeave += new System.EventHandler(this.btnRuta5_MouseLeave);
-            this.btnRuta5.MouseHover += new System.EventHandler(this.btnRuta5_MouseHover);
-            // 
-            // btnRuta4
-            // 
-            this.btnRuta4.BackColor = System.Drawing.Color.Transparent;
-            this.btnRuta4.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
-            this.btnRuta4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRuta4.FlatAppearance.BorderSize = 0;
-            this.btnRuta4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRuta4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRuta4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuta4.Location = new System.Drawing.Point(570, 123);
-            this.btnRuta4.Name = "btnRuta4";
-            this.btnRuta4.Size = new System.Drawing.Size(144, 135);
-            this.btnRuta4.TabIndex = 14;
-            this.btnRuta4.UseVisualStyleBackColor = false;
-            this.btnRuta4.Click += new System.EventHandler(this.btnRuta4_Click);
-            this.btnRuta4.MouseLeave += new System.EventHandler(this.btnRuta4_MouseLeave);
-            this.btnRuta4.MouseHover += new System.EventHandler(this.btnRuta4_MouseHover);
-            // 
-            // btnRuta3
-            // 
-            this.btnRuta3.BackColor = System.Drawing.Color.Transparent;
-            this.btnRuta3.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
-            this.btnRuta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRuta3.FlatAppearance.BorderSize = 0;
-            this.btnRuta3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRuta3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRuta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuta3.Location = new System.Drawing.Point(392, 53);
-            this.btnRuta3.Name = "btnRuta3";
-            this.btnRuta3.Size = new System.Drawing.Size(144, 135);
-            this.btnRuta3.TabIndex = 13;
-            this.btnRuta3.UseVisualStyleBackColor = false;
-            this.btnRuta3.Click += new System.EventHandler(this.btnRuta3_Click);
-            this.btnRuta3.MouseLeave += new System.EventHandler(this.btnRuta3_MouseLeave);
-            this.btnRuta3.MouseHover += new System.EventHandler(this.btnRuta3_MouseHover);
-            // 
-            // btnRuta1
-            // 
-            this.btnRuta1.BackColor = System.Drawing.Color.Green;
-            this.btnRuta1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRuta1.FlatAppearance.BorderSize = 0;
-            this.btnRuta1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
-            this.btnRuta1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnRuta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRuta1.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRuta1.Location = new System.Drawing.Point(47, 230);
-            this.btnRuta1.Name = "btnRuta1";
-            this.btnRuta1.Size = new System.Drawing.Size(126, 88);
-            this.btnRuta1.TabIndex = 11;
-            this.btnRuta1.Text = "SALA";
-            this.btnRuta1.UseVisualStyleBackColor = false;
-            // 
-            // btnIRhabitacion
-            // 
-            this.btnIRhabitacion.BackColor = System.Drawing.Color.Transparent;
-            this.btnIRhabitacion.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnHabitacion;
-            this.btnIRhabitacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIRhabitacion.FlatAppearance.BorderSize = 0;
-            this.btnIRhabitacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnIRhabitacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnIRhabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIRhabitacion.Location = new System.Drawing.Point(481, 388);
-            this.btnIRhabitacion.Name = "btnIRhabitacion";
-            this.btnIRhabitacion.Size = new System.Drawing.Size(136, 102);
-            this.btnIRhabitacion.TabIndex = 6;
-            this.btnIRhabitacion.UseVisualStyleBackColor = false;
-            this.btnIRhabitacion.MouseLeave += new System.EventHandler(this.btnIRhabitacion_MouseLeave);
-            this.btnIRhabitacion.MouseHover += new System.EventHandler(this.btnIRhabitacion_MouseHover);
-            // 
-            // btnRegresarRutas
-            // 
-            this.btnRegresarRutas.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegresarRutas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
-            this.btnRegresarRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegresarRutas.FlatAppearance.BorderSize = 0;
-            this.btnRegresarRutas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRegresarRutas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRegresarRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresarRutas.Location = new System.Drawing.Point(823, 3);
-            this.btnRegresarRutas.Name = "btnRegresarRutas";
-            this.btnRegresarRutas.Size = new System.Drawing.Size(97, 86);
-            this.btnRegresarRutas.TabIndex = 5;
-            this.btnRegresarRutas.UseVisualStyleBackColor = false;
-            this.btnRegresarRutas.Click += new System.EventHandler(this.btnRegresarEntretenimiento_Click);
-            this.btnRegresarRutas.MouseLeave += new System.EventHandler(this.btnRegresarRutas_MouseLeave);
-            this.btnRegresarRutas.MouseHover += new System.EventHandler(this.btnRegresarRutas_MouseHover);
-            // 
-            // btnIRbaño
-            // 
-            this.btnIRbaño.BackColor = System.Drawing.Color.Transparent;
-            this.btnIRbaño.BackgroundImage = global::InterfaceTIV.Properties.Resources.brnBaño;
-            this.btnIRbaño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIRbaño.FlatAppearance.BorderSize = 0;
-            this.btnIRbaño.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnIRbaño.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnIRbaño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIRbaño.Location = new System.Drawing.Point(299, 388);
-            this.btnIRbaño.Name = "btnIRbaño";
-            this.btnIRbaño.Size = new System.Drawing.Size(136, 102);
-            this.btnIRbaño.TabIndex = 1;
-            this.btnIRbaño.UseVisualStyleBackColor = false;
-            this.btnIRbaño.MouseLeave += new System.EventHandler(this.btnIRbaño_MouseLeave);
-            this.btnIRbaño.MouseHover += new System.EventHandler(this.btnIRbaño_MouseHover);
-            // 
             // btnSeleccion
             // 
-            this.btnSeleccion.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgMensaje;
+            this.btnSeleccion.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnimgHablar;
             this.btnSeleccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSeleccion.FlatAppearance.BorderSize = 0;
             this.btnSeleccion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -434,6 +265,7 @@
             // 
             // panelAlimentos
             // 
+            this.panelAlimentos.BackColor = System.Drawing.Color.Transparent;
             this.panelAlimentos.Controls.Add(this.btnRegresarAlimentos);
             this.panelAlimentos.Controls.Add(this.btnPostres);
             this.panelAlimentos.Controls.Add(this.btnBebidas);
@@ -514,6 +346,7 @@
             // 
             // panelActividades
             // 
+            this.panelActividades.BackColor = System.Drawing.Color.Transparent;
             this.panelActividades.Controls.Add(this.btnCine);
             this.panelActividades.Controls.Add(this.btnBano);
             this.panelActividades.Controls.Add(this.btnPasear);
@@ -593,6 +426,7 @@
             // 
             // panelWeb
             // 
+            this.panelWeb.BackColor = System.Drawing.Color.Transparent;
             this.panelWeb.Location = new System.Drawing.Point(877, 570);
             this.panelWeb.Name = "panelWeb";
             this.panelWeb.Size = new System.Drawing.Size(916, 509);
@@ -600,6 +434,7 @@
             // 
             // panelControlRemoto
             // 
+            this.panelControlRemoto.BackColor = System.Drawing.Color.Transparent;
             this.panelControlRemoto.Controls.Add(this.btnRegresarRemoto);
             this.panelControlRemoto.Controls.Add(this.btnLuces);
             this.panelControlRemoto.Controls.Add(this.btnAcondicionado);
@@ -654,6 +489,7 @@
             // 
             // panelSilla
             // 
+            this.panelSilla.BackColor = System.Drawing.Color.Transparent;
             this.panelSilla.Controls.Add(this.btnRutas);
             this.panelSilla.Controls.Add(this.btnFlechaIzquierda);
             this.panelSilla.Controls.Add(this.btnFlechaDerecha);
@@ -782,7 +618,8 @@
             // 
             // panelAutomatico
             // 
-            this.panelAutomatico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.panelAutomatico.BackColor = System.Drawing.Color.Transparent;
+            this.panelAutomatico.Controls.Add(this.btnBorrar);
             this.panelAutomatico.Controls.Add(this.btnAgregarMAS);
             this.panelAutomatico.Controls.Add(this.btnMostrarMasDER);
             this.panelAutomatico.Controls.Add(this.btnMostrarMenosIZQ);
@@ -799,11 +636,28 @@
             this.panelAutomatico.Controls.Add(this.btnUNO);
             this.panelAutomatico.Controls.Add(this.imgUNO);
             this.panelAutomatico.Controls.Add(this.btnRegresarAutomatico);
-            this.panelAutomatico.Location = new System.Drawing.Point(826, 618);
+            this.panelAutomatico.Location = new System.Drawing.Point(828, 610);
             this.panelAutomatico.Name = "panelAutomatico";
             this.panelAutomatico.Size = new System.Drawing.Size(926, 506);
             this.panelAutomatico.TabIndex = 10;
             this.panelAutomatico.Visible = false;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBorrar;
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Location = new System.Drawing.Point(821, 454);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(38, 35);
+            this.btnBorrar.TabIndex = 20;
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            this.btnBorrar.MouseLeave += new System.EventHandler(this.btnBorrar_MouseLeave);
+            this.btnBorrar.MouseHover += new System.EventHandler(this.btnBorrar_MouseHover);
             // 
             // btnAgregarMAS
             // 
@@ -1063,6 +917,177 @@
             this.btnRegresarAutomatico.MouseLeave += new System.EventHandler(this.btnRegresarAutomatico_MouseLeave);
             this.btnRegresarAutomatico.MouseHover += new System.EventHandler(this.btnRegresarAutomatico_MouseHover);
             // 
+            // panelRUTA
+            // 
+            this.panelRUTA.BackgroundImage = global::InterfaceTIV.Properties.Resources.FondoMAPA;
+            this.panelRUTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelRUTA.Controls.Add(this.pictureBox2);
+            this.panelRUTA.Controls.Add(this.btnRuta2);
+            this.panelRUTA.Controls.Add(this.btnRuta5);
+            this.panelRUTA.Controls.Add(this.btnRuta4);
+            this.panelRUTA.Controls.Add(this.btnRuta3);
+            this.panelRUTA.Controls.Add(this.btnRuta1);
+            this.panelRUTA.Controls.Add(this.btnIRhabitacion);
+            this.panelRUTA.Controls.Add(this.btnRegresarRutas);
+            this.panelRUTA.Controls.Add(this.btnIRbaño);
+            this.panelRUTA.Location = new System.Drawing.Point(890, 557);
+            this.panelRUTA.Name = "panelRUTA";
+            this.panelRUTA.Size = new System.Drawing.Size(936, 509);
+            this.panelRUTA.TabIndex = 11;
+            this.panelRUTA.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgLogo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(-2, -13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(136, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnRuta2
+            // 
+            this.btnRuta2.BackColor = System.Drawing.Color.Green;
+            this.btnRuta2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRuta2.FlatAppearance.BorderSize = 0;
+            this.btnRuta2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
+            this.btnRuta2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnRuta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRuta2.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRuta2.Location = new System.Drawing.Point(218, 135);
+            this.btnRuta2.Name = "btnRuta2";
+            this.btnRuta2.Size = new System.Drawing.Size(126, 88);
+            this.btnRuta2.TabIndex = 16;
+            this.btnRuta2.Text = "COMEDOR";
+            this.btnRuta2.UseVisualStyleBackColor = false;
+            // 
+            // btnRuta5
+            // 
+            this.btnRuta5.BackColor = System.Drawing.Color.Transparent;
+            this.btnRuta5.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
+            this.btnRuta5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRuta5.FlatAppearance.BorderSize = 0;
+            this.btnRuta5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRuta5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRuta5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuta5.Location = new System.Drawing.Point(720, 208);
+            this.btnRuta5.Name = "btnRuta5";
+            this.btnRuta5.Size = new System.Drawing.Size(144, 135);
+            this.btnRuta5.TabIndex = 15;
+            this.btnRuta5.UseVisualStyleBackColor = false;
+            this.btnRuta5.Click += new System.EventHandler(this.btnRuta5_Click);
+            this.btnRuta5.MouseLeave += new System.EventHandler(this.btnRuta5_MouseLeave);
+            this.btnRuta5.MouseHover += new System.EventHandler(this.btnRuta5_MouseHover);
+            // 
+            // btnRuta4
+            // 
+            this.btnRuta4.BackColor = System.Drawing.Color.Transparent;
+            this.btnRuta4.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
+            this.btnRuta4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRuta4.FlatAppearance.BorderSize = 0;
+            this.btnRuta4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRuta4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRuta4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuta4.Location = new System.Drawing.Point(570, 123);
+            this.btnRuta4.Name = "btnRuta4";
+            this.btnRuta4.Size = new System.Drawing.Size(144, 135);
+            this.btnRuta4.TabIndex = 14;
+            this.btnRuta4.UseVisualStyleBackColor = false;
+            this.btnRuta4.Click += new System.EventHandler(this.btnRuta4_Click);
+            this.btnRuta4.MouseLeave += new System.EventHandler(this.btnRuta4_MouseLeave);
+            this.btnRuta4.MouseHover += new System.EventHandler(this.btnRuta4_MouseHover);
+            // 
+            // btnRuta3
+            // 
+            this.btnRuta3.BackColor = System.Drawing.Color.Transparent;
+            this.btnRuta3.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
+            this.btnRuta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRuta3.FlatAppearance.BorderSize = 0;
+            this.btnRuta3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRuta3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRuta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuta3.Location = new System.Drawing.Point(392, 53);
+            this.btnRuta3.Name = "btnRuta3";
+            this.btnRuta3.Size = new System.Drawing.Size(144, 135);
+            this.btnRuta3.TabIndex = 13;
+            this.btnRuta3.UseVisualStyleBackColor = false;
+            this.btnRuta3.Click += new System.EventHandler(this.btnRuta3_Click);
+            this.btnRuta3.MouseLeave += new System.EventHandler(this.btnRuta3_MouseLeave);
+            this.btnRuta3.MouseHover += new System.EventHandler(this.btnRuta3_MouseHover);
+            // 
+            // btnRuta1
+            // 
+            this.btnRuta1.BackColor = System.Drawing.Color.Green;
+            this.btnRuta1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRuta1.FlatAppearance.BorderSize = 0;
+            this.btnRuta1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
+            this.btnRuta1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnRuta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRuta1.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRuta1.Location = new System.Drawing.Point(47, 230);
+            this.btnRuta1.Name = "btnRuta1";
+            this.btnRuta1.Size = new System.Drawing.Size(126, 88);
+            this.btnRuta1.TabIndex = 11;
+            this.btnRuta1.Text = "SALA";
+            this.btnRuta1.UseVisualStyleBackColor = false;
+            // 
+            // btnIRhabitacion
+            // 
+            this.btnIRhabitacion.BackColor = System.Drawing.Color.Transparent;
+            this.btnIRhabitacion.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnHabitacion;
+            this.btnIRhabitacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIRhabitacion.FlatAppearance.BorderSize = 0;
+            this.btnIRhabitacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnIRhabitacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnIRhabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIRhabitacion.Location = new System.Drawing.Point(481, 388);
+            this.btnIRhabitacion.Name = "btnIRhabitacion";
+            this.btnIRhabitacion.Size = new System.Drawing.Size(136, 102);
+            this.btnIRhabitacion.TabIndex = 6;
+            this.btnIRhabitacion.UseVisualStyleBackColor = false;
+            this.btnIRhabitacion.MouseLeave += new System.EventHandler(this.btnIRhabitacion_MouseLeave);
+            this.btnIRhabitacion.MouseHover += new System.EventHandler(this.btnIRhabitacion_MouseHover);
+            // 
+            // btnRegresarRutas
+            // 
+            this.btnRegresarRutas.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarRutas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
+            this.btnRegresarRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegresarRutas.FlatAppearance.BorderSize = 0;
+            this.btnRegresarRutas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarRutas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresarRutas.Location = new System.Drawing.Point(823, 3);
+            this.btnRegresarRutas.Name = "btnRegresarRutas";
+            this.btnRegresarRutas.Size = new System.Drawing.Size(97, 86);
+            this.btnRegresarRutas.TabIndex = 5;
+            this.btnRegresarRutas.UseVisualStyleBackColor = false;
+            this.btnRegresarRutas.Click += new System.EventHandler(this.btnRegresarEntretenimiento_Click);
+            this.btnRegresarRutas.MouseLeave += new System.EventHandler(this.btnRegresarRutas_MouseLeave);
+            this.btnRegresarRutas.MouseHover += new System.EventHandler(this.btnRegresarRutas_MouseHover);
+            // 
+            // btnIRbaño
+            // 
+            this.btnIRbaño.BackColor = System.Drawing.Color.Transparent;
+            this.btnIRbaño.BackgroundImage = global::InterfaceTIV.Properties.Resources.brnBaño;
+            this.btnIRbaño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIRbaño.FlatAppearance.BorderSize = 0;
+            this.btnIRbaño.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnIRbaño.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnIRbaño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIRbaño.Location = new System.Drawing.Point(299, 388);
+            this.btnIRbaño.Name = "btnIRbaño";
+            this.btnIRbaño.Size = new System.Drawing.Size(136, 102);
+            this.btnIRbaño.TabIndex = 1;
+            this.btnIRbaño.UseVisualStyleBackColor = false;
+            this.btnIRbaño.MouseLeave += new System.EventHandler(this.btnIRbaño_MouseLeave);
+            this.btnIRbaño.MouseHover += new System.EventHandler(this.btnIRbaño_MouseHover);
+            // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
@@ -1090,24 +1115,25 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(940, 556);
-            this.Controls.Add(this.panelRUTA);
+            this.BackgroundImage = global::InterfaceTIV.Properties.Resources.bacground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(940, 558);
             this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.panelRUTA);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSilla);
-            this.Controls.Add(this.panelAutomatico);
             this.Controls.Add(this.panelComando);
             this.Controls.Add(this.panelWeb);
             this.Controls.Add(this.panelActividades);
             this.Controls.Add(this.panelControlRemoto);
             this.Controls.Add(this.panelHome);
             this.Controls.Add(this.panelAlimentos);
+            this.Controls.Add(this.panelAutomatico);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.Text = "Home";
             this.panelHome.ResumeLayout(false);
-            this.panelRUTA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelAlimentos.ResumeLayout(false);
             this.panelActividades.ResumeLayout(false);
             this.panelControlRemoto.ResumeLayout(false);
@@ -1122,6 +1148,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgTRES)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDOS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUNO)).EndInit();
+            this.panelRUTA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
@@ -1195,5 +1223,6 @@
         private System.Windows.Forms.Button btnRuta3;
         private System.Windows.Forms.Button btnRuta2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }

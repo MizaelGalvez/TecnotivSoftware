@@ -101,6 +101,12 @@
     <Compile Include="Vista\AgregarContenido.Designer.cs">
       <DependentUpon>AgregarContenido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\BorrarContenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\BorrarContenido.Designer.cs">
+      <DependentUpon>BorrarContenido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <EmbeddedResource Include="Vista\AgregarContenido.resx">
       <DependentUpon>AgregarContenido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\BorrarContenido.resx">
+      <DependentUpon>BorrarContenido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +181,11 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\bacground.png" />
+    <None Include="Resources\fondoBack.png" />
+    <None Include="Resources\btnBorrar.png" />
+    <None Include="Resources\btnRegresarClick.png" />
+    <None Include="Resources\btnagrgarmasClick.png" />
     <None Include="Resources\btnGuardarRuta.png" />
     <None Include="Resources\btnIniciarRuta.png" />
     <None Include="Resources\btnHotmail.png" />

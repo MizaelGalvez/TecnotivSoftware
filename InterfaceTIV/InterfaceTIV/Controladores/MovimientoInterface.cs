@@ -22,7 +22,7 @@ namespace InterfaceTIV.Controladores
 
         public void MoverCursor()
         {
-
+            
             // N = neutral A = adelante I = izquierda D = derecha UP = arriba DOWN = abajo
             if (valor.Equals("A")||valor.Equals("S")||valor.Equals("D")|| valor.Equals("W"))
             {
@@ -95,12 +95,12 @@ namespace InterfaceTIV.Controladores
         {
             try
             {
-                Cursor.Hide();
+               Cursor.Hide();
             }
             catch
             {
             }
-            Console.WriteLine(contador+" "+panelReferencia);
+            //Console.WriteLine(contador+" "+panelReferencia);
             switch (panelReferencia)
             {
                 case "comidas":
@@ -321,7 +321,7 @@ namespace InterfaceTIV.Controladores
                 case 12:
                     try
                     {
-                        Cursor.Position = new Point(Cursor.Position.X + 160, Cursor.Position.Y - 80);
+                        Cursor.Position = new Point(845, 290);
                     }
                     catch
                     {

@@ -30,6 +30,8 @@ namespace InterfaceTIV.Vista
         int cambio = 0;                                                            //Variable para el Swicheo de diadema, ratos, silla etc...
         public string cambioPanel = "home";                                                   //variable para controlar el panel automatico, si regresara atras o al de alimentos segun sea necesario
         int contador=0;
+        int restaLongitud= 0;
+        int Vlongitud = 0;
         //
         //
         string descripUNO = "";
@@ -138,7 +140,12 @@ namespace InterfaceTIV.Vista
         }
 
         public void enviar(string valor) {
-            
+
+            if (contador == Vlongitud)
+            {
+                contador = contador + restaLongitud;
+            }
+                
                 Console.WriteLine(valor);
                 LecturaSerial enviardatos = new LecturaSerial();
                 enviardatos.sensor = cambio;
@@ -222,6 +229,7 @@ namespace InterfaceTIV.Vista
                 datos.txtTecto = Descripcion;
                 datos.EnviarNotificacion();
             }
+            focus();
 
 
            
@@ -280,9 +288,11 @@ namespace InterfaceTIV.Vista
         //
         public void llenadoAUTOMATICO(string[,] Datos) {
 
-
+            
+            Vlongitud = (Datos.GetLength(0) * 2);
             string img;
             int longitud = Datos.GetLength(0);
+            restaLongitud = 12 - Vlongitud;
             int incremento = 0;
 
             btnUNO.Hide();
@@ -461,6 +471,15 @@ namespace InterfaceTIV.Vista
             agregarContenido.panelReferencia = cambioPanel;
             
         }            //Creando la Ventana Para AGREGAR nuevos Registros
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            BorrarContenido borrarContenido = new BorrarContenido();
+            borrarContenido.panelReferencia = cambioPanel;
+            borrarContenido.TraerDatos();
+            borrarContenido.Show();
+        }
+
         private void btnHablar_Click(object sender, EventArgs e)
         {
             Process.Start(@"C:\Intel\ACAT\ACATTalk");
@@ -528,6 +547,8 @@ namespace InterfaceTIV.Vista
         // Eventos de los botones Regresar de cada Panel
         private void btnRegresarAlimentos_Click(object sender, EventArgs e)
         {
+            Vlongitud = 0;
+            restaLongitud = 0;
             cambioPanel = "home";
             contador = 0;
             ocultarVentana(ref panelHome, ref panelAlimentos);
@@ -535,6 +556,8 @@ namespace InterfaceTIV.Vista
         }
         private void btnRegresarPanelActividades_Click(object sender, EventArgs e)
         {
+            Vlongitud = 0;
+            restaLongitud = 0;
             cambioPanel = "home";
             contador = 0;
             ocultarVentana(ref panelHome, ref panelActividades);
@@ -542,6 +565,8 @@ namespace InterfaceTIV.Vista
         }
         private void btnRegresarEntretenimiento_Click(object sender, EventArgs e)
         {
+            Vlongitud = 0;
+            restaLongitud = 0;
             cambioPanel = "silla";
             contador = 0;
             cambio = 1;
@@ -550,6 +575,8 @@ namespace InterfaceTIV.Vista
         } //regresar del panel Rutas
         private void btnRegresarRemoto_Click(object sender, EventArgs e)
         {
+            Vlongitud = 0;
+            restaLongitud = 0;
             cambioPanel = "home";
             contador = 0;
             ocultarVentana(ref panelHome, ref panelControlRemoto);
@@ -557,6 +584,8 @@ namespace InterfaceTIV.Vista
         }
         private void btnRegresarSilla_Click(object sender, EventArgs e)
         {
+            Vlongitud = 0;
+            restaLongitud = 0;
             cambioPanel = "home";
             contador = 0;
             ocultarVentana(ref panelHome, ref panelSilla);
@@ -565,6 +594,8 @@ namespace InterfaceTIV.Vista
         }
         private void btnRegresarAutomatico_Click(object sender, EventArgs e)
         {
+            Vlongitud = 0;
+            restaLongitud = 0;
             if (cambioPanel.Equals("comidas") || cambioPanel.Equals("bebidas") || cambioPanel.Equals("postres"))
             {
                 cambioPanel = "alimentos";
@@ -1019,7 +1050,7 @@ namespace InterfaceTIV.Vista
         private void btnMostrarMasDER_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnMostrarMasDER);
-            btnMostrarMasDER.BackgroundImage = InterfaceTIV.Properties.Resources.btnCargarMasDER;
+            btnMostrarMasDER.BackgroundImage = InterfaceTIV.Properties.Resources.btnagrgarmasClick;
         }
         private void btnMostrarMasDER_MouseLeave(object sender, EventArgs e)
         {
@@ -1029,7 +1060,7 @@ namespace InterfaceTIV.Vista
         private void btnMostrarMenosIZQ_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnMostrarMenosIZQ);
-            btnMostrarMenosIZQ.BackgroundImage = InterfaceTIV.Properties.Resources.btnCargarMenosIZQ;
+            btnMostrarMenosIZQ.BackgroundImage = InterfaceTIV.Properties.Resources.btnRegresarClick;
         }
         private void btnMostrarMenosIZQ_MouseLeave(object sender, EventArgs e)
         {
@@ -1045,6 +1076,14 @@ namespace InterfaceTIV.Vista
         {
             RegresarTamañoControl(ref btnAgregarMAS);
             btnAgregarMAS.BackgroundImage = InterfaceTIV.Properties.Resources.btnAgregar;
+        }
+        private void btnBorrar_MouseHover(object sender, EventArgs e)
+        {
+            CambiarTamañoControl(ref btnBorrar);
+        }
+        private void btnBorrar_MouseLeave(object sender, EventArgs e)
+        {
+            RegresarTamañoControl(ref btnBorrar);
         }
         private void imgUNO_MouseHover(object sender, EventArgs e)
         {
@@ -1267,8 +1306,6 @@ namespace InterfaceTIV.Vista
             guardarruta.Activate();
 
         }
-
-       
         //
         //
         //
