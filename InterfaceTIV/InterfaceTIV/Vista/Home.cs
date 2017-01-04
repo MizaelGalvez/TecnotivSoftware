@@ -70,7 +70,16 @@ namespace InterfaceTIV.Vista
         {
             InitializeComponent();
             focus();
-            
+            int a = DateTime.Now.Hour;
+            if (a >= 12)
+            {
+                Hora.Text = DateTime.Now.Hour - 12 + ":" + DateTime.Now.Minute.ToString("D2") + " PM";
+            }
+            else
+            {
+                Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + "AM";
+            }
+
         }
         public void focus(){
             txtComando.Text = "";
@@ -272,6 +281,25 @@ namespace InterfaceTIV.Vista
                     break;
             }
         }
+        public void abrirNavgador(string url)
+        {
+            try
+            {
+                Cursor.Show();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", url);
+
+            WebNavegador web = new WebNavegador();
+            web.Show();
+            web.SetDesktopLocation(0, 0);
+            web.Activate();
+
+
+        }
         //
         //
         //
@@ -457,7 +485,10 @@ namespace InterfaceTIV.Vista
         //
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
-          
+           
+            
+           Cursor.Show();
+            
             Configuracion VistaConfiguracion = new Configuracion();
 
             VistaConfiguracion.Show();
@@ -465,6 +496,14 @@ namespace InterfaceTIV.Vista
         }         //Creando la Ventana de Configuracion
         private void btnAgregarMAS_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Cursor.Show();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             AgregarContenido agregarContenido = new AgregarContenido();
             agregarContenido.TipoGuardado = tipoGuardado;
             agregarContenido.Show();
@@ -474,6 +513,14 @@ namespace InterfaceTIV.Vista
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Cursor.Show();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             BorrarContenido borrarContenido = new BorrarContenido();
             borrarContenido.panelReferencia = cambioPanel;
             borrarContenido.TraerDatos();
@@ -482,18 +529,17 @@ namespace InterfaceTIV.Vista
 
         private void btnHablar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Cursor.Show();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             Process.Start(@"C:\Intel\ACAT\ACATTalk");
         }                //Abriendo la Aplicacion de ACAT
-        public void abrirNavgador(string url) {
-            Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", url);
-            
-                    WebNavegador web = new WebNavegador();
-                    web.Show();
-                    web.SetDesktopLocation(0, 0);
-                    web.Activate();
-
-            
-        }
+       
         //
         //
         //
@@ -1306,6 +1352,27 @@ namespace InterfaceTIV.Vista
             guardarruta.Activate();
 
         }
+
+        private void panelHome_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Cronometro_Tick(object sender, EventArgs e)
+        {
+            Hora.Refresh();
+            int a = DateTime.Now.Hour;
+            if (a >= 12)
+            {
+                Hora.Text = DateTime.Now.Hour -12 + ":" + DateTime.Now.Minute.ToString("D2") + " PM";
+            }
+            else
+            {
+                Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + "AM";
+            }
+            
+        }
+
         //
         //
         //

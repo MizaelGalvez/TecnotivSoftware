@@ -99,7 +99,7 @@ namespace InterfaceTIV.Vista
 
             try
             {
-                Cursor.Position = new Point(80, 75);
+                Cursor.Position = new Point(30, 30);
             }
             catch
             {

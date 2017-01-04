@@ -14,6 +14,11 @@ namespace InterfaceTIV.Vista
     public partial class BorrarContenido : Form
     {
     public string panelReferencia { get; set; }
+        int idborrar;
+        string Nombre;
+        string Descripcion;
+        string Ruta;
+        string url;
 
         
         private string[,] Datos;
@@ -27,7 +32,7 @@ namespace InterfaceTIV.Vista
         {
             try
             {
-                Cursor.Position = new Point(80, 75);
+                Cursor.Position = new Point(30, 30);
             }
             catch
             {
@@ -359,6 +364,10 @@ namespace InterfaceTIV.Vista
             imgBORRAR.Show();
             lblBORRAR.Show();
             btnEliminar.Enabled = true;
+            idborrar = Convert.ToInt32(Datos[0, 4]);
+            Nombre = Datos[0, 0];
+            Descripcion = Datos[0, 2];
+            Ruta = Datos[0, 1];
         }
 
         private void imgDOS_Click(object sender, EventArgs e)
@@ -368,6 +377,10 @@ namespace InterfaceTIV.Vista
             imgBORRAR.Show();
             lblBORRAR.Show();
             btnEliminar.Enabled = true;
+            idborrar = Convert.ToInt32(Datos[1, 4]);
+            Nombre = Datos[1, 0];
+            Descripcion = Datos[1, 2];
+            Ruta = Datos[1, 1];
         }
 
         private void imgTRES_Click(object sender, EventArgs e)
@@ -377,6 +390,10 @@ namespace InterfaceTIV.Vista
             imgBORRAR.Show();
             lblBORRAR.Show();
             btnEliminar.Enabled = true;
+            idborrar = Convert.ToInt32(Datos[2, 4]);
+            Nombre = Datos[3, 0];
+            Descripcion = Datos[3, 2];
+            Ruta = Datos[3, 1];
         }
 
         private void imgCUATRO_Click(object sender, EventArgs e)
@@ -386,6 +403,10 @@ namespace InterfaceTIV.Vista
             imgBORRAR.Show();
             lblBORRAR.Show();
             btnEliminar.Enabled = true;
+            idborrar = Convert.ToInt32(Datos[3, 4]);
+            Nombre = Datos[3, 0];
+            Descripcion = Datos[3, 2];
+            Ruta = Datos[3, 1];
         }
 
         private void imgCINCO_Click(object sender, EventArgs e)
@@ -395,15 +416,91 @@ namespace InterfaceTIV.Vista
             imgBORRAR.Show();
             lblBORRAR.Show();
             btnEliminar.Enabled = true;
+            idborrar = Convert.ToInt32(Datos[4, 4]);
+            Nombre = Datos[4, 0];
+            Descripcion = Datos[4, 2];
+            Ruta = Datos[4, 1];
         }
 
         private void imgSEIS_Click(object sender, EventArgs e)
         {
             imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[6, 1] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
-            lblBORRAR.Text = Datos[6, 0];
+            lblBORRAR.Text = Datos[5, 0];
             imgBORRAR.Show();
             lblBORRAR.Show();
             btnEliminar.Enabled = true;
+            idborrar = Convert.ToInt32(Datos[5, 4]);
+            Nombre = Datos[5, 0];
+            Descripcion = Datos[5, 2];
+            Ruta = Datos[5, 1];
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            switch (panelReferencia)
+            {
+                case "comidas":
+                    comidas nEntrada = new comidas();
+                    nEntrada.bactivo = false;
+                    nEntrada.idComidas = idborrar;
+                    nEntrada.lbl_Nombre = Nombre;
+                    nEntrada.lbl_Descripcion = Descripcion;
+                    nEntrada.img_Ruta = Ruta;
+                    Acciones.EliminarComidas(nEntrada);
+
+                    Datos = Acciones.ObtenerComidas();
+                    llenadoAUTOMATICO(Datos);
+                    break;
+                case "bebidas":
+                    bebidas nEntrada2 = new bebidas();
+                    nEntrada2.bactivo = false;
+                    nEntrada2.idBebidas = idborrar;
+                    nEntrada2.lbl_Nombre = Nombre;
+                    nEntrada2.lbl_Descripcion = Descripcion;
+                    nEntrada2.img_Ruta = Ruta;
+                    Acciones.EliminarBebidas(nEntrada2);
+
+                    Datos = Acciones.ObtenerBebidas();
+                    llenadoAUTOMATICO(Datos);
+                    break;
+                case "postres":
+                    postres nEntrada3 = new postres();
+                    nEntrada3.bactivo = false;
+                    nEntrada3.idPostres = idborrar;
+                    nEntrada3.lbl_Nombre = Nombre;
+                    nEntrada3.lbl_Descripcion = Descripcion;
+                    nEntrada3.img_Ruta = Ruta;
+                    Acciones.EliminarPostres(nEntrada3);
+
+                    Datos = Acciones.ObtenerPostres();
+                    llenadoAUTOMATICO(Datos);
+                    break;
+                case "actividades":
+                    actitidades nEntrada4 = new actitidades();
+                    nEntrada4.bactivo = false;
+                    nEntrada4.idActitidades = idborrar;
+                    Acciones.EliminarActividades(nEntrada4);
+                    nEntrada4.lbl_NombreActividad = Nombre;
+                    nEntrada4.img_Ruta = Ruta;
+
+                    Datos = Acciones.ObtenerActividades();
+                    llenadoAUTOMATICO(Datos);
+                    break;
+                case "entretenimiento":
+                    internet nEntrada5 = new internet();
+                    nEntrada5.bactivo = false;
+                    nEntrada5.idInternet = idborrar;
+                    nEntrada5.lbl_Nombre = Nombre;
+                    nEntrada5.lbl_Url = Descripcion;
+                    nEntrada5.img_Ruta = Ruta;
+                    Acciones.EliminarEntretenimiento(nEntrada5);
+
+                    Datos = Acciones.ObtenerEntretenimiento();
+                    llenadoAUTOMATICO(Datos);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

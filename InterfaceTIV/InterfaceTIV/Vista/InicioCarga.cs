@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,7 @@ namespace InterfaceTIV.Vista
         public InicioCarga()
         {
             InitializeComponent();
-
-            lblBienvenida.Text = "Bienvenido " + Acciones.usuario(1);
+            
             var usuario = Acciones.usuario(1);
             var contraseña = Acciones.contraseña(1);
             
@@ -102,6 +102,11 @@ namespace InterfaceTIV.Vista
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", "http://www.tecnotiv.com/");
         }
     }
 }

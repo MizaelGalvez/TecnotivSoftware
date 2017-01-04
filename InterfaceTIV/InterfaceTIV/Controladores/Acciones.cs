@@ -43,7 +43,117 @@ namespace InterfaceTIV.Model
                 throw;
             }
         }
-        
+        public static void EliminarComidas(comidas nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idComidas > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void EliminarBebidas(bebidas nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idBebidas > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void EliminarPostres(postres nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idPostres > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void EliminarActividades(actitidades nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idActitidades > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void EliminarEntretenimiento(internet nEntrada)
+        {
+            try
+            {
+                using (var ctx = new Model1())
+                {
+                    if (nEntrada.idInternet > 0)
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nEntrada).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public  static string usuario( int Id)
         {
             string valor = "";
@@ -304,7 +414,7 @@ namespace InterfaceTIV.Model
 
 
                     int i = 0;
-                    string[,] Datos = new string[user.Count(), 3];
+                    string[,] Datos = new string[user.Count(), 5];
                     
                     foreach (var result in user )
                     {
@@ -343,7 +453,24 @@ namespace InterfaceTIV.Model
                                 i++;
                             }
 
-                            return Datos;
+                            using (var ctx4 = new Model1())
+                            {
+                                var user4 = (from dato4 in ctx4.comidas
+                                             where dato4.bactivo == bactivo
+                                             select dato4.idComidas);
+
+                                i = 0;
+
+                                foreach (var result4 in user4)
+                                {
+                                    valor = result4.ToString();
+                                    Datos[i, 4] = valor;
+                                    i++;
+                                }
+
+                                return Datos;
+
+                            }
 
                         }
 
@@ -375,7 +502,7 @@ namespace InterfaceTIV.Model
 
 
                     int i = 0;
-                    string[,] Datos = new string[user.Count(), 3];
+                    string[,] Datos = new string[user.Count(), 5];
 
                     foreach (var result in user)
                     {
@@ -414,7 +541,24 @@ namespace InterfaceTIV.Model
                                 i++;
                             }
 
-                            return Datos;
+                            using (var ctx4 = new Model1())
+                            {
+                                var user4 = (from dato4 in ctx4.bebidas
+                                             where dato4.bactivo == bactivo
+                                             select dato4.idBebidas);
+
+                                i = 0;
+
+                                foreach (var result4 in user4)
+                                {
+                                    valor = result4.ToString();
+                                    Datos[i, 4] = valor;
+                                    i++;
+                                }
+
+                                return Datos;
+
+                            }
 
                         }
 
@@ -446,7 +590,7 @@ namespace InterfaceTIV.Model
 
 
                     int i = 0;
-                    string[,] Datos = new string[user.Count(), 3];
+                    string[,] Datos = new string[user.Count(), 5];
 
                     foreach (var result in user)
                     {
@@ -485,7 +629,24 @@ namespace InterfaceTIV.Model
                                 i++;
                             }
 
-                            return Datos;
+                            using (var ctx4 = new Model1())
+                            {
+                                var user4 = (from dato4 in ctx4.postres
+                                             where dato4.bactivo == bactivo
+                                             select dato4.idPostres);
+
+                                i = 0;
+
+                                foreach (var result4 in user4)
+                                {
+                                    valor = result4.ToString();
+                                    Datos[i, 4] = valor;
+                                    i++;
+                                }
+
+                                return Datos;
+
+                            }
 
                         }
 
@@ -517,7 +678,7 @@ namespace InterfaceTIV.Model
 
 
                     int i = 0;
-                    string[,] Datos = new string[user.Count(), 3];
+                    string[,] Datos = new string[user.Count(), 5];
 
                     foreach (var result in user)
                     {
@@ -541,7 +702,24 @@ namespace InterfaceTIV.Model
                             i++;
                         }
 
-                        return Datos;
+                        using (var ctx4 = new Model1())
+                        {
+                            var user4 = (from dato4 in ctx4.actitidades
+                                         where dato4.bactivo == bactivo
+                                         select dato4.idActitidades);
+
+                            i = 0;
+
+                            foreach (var result4 in user4)
+                            {
+                                valor = result4.ToString();
+                                Datos[i, 4] = valor;
+                                i++;
+                            }
+
+                            return Datos;
+
+                        }
 
                     }
 
@@ -571,7 +749,7 @@ namespace InterfaceTIV.Model
 
 
                     int i = 0;
-                    string[,] Datos = new string[user.Count(), 3];
+                    string[,] Datos = new string[user.Count(), 5];
 
                     foreach (var result in user)
                     {
@@ -610,10 +788,26 @@ namespace InterfaceTIV.Model
                                 i++;
                             }
 
-                            return Datos;
+                            using (var ctx4 = new Model1())
+                            {
+                                var user4 = (from dato4 in ctx4.internet
+                                             where dato4.bactivo == bactivo
+                                             select dato4.idInternet);
+
+                                i = 0;
+
+                                foreach (var result4 in user4)
+                                {
+                                    valor = result4.ToString();
+                                    Datos[i, 4] = valor;
+                                    i++;
+                                }
+
+                                return Datos;
+
+                            }
 
                         }
-
                     }
 
 

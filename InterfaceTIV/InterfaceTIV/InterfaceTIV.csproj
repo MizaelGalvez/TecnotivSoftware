@@ -181,6 +181,13 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\mamona1.png" />
+    <None Include="Resources\mamona.png" />
+    <None Include="Resources\imgLogodegradado.png" />
+    <None Include="Resources\SuperiorDegradadobest.png" />
+    <None Include="Resources\SuperiorDegradado.png" />
+    <None Include="Resources\imgLogoDark.png" />
+    <None Include="Resources\imgLogoSecundario.png" />
     <None Include="Resources\bacground.png" />
     <None Include="Resources\fondoBack.png" />
     <None Include="Resources\btnBorrar.png" />
