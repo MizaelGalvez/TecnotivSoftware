@@ -404,7 +404,6 @@ namespace InterfaceTIV.Vista
                     imgUNO.Show();
                     descripUNO = Datos[incremento, 2];
                     URL1 = Datos[incremento, 1];
-                    Console.WriteLine(URL1 ,img);
                 }
                 catch (Exception)
                 {

@@ -119,7 +119,7 @@ namespace InterfaceTIV.Vista
             {
                 lblUNO.Show();
                 lblUNO.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgUNO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -135,7 +135,7 @@ namespace InterfaceTIV.Vista
             {
                 lblDOS.Show();
                 lblDOS.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgDOS.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -151,7 +151,7 @@ namespace InterfaceTIV.Vista
             {
                 lblTRES.Show();
                 lblTRES.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgTRES.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -167,7 +167,7 @@ namespace InterfaceTIV.Vista
             {
                 lblCUATRO.Show();
                 lblCUATRO.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgCUATRO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -183,7 +183,7 @@ namespace InterfaceTIV.Vista
             {
                 lblCINCO.Show();
                 lblCINCO.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgCINCO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -199,7 +199,7 @@ namespace InterfaceTIV.Vista
             {
                 lblSEIS.Show();
                 lblSEIS.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgSEIS.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -215,7 +215,7 @@ namespace InterfaceTIV.Vista
             {
                 lblSIETE.Show();
                 lblSIETE.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgSIETE.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -231,7 +231,7 @@ namespace InterfaceTIV.Vista
             {
                 lblOCHO.Show();
                 lblOCHO.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgOCHO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -247,7 +247,7 @@ namespace InterfaceTIV.Vista
             {
                 lblNUEVE.Show();
                 lblNUEVE.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgNUEVE.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -263,7 +263,7 @@ namespace InterfaceTIV.Vista
             {
                 lblDIEZ.Show();
                 lblDIEZ.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgDIEZ.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -279,7 +279,7 @@ namespace InterfaceTIV.Vista
             {
                 lblONCE.Show();
                 lblONCE.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgONCE.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -295,7 +295,7 @@ namespace InterfaceTIV.Vista
             {
                 lblDOCE.Show();
                 lblDOCE.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgDOCE.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -311,7 +311,7 @@ namespace InterfaceTIV.Vista
             {
                 lblTRECE.Show();
                 lblTRECE.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgTRECE.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -327,7 +327,7 @@ namespace InterfaceTIV.Vista
             {
                 lblCATORCE.Show();
                 lblCATORCE.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgCATORCE.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -343,7 +343,7 @@ namespace InterfaceTIV.Vista
             {
                 lblQUINCE.Show();
                 lblQUINCE.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgQUINCE.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
@@ -359,7 +359,7 @@ namespace InterfaceTIV.Vista
 
         private void imgUNO_Click(object sender, EventArgs e)
         {
-            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[0, 1] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[0, 0] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
             lblBORRAR.Text = Datos[0, 0];
             imgBORRAR.Show();
             lblBORRAR.Show();
@@ -372,7 +372,7 @@ namespace InterfaceTIV.Vista
 
         private void imgDOS_Click(object sender, EventArgs e)
         {
-            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[1, 1] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[1, 0] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
             lblBORRAR.Text = Datos[1, 0];
             imgBORRAR.Show();
             lblBORRAR.Show();
@@ -385,7 +385,7 @@ namespace InterfaceTIV.Vista
 
         private void imgTRES_Click(object sender, EventArgs e)
         {
-            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[2, 1] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[2, 0] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
             lblBORRAR.Text = Datos[2, 0];
             imgBORRAR.Show();
             lblBORRAR.Show();
@@ -398,7 +398,7 @@ namespace InterfaceTIV.Vista
 
         private void imgCUATRO_Click(object sender, EventArgs e)
         {
-            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[3, 1] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[3, 0] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
             lblBORRAR.Text = Datos[3, 0];
             imgBORRAR.Show();
             lblBORRAR.Show();
@@ -411,7 +411,7 @@ namespace InterfaceTIV.Vista
 
         private void imgCINCO_Click(object sender, EventArgs e)
         {
-            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[4, 1] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[4, 0] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
             lblBORRAR.Text = Datos[4, 0];
             imgBORRAR.Show();
             lblBORRAR.Show();
@@ -424,7 +424,7 @@ namespace InterfaceTIV.Vista
 
         private void imgSEIS_Click(object sender, EventArgs e)
         {
-            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[6, 1] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
+            imgBORRAR.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + Datos[6, 0] + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
             lblBORRAR.Text = Datos[5, 0];
             imgBORRAR.Show();
             lblBORRAR.Show();
