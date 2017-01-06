@@ -32,6 +32,14 @@ namespace InterfaceTIV.Vista
         int contador=0;
         int restaLongitud= 0;
         int Vlongitud = 0;
+        string[,] Datos;
+        string URL = "";
+        string URL1 = "";
+        string URL2 = "";
+        string URL3 = "";
+        string URL4 = "";
+        string URL5 = "";
+        string URL6 = "";
         //
         //
         string descripUNO = "";
@@ -77,7 +85,7 @@ namespace InterfaceTIV.Vista
             }
             else
             {
-                Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + "AM";
+                Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + " AM";
             }
 
         }
@@ -219,24 +227,72 @@ namespace InterfaceTIV.Vista
         {
             focus();
         }                     //Eventos de focus al elemento necesario, cuando da click en otra area de la ventana
-        private void Notificador(int activo, string Texto, string Descripcion)
+        private void Notificador(int tipo, string Texto, string Descripcion, String URL)
         {
+            switch (cambioPanel)
+            {
+                case "home":
 
-            if (cambioPanel.Equals("entretenimiento"))
-            {
-                abrirNavgador(Descripcion);
-            }
-            else
-            {
-                MetodosHTTP datos = new MetodosHTTP();
-                datos.user = Acciones.usuario(1);
-                datos.idAlimento = 0;
-                datos.txtAlimento = "";
-                datos.idActividad = activo;
-                datos.txtActividad = Texto;
-                datos.idtexto = 0;
-                datos.txtTecto = Descripcion;
-                datos.EnviarNotificacion();
+                    break;
+                case "alimentos":
+                   
+                    break;
+                case "comidas":
+                    MetodosHTTP datos = new MetodosHTTP();
+                    datos.user = Acciones.usuario(1);
+                    datos.idAlimento = 0;
+                    datos.txtAlimento = URL;
+                    datos.idActividad = 1;
+                    datos.txtActividad = Texto;
+                    datos.idtexto = tipo;
+                    datos.txtTecto = Descripcion;
+                    datos.EnviarNotificacion();
+                    break;
+                case "bebidas":
+                    Console.WriteLine(URL);
+                    MetodosHTTP datos2 = new MetodosHTTP();
+                    datos2.user = Acciones.usuario(1);
+                    datos2.idAlimento = 0;
+                    datos2.txtAlimento = URL;
+                    datos2.idActividad = 1;
+                    datos2.txtActividad = Texto;
+                    datos2.idtexto = tipo;
+                    datos2.txtTecto = Descripcion;
+                    datos2.EnviarNotificacion();
+                    break;
+                case "postres":
+                    MetodosHTTP datos3 = new MetodosHTTP();
+                    datos3.user = Acciones.usuario(1);
+                    datos3.idAlimento = 0;
+                    datos3.txtAlimento = URL;
+                    datos3.idActividad = 1;
+                    datos3.txtActividad = Texto;
+                    datos3.idtexto = tipo;
+                    datos3.txtTecto = Descripcion;
+                    datos3.EnviarNotificacion();
+                    break;
+                case "actividades":
+                    MetodosHTTP datos4 = new MetodosHTTP();
+                    datos4.user = Acciones.usuario(1);
+                    datos4.idAlimento = 0;
+                    datos4.txtAlimento = URL;
+                    datos4.idActividad = 2;
+                    datos4.txtActividad = Texto;
+                    datos4.idtexto = tipo;
+                    datos4.txtTecto = Descripcion;
+                    datos4.EnviarNotificacion();
+                    break;
+                case "entretenimiento":
+                    abrirNavgador(Descripcion);
+                    break;
+                case "silla":
+                   
+                    break;
+                case "rutas":
+                   
+                    break;
+                default:
+                    break;
             }
             focus();
 
@@ -256,24 +312,24 @@ namespace InterfaceTIV.Vista
             switch (cambioPanel)
             {
                 case "comidas":
-                    string[,] Datos1 = Acciones.ObtenerComidas();
-                    llenadoAUTOMATICO(Datos1);
+                    Datos = Acciones.ObtenerComidas();
+                    llenadoAUTOMATICO(Datos);
                     break;
                 case "bebidas":
-                    string[,] Datos2 = Acciones.ObtenerBebidas();
-                    llenadoAUTOMATICO(Datos2);
+                    Datos = Acciones.ObtenerBebidas();
+                    llenadoAUTOMATICO(Datos);
                     break;
                 case "postres":
-                    string[,] Datos3 = Acciones.ObtenerPostres();
-                    llenadoAUTOMATICO(Datos3);
+                    Datos = Acciones.ObtenerPostres();
+                    llenadoAUTOMATICO(Datos);
                     break;
                 case "actividades":
-                    string[,] Datos4 = Acciones.ObtenerActividades();
-                    llenadoAUTOMATICO(Datos4);
+                    Datos = Acciones.ObtenerActividades();
+                    llenadoAUTOMATICO(Datos);
                     break;
                 case "entretenimiento":
-                    string[,] Datos5 = Acciones.ObtenerEntretenimiento();
-                    llenadoAUTOMATICO(Datos5);
+                    Datos = Acciones.ObtenerEntretenimiento();
+                    llenadoAUTOMATICO(Datos);
                     break;
                 case "":
                     break;
@@ -340,13 +396,15 @@ namespace InterfaceTIV.Vista
             if (longitud>=1)
             {
                 btnUNO.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgUNO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img+ ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
                     btnUNO.Show();
                     imgUNO.Show();
                     descripUNO = Datos[incremento, 2];
+                    URL1 = Datos[incremento, 1];
+                    Console.WriteLine(URL1 ,img);
                 }
                 catch (Exception)
                 {
@@ -358,13 +416,14 @@ namespace InterfaceTIV.Vista
             if (longitud >= 2)
             {
                 btnDOS.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgDOS.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
                     btnDOS.Show();
                     imgDOS.Show();
                     descripDOS = Datos[incremento, 2];
+                    URL2 = Datos[incremento, 1];
                 }
                 catch (Exception)
                 {
@@ -376,13 +435,14 @@ namespace InterfaceTIV.Vista
             if (longitud >= 3)
             {
                 btnTRES.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgTRES.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
                     btnTRES.Show();
                     imgTRES.Show();
                     descripTRES = Datos[incremento, 2];
+                    URL3 = Datos[incremento, 1];
                 }
                 catch (Exception)
                 {
@@ -394,13 +454,14 @@ namespace InterfaceTIV.Vista
             if (longitud >= 4)
             {
                 btnCUATRO.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgCUATRO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
                     btnCUATRO.Show();
                     imgCUATRO.Show();
                     descripCUATRO = Datos[incremento, 2];
+                    URL4 = Datos[incremento, 1];
                 }
                 catch (Exception)
                 {
@@ -412,13 +473,14 @@ namespace InterfaceTIV.Vista
             if (longitud >= 5)
             {
                 btnCINCO.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgCINCO.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
                     btnCINCO.Show();
                     imgCINCO.Show();
                     descripCINCO = Datos[incremento, 2];
+                    URL5 = Datos[incremento, 1];
                 }
                 catch (Exception)
                 {
@@ -430,13 +492,14 @@ namespace InterfaceTIV.Vista
             if (longitud >= 6)
             {
                 btnSEIS.Text = Datos[incremento, 0];
-                img = Datos[incremento, 1];
+                img = Datos[incremento, 0];
                 try
                 {
                     imgSEIS.BackgroundImage = Image.FromFile(@"C:\Users\Symonds-Pc\Pictures\" + img + ".jpg");  //TODO AUTOMATIZAR LA RUTA AUTOMATICA A IMAGENES EL LA PC
                     btnSEIS.Show();
                     imgSEIS.Show();
                     descripSEIS = Datos[incremento, 2];
+                    URL6 = Datos[incremento, 1];
                 }
                 catch (Exception)
                 {
@@ -730,62 +793,63 @@ namespace InterfaceTIV.Vista
         //eventos del panel AUTOMATICO
         private void imgUNO_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnUNO.Text, descripUNO);
+
+            Notificador(0, btnUNO.Text, descripUNO, URL1);
         }
 
         private void btnUNO_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnUNO.Text, descripUNO);
+            Notificador(0, btnUNO.Text, descripUNO, URL1);
         }
 
         private void imgDOS_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnDOS.Text, descripDOS);
+            Notificador(2, btnDOS.Text, descripDOS, URL2);
         }
 
         private void btnDOS_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnDOS.Text, descripDOS);
+            Notificador(2, btnDOS.Text, descripDOS, URL2);
         }
 
         private void imgTRES_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnTRES.Text, descripTRES);
+            Notificador(0, btnTRES.Text, descripTRES, URL3);
         }
 
         private void btnTRES_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnTRES.Text, descripTRES);
+            Notificador(0, btnTRES.Text, descripTRES, URL3);
         }
 
         private void imgCUATRO_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnCUATRO.Text, descripCUATRO);
+            Notificador(1, btnCUATRO.Text, descripCUATRO, URL4);
         }
 
         private void btnCUATRO_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnCUATRO.Text, descripCUATRO);
+            Notificador(1, btnCUATRO.Text, descripCUATRO, URL4);
         }
 
         private void imgCINCO_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnCINCO.Text, descripCINCO);
+            Notificador(0, btnCINCO.Text, descripCINCO, URL5);
         }
 
         private void btnCINCO_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnCINCO.Text, descripCINCO);
+            Notificador(0, btnCINCO.Text, descripCINCO, URL5);
         }
 
         private void imgSEIS_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnSEIS.Text, descripSEIS);
+            Notificador(0, btnSEIS.Text, descripSEIS, URL6);
         }
 
         private void btnSEIS_Click(object sender, EventArgs e)
         {
-            Notificador(1, btnSEIS.Text, descripSEIS);
+            Notificador(0, btnSEIS.Text, descripSEIS, URL6);
         }
         //
         //
@@ -1368,7 +1432,7 @@ namespace InterfaceTIV.Vista
             }
             else
             {
-                Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + "AM";
+                Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + " AM";
             }
             
         }

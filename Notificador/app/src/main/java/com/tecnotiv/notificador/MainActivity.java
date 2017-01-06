@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +42,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Handler;
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private String idActividad = "";
     private String txtActividad="";
     private String txtDescripcion="";
+    private String txtUrl="";
     private int lanzador = 0;
 
 
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(MainActivity.this, txtDescripcion, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, txtUrl, Toast.LENGTH_LONG).show();
                 btnAtendido.setVisibility(View.GONE);
             }
         });
@@ -122,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void notificaciones(String id, String texto) {
+    public void notificaciones(String id, String texto, String url) {
 
 
             switch (idActividad) {
@@ -131,8 +134,8 @@ public class MainActivity extends AppCompatActivity {
                     PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
 
-                    builder.setContentTitle("Nesesito Algo !!!")
-                            .setContentText("Me Gustaria lo Siguente : "+texto+ ". Muchas Gracias Por Tu Atencion !!!")
+                    builder.setContentTitle("Nesesito Algo de Comer  !!!")
+                            .setContentText("Me Gustaria : "+texto+ ". Muchas Gracias Por Tu Atencion !!!")
                             .setSmallIcon(R.drawable.logo)
                             .setVibrate(new long[]{100, 100, 400})
                             .setAutoCancel(true);
@@ -143,7 +146,12 @@ public class MainActivity extends AppCompatActivity {
                     NotificationManager manager = (NotificationManager) getSystemService(MainActivity.this.NOTIFICATION_SERVICE);
                     manager.notify(0, builder.build());
 
-                    imgImagen.setImageDrawable(getResources().getDrawable(R.drawable.hola));
+
+
+
+
+
+                    imgImagen.setImageURI(Uri.parse(txtUrl.toString()));
                     lbltextocabesera.setText(texto);
                     btnAtendido.setVisibility(View.VISIBLE);
                     break;
@@ -164,8 +172,9 @@ public class MainActivity extends AppCompatActivity {
                     NotificationManager manager1 = (NotificationManager) getSystemService(MainActivity.this.NOTIFICATION_SERVICE);
                     manager1.notify(0, builder1.build());
 
-                    imgImagen.setImageDrawable(getResources().getDrawable(R.drawable.bebidas));
-                    lbltextocabesera.setText("Menu Bebidas");
+                    imgImagen.setImageURI(Uri.parse(txtUrl.toString()));
+                    lbltextocabesera.setText(texto);
+                    btnAtendido.setVisibility(View.VISIBLE);
                     break;
                 case "3":
                     Intent intent2 = new Intent(MainActivity.this, MainActivity.class);
@@ -173,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                     NotificationCompat.Builder builder2 = new NotificationCompat.Builder(MainActivity.this);
 
                     builder2.setContentTitle(texto)
-                            .setContentText("Hola, necesito "+texto)
+                            .setContentText("Hola, "+texto)
                             .setSmallIcon(R.drawable.logo)
                             .setVibrate(new long[]{100, 100, 100, 400})
                             .setAutoCancel(true);
@@ -185,8 +194,9 @@ public class MainActivity extends AppCompatActivity {
                     manager2.notify(0, builder2.build());
 
 
-                    imgImagen.setImageDrawable(getResources().getDrawable(R.drawable.postres));
-                    lbltextocabesera.setText("Menu Postres");
+                    imgImagen.setImageURI(Uri.parse(txtUrl.toString()));
+                    lbltextocabesera.setText(texto);
+                    btnAtendido.setVisibility(View.VISIBLE);
                     break;
 
             }
@@ -246,6 +256,7 @@ public class MainActivity extends AppCompatActivity {
                 idActividad = JArrayObject.getJSONObject(0).getString("idActividad");
                 txtActividad = JArrayObject.getJSONObject(0).getString("txtActividad");
                 txtDescripcion = JArrayObject.getJSONObject(0).getString("txtTecto");
+                txtUrl = JArrayObject.getJSONObject(0).getString("txtAlimento");
 
                 if (idActividad.equals("0")){
                     new CountDownTimer(3000, 1000) {
@@ -263,7 +274,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }else {
-                    notificaciones(idActividad, txtActividad);
+                    notificaciones(idActividad, txtActividad, txtUrl);
                     new peticionHttp().execute("http://138.197.144.25/inserts/updateVacante.php?txtUsuario=Mizael&idAlimento=0&txtAlimento=&idActividad=0&txtActividad=&idTexto=0&txttexto=");
                     new CountDownTimer(5000, 1000) {
                         public void onFinish() {

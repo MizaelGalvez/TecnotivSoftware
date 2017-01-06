@@ -10,8 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/colorgris"
-    tools:context="com.tecnotiv.notificador.MainActivity">
-
+    tools:context="com.tecnotiv.notificador.MainActivity"
+    >
     <TextView
         android:id="@+id/lblTexto"
         android:layout_width="wrap_content"
@@ -22,19 +22,6 @@
         android:textSize="@dimen/textotamaño"
         android:padding="@dimen/margenExtendido"
         />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/logo"
-        android:id="@+id/imagen"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:scaleType="fitCenter"
-        android:layout_marginBottom="100dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp" />
 
     <Button
         android:text="Recomendaciones"
@@ -70,4 +57,17 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imagen"
+        android:scaleType="fitCenter"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/btnAtendido"
+        android:layout_below="@+id/lblTexto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

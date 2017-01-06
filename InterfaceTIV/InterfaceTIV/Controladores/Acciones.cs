@@ -468,7 +468,24 @@ namespace InterfaceTIV.Model
                                     i++;
                                 }
 
-                                return Datos;
+                                using (var ctx5 = new Model1())
+                                {
+                                    var user5 = (from dato5 in ctx5.comidas
+                                                 where dato5.bactivo == bactivo
+                                                 select dato5.img_Ruta);
+
+                                    i = 0;
+
+                                    foreach (var result5 in user5)
+                                    {
+                                        valor = result5.ToString();
+                                        Datos[i, 3] = valor;
+                                        i++;
+                                    }
+
+                                    return Datos;
+
+                                }
 
                             }
 
@@ -556,7 +573,24 @@ namespace InterfaceTIV.Model
                                     i++;
                                 }
 
-                                return Datos;
+                                using (var ctx5 = new Model1())
+                                {
+                                    var user5 = (from dato5 in ctx5.bebidas
+                                                 where dato5.bactivo == bactivo
+                                                 select dato5.img_Ruta);
+
+                                    i = 0;
+
+                                    foreach (var result5 in user4)
+                                    {
+                                        valor = result5.ToString();
+                                        Datos[i, 3] = valor;
+                                        i++;
+                                    }
+
+                                    return Datos;
+
+                                }
 
                             }
 
@@ -644,7 +678,24 @@ namespace InterfaceTIV.Model
                                     i++;
                                 }
 
-                                return Datos;
+                                using (var ctx5 = new Model1())
+                                {
+                                    var user5 = (from dato5 in ctx5.postres
+                                                 where dato5.bactivo == bactivo
+                                                 select dato5.img_Ruta);
+
+                                    i = 0;
+
+                                    foreach (var result5 in user5)
+                                    {
+                                        valor = result5.ToString();
+                                        Datos[i, 3] = valor;
+                                        i++;
+                                    }
+
+                                    return Datos;
+
+                                }
 
                             }
 
@@ -717,7 +768,24 @@ namespace InterfaceTIV.Model
                                 i++;
                             }
 
-                            return Datos;
+                            using (var ctx5 = new Model1())
+                            {
+                                var user5 = (from dato5 in ctx5.actitidades
+                                             where dato5.bactivo == bactivo
+                                             select dato5.img_Ruta);
+
+                                i = 0;
+
+                                foreach (var result5 in user5)
+                                {
+                                    valor = result5.ToString();
+                                    Datos[i, 3] = valor;
+                                    i++;
+                                }
+
+                                return Datos;
+
+                            }
 
                         }
 
