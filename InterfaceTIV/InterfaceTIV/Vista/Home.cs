@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using InterfaceTIV.Vista;
 using InterfaceTIV.Controladores;
 using Emotiv;
-using System.IO.Ports;
+using System.IO.Ports;  // crear los parametros en esta clase principal
 using InterfaceTIV.Model;
 using System.Diagnostics;
 
@@ -87,19 +87,6 @@ namespace InterfaceTIV.Vista
             {
                 Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + " AM";
             }
-
-            
-
-            EmoEngine engine;
-            int userID = -1;
-            engine = EmoEngine.Instance;
-            //engine.UserAdded += new EmoEngine.UserAddedEventHandler();
-
-            engine.Connect();
-
-
-
-            
 
         }
         public void focus(){

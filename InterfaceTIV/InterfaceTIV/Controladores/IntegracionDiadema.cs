@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfaceTIV.Controladores
 {
-    class DiademaTecnotiv
+    class IntegracionDiadema
     {
     }
 }
