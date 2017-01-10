@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using InterfaceTIV.Vista;
 using InterfaceTIV.Controladores;
 using Emotiv;
-using System.IO.Ports;
+using System.IO.Ports;  // crear los parametros en esta clase principal
 using InterfaceTIV.Model;
 using System.Diagnostics;
 
