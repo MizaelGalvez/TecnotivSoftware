@@ -88,6 +88,19 @@ namespace InterfaceTIV.Vista
                 Hora.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2") + " AM";
             }
 
+            
+
+            EmoEngine engine;
+            int userID = -1;
+            engine = EmoEngine.Instance;
+            //engine.UserAdded += new EmoEngine.UserAddedEventHandler();
+
+            engine.Connect();
+
+
+
+            
+
         }
         public void focus(){
             txtComando.Text = "";
