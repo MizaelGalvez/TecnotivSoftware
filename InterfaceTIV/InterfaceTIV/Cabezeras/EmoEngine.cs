@@ -1442,5 +1442,10 @@ namespace Emotiv
         {
             errorHandler(EdkDll.IEE_FFTGetWindowingType(userId, type));
         }
+
+        internal Dictionary<EdkDll.IEE_DataChannel_t, double[]> GetData(uint userID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using InterfaceTIV.Vista;
+using InterfaceTIV.Controladores;
 using System.Windows.Forms;
 
 namespace InterfaceTIV
@@ -17,7 +18,9 @@ namespace InterfaceTIV
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            InicioCarga HOME = new InicioCarga();
+            HeadsetInformationLogger Datos = new HeadsetInformationLogger();
+            //InicioCarga HOME = new InicioCarga();
+            Datos.Main();
             Application.Run();
 
            

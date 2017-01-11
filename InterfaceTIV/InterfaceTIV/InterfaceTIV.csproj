@@ -72,6 +72,7 @@
     <Compile Include="Cabezeras\EmoEngine.cs" />
     <Compile Include="Cabezeras\EmoState.cs" />
     <Compile Include="Cabezeras\EmotivCloudClient.cs" />
+    <Compile Include="Controladores\IntegracionDiadema.cs" />
     <Compile Include="Controladores\LecturaSerial.cs" />
     <Compile Include="Controladores\MetodosHTTP.cs" />
     <Compile Include="Controladores\MovimientoInterface.cs" />
