@@ -18,9 +18,15 @@ namespace InterfaceTIV
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            HeadsetInformationLogger Datos = new HeadsetInformationLogger();
-            //InicioCarga HOME = new InicioCarga();
-            Datos.Main();
+           // InicioCarga HOME = new InicioCarga();
+
+
+            IntegracionDiadiema Estados = new IntegracionDiadiema();
+            Estados.Main();
+            
+            //LecturaFrecuencias Frecuencias = new LecturaFrecuencias();
+            //Frecuencias.Main();
+            
             Application.Run();
 
            

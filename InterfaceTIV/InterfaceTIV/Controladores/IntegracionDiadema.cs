@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
+using InterfaceTIV.Vista;
 
 namespace InterfaceTIV.Controladores
 {
     
-    class HeadsetInformationLogger
+    class IntegracionDiadiema
     {
 
         static int userID = -1;
-        static string filename = "HeadsetInformationLogger.csv";
+        static string filename = "BateriayContactodeElectrodos.csv";
         static TextWriter file = new StreamWriter(filename, false);
-
+        
+        
+        
         static void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
         {
             Console.WriteLine("User Added Event has occured");
@@ -29,7 +32,7 @@ namespace InterfaceTIV.Controladores
 
             EmoState es = e.emoState;
 
-            if (e.userId != 0) return;      // Get info from UserID 0
+            if (e.userId != 0) return;
 
             float timeFromStart = es.GetTimeFromStart();
             file.Write(timeFromStart + ",");
@@ -39,9 +42,10 @@ namespace InterfaceTIV.Controladores
             file.Write(signalStrength + ",");
 
             Int32 chargeLevel = 0;
-            Int32 maxChargeLevel = 3;
+            Int32 maxChargeLevel = 0;
             es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
             file.Write(chargeLevel + ",");
+
 
             file.Write((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3) + ",");
             file.Write((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7) + ",");
@@ -54,7 +58,8 @@ namespace InterfaceTIV.Controladores
 
         public void Main()
         {
-            Console.WriteLine("Headset Information Logger Example");
+           
+            //Console.WriteLine("Headset Information Logger Example");
 
             EmoEngine engine = EmoEngine.Instance;
 
@@ -64,7 +69,7 @@ namespace InterfaceTIV.Controladores
             // connect to Emoengine.            
             engine.Connect();
 
-            HeadsetInformationLogger p = new HeadsetInformationLogger();
+            IntegracionDiadiema p = new IntegracionDiadiema();
 
             string header = "Time, Wireless Strength, Battery Level, AF3, T7, Pz, T8, AF4";
             file.WriteLine(header);
