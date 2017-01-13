@@ -15,21 +15,20 @@ namespace InterfaceTIV
         static void Main(string[] args)
         {
 
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // InicioCarga HOME = new InicioCarga();
-
-
-            IntegracionDiadiema Estados = new IntegracionDiadiema();
-            Estados.Main();
+            InicioCarga HOME = new InicioCarga();
             
+            //IntegracionDiadiema Estados = new IntegracionDiadiema();
+            //Estados.Main();
+
             //LecturaFrecuencias Frecuencias = new LecturaFrecuencias();
             //Frecuencias.Main();
-            
+
             Application.Run();
 
-           
+
         }
     }
 }

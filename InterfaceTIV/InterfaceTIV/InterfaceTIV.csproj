@@ -115,6 +115,12 @@
     <Compile Include="Vista\Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Electrodos-Carga-señal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Electrodos-Carga-señal.Designer.cs">
+      <DependentUpon>Electrodos-Carga-señal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\GuardarRuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     <EmbeddedResource Include="Vista\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Electrodos-Carga-señal.resx">
+      <DependentUpon>Electrodos-Carga-señal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\GuardarRuta.resx">
       <DependentUpon>GuardarRuta.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +192,20 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\C4.png" />
+    <None Include="Resources\C3.png" />
+    <None Include="Resources\C2.png" />
+    <None Include="Resources\C1.png" />
+    <None Include="Resources\C0.png" />
+    <None Include="Resources\W3.png" />
+    <None Include="Resources\W2.png" />
+    <None Include="Resources\W1.png" />
+    <None Include="Resources\W0.png" />
+    <None Include="Resources\B3.png" />
+    <None Include="Resources\B2.png" />
+    <None Include="Resources\B1.png" />
+    <None Include="Resources\B0.png" />
+    <None Include="Resources\Transparente.png" />
     <None Include="Resources\mamona1.png" />
     <None Include="Resources\mamona.png" />
     <None Include="Resources\imgLogodegradado.png" />
