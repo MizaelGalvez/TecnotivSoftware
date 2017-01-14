@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetEmotivSDK">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Emotiv SDK v2.0.0.20-LITE\Applications\DotNetEmotivSDK.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -71,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cabezeras\EdkDll.cs" />
+    <Compile Include="Cabezeras\EmoEngine.cs" />
+    <Compile Include="Cabezeras\EmoState.cs" />
+    <Compile Include="Cabezeras\EmotivCloudClient.cs" />
+    <Compile Include="Controladores\IntegracionDiadema.cs" />
+    <Compile Include="Controladores\LecturaFrecuencias.cs" />
     <Compile Include="Controladores\LecturaSerial.cs" />
     <Compile Include="Controladores\MetodosHTTP.cs" />
     <Compile Include="Controladores\MovimientoInterface.cs" />
@@ -112,6 +115,12 @@
     <Compile Include="Vista\Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Electrodos-Carga-señal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Electrodos-Carga-señal.Designer.cs">
+      <DependentUpon>Electrodos-Carga-señal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\GuardarRuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Cabezeras\edk.lib" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +166,9 @@
     <EmbeddedResource Include="Vista\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Electrodos-Carga-señal.resx">
+      <DependentUpon>Electrodos-Carga-señal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\GuardarRuta.resx">
       <DependentUpon>GuardarRuta.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +183,29 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cabezeras\edk.dll" />
+    <Content Include="Cabezeras\EmotivCloudClient.h" />
+    <Content Include="Cabezeras\EmotivCloudErrorCode.h" />
+    <Content Include="Cabezeras\FacialExpressionDetection.h" />
+    <Content Include="Cabezeras\glut.h" />
+    <Content Include="Cabezeras\Iedk.h" />
+    <Content Include="Cabezeras\IedkErrorCode.h" />
+    <Content Include="Cabezeras\IEmoStateDLL.h" />
+    <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\C4.png" />
+    <None Include="Resources\C3.png" />
+    <None Include="Resources\C2.png" />
+    <None Include="Resources\C1.png" />
+    <None Include="Resources\C0.png" />
+    <None Include="Resources\W3.png" />
+    <None Include="Resources\W2.png" />
+    <None Include="Resources\W1.png" />
+    <None Include="Resources\W0.png" />
+    <None Include="Resources\B3.png" />
+    <None Include="Resources\B2.png" />
+    <None Include="Resources\B1.png" />
+    <None Include="Resources\B0.png" />
+    <None Include="Resources\Transparente.png" />
     <None Include="Resources\mamona1.png" />
     <None Include="Resources\mamona.png" />
     <None Include="Resources\imgLogodegradado.png" />

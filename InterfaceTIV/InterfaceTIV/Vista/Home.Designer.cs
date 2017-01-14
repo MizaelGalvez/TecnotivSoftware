@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.panelAlimentos = new System.Windows.Forms.Panel();
+            this.btnRegresarAlimentos = new System.Windows.Forms.Button();
+            this.btnPostres = new System.Windows.Forms.Button();
+            this.btnBebidas = new System.Windows.Forms.Button();
+            this.btnComidas = new System.Windows.Forms.Button();
             this.panelActividades = new System.Windows.Forms.Panel();
             this.btnCine = new System.Windows.Forms.Button();
             this.btnBano = new System.Windows.Forms.Button();
@@ -51,6 +55,15 @@
             this.btnRegresarRutas = new System.Windows.Forms.Button();
             this.btnIRbaño = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTiempo = new System.Windows.Forms.Label();
+            this.pbAF4 = new System.Windows.Forms.PictureBox();
+            this.pbT8 = new System.Windows.Forms.PictureBox();
+            this.pbPZ = new System.Windows.Forms.PictureBox();
+            this.pbT7 = new System.Windows.Forms.PictureBox();
+            this.pbAF3 = new System.Windows.Forms.PictureBox();
+            this.pbWifi = new System.Windows.Forms.PictureBox();
+            this.pbBateria = new System.Windows.Forms.PictureBox();
+            this.Hora = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panelSilla = new System.Windows.Forms.Panel();
@@ -83,10 +96,6 @@
             this.btnUNO = new System.Windows.Forms.Button();
             this.imgUNO = new System.Windows.Forms.PictureBox();
             this.btnRegresarAutomatico = new System.Windows.Forms.Button();
-            this.btnRegresarAlimentos = new System.Windows.Forms.Button();
-            this.btnPostres = new System.Windows.Forms.Button();
-            this.btnBebidas = new System.Windows.Forms.Button();
-            this.btnComidas = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
             this.btnSeleccion = new System.Windows.Forms.Button();
             this.btnSilla = new System.Windows.Forms.Button();
@@ -95,13 +104,19 @@
             this.btnActividades = new System.Windows.Forms.Button();
             this.btnEntretenimiento = new System.Windows.Forms.Button();
             this.btnAlimentos = new System.Windows.Forms.Button();
-            this.Hora = new System.Windows.Forms.Label();
             this.Cronometro = new System.Windows.Forms.Timer(this.components);
             this.panelAlimentos.SuspendLayout();
             this.panelActividades.SuspendLayout();
             this.panelComando.SuspendLayout();
             this.panelRUTA.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAF4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbT8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPZ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbT7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAF3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWifi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBateria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panelSilla.SuspendLayout();
@@ -146,6 +161,74 @@
             this.panelAlimentos.Size = new System.Drawing.Size(939, 516);
             this.panelAlimentos.TabIndex = 9;
             this.panelAlimentos.Visible = false;
+            // 
+            // btnRegresarAlimentos
+            // 
+            this.btnRegresarAlimentos.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
+            this.btnRegresarAlimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegresarAlimentos.FlatAppearance.BorderSize = 0;
+            this.btnRegresarAlimentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarAlimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarAlimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresarAlimentos.Location = new System.Drawing.Point(784, 33);
+            this.btnRegresarAlimentos.Name = "btnRegresarAlimentos";
+            this.btnRegresarAlimentos.Size = new System.Drawing.Size(101, 72);
+            this.btnRegresarAlimentos.TabIndex = 5;
+            this.btnRegresarAlimentos.UseVisualStyleBackColor = true;
+            this.btnRegresarAlimentos.Click += new System.EventHandler(this.btnRegresarAlimentos_Click);
+            this.btnRegresarAlimentos.MouseLeave += new System.EventHandler(this.btnRegresarAlimentos_MouseLeave);
+            this.btnRegresarAlimentos.MouseHover += new System.EventHandler(this.btnRegresarAlimentos_MouseHover);
+            // 
+            // btnPostres
+            // 
+            this.btnPostres.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnPostre;
+            this.btnPostres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPostres.FlatAppearance.BorderSize = 0;
+            this.btnPostres.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPostres.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPostres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPostres.Location = new System.Drawing.Point(658, 180);
+            this.btnPostres.Name = "btnPostres";
+            this.btnPostres.Size = new System.Drawing.Size(210, 148);
+            this.btnPostres.TabIndex = 4;
+            this.btnPostres.UseVisualStyleBackColor = true;
+            this.btnPostres.Click += new System.EventHandler(this.btnPostres_Click);
+            this.btnPostres.MouseLeave += new System.EventHandler(this.btnPostres_MouseLeave);
+            this.btnPostres.MouseHover += new System.EventHandler(this.btnPostres_MouseHover);
+            // 
+            // btnBebidas
+            // 
+            this.btnBebidas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBebida;
+            this.btnBebidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBebidas.FlatAppearance.BorderSize = 0;
+            this.btnBebidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBebidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBebidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBebidas.Location = new System.Drawing.Point(360, 180);
+            this.btnBebidas.Name = "btnBebidas";
+            this.btnBebidas.Size = new System.Drawing.Size(210, 148);
+            this.btnBebidas.TabIndex = 3;
+            this.btnBebidas.UseVisualStyleBackColor = true;
+            this.btnBebidas.Click += new System.EventHandler(this.btnBebidas_Click);
+            this.btnBebidas.MouseLeave += new System.EventHandler(this.btnBebidas_MouseLeave);
+            this.btnBebidas.MouseHover += new System.EventHandler(this.btnBebidas_MouseHover);
+            // 
+            // btnComidas
+            // 
+            this.btnComidas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnComida;
+            this.btnComidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnComidas.FlatAppearance.BorderSize = 0;
+            this.btnComidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnComidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnComidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComidas.Location = new System.Drawing.Point(70, 180);
+            this.btnComidas.Name = "btnComidas";
+            this.btnComidas.Size = new System.Drawing.Size(210, 148);
+            this.btnComidas.TabIndex = 1;
+            this.btnComidas.UseVisualStyleBackColor = true;
+            this.btnComidas.Click += new System.EventHandler(this.btnComidas_Click);
+            this.btnComidas.MouseLeave += new System.EventHandler(this.btnComidas_MouseLeave);
+            this.btnComidas.MouseHover += new System.EventHandler(this.btnComidas_MouseHover);
             // 
             // panelActividades
             // 
@@ -409,6 +492,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(99)))));
             this.panel1.BackgroundImage = global::InterfaceTIV.Properties.Resources.SuperiorDegradadobest;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lblTiempo);
+            this.panel1.Controls.Add(this.pbAF4);
+            this.panel1.Controls.Add(this.pbT8);
+            this.panel1.Controls.Add(this.pbPZ);
+            this.panel1.Controls.Add(this.pbT7);
+            this.panel1.Controls.Add(this.pbAF3);
+            this.panel1.Controls.Add(this.pbWifi);
+            this.panel1.Controls.Add(this.pbBateria);
             this.panel1.Controls.Add(this.Hora);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox8);
@@ -416,6 +507,112 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(942, 70);
             this.panel1.TabIndex = 15;
+            // 
+            // lblTiempo
+            // 
+            this.lblTiempo.AutoSize = true;
+            this.lblTiempo.Location = new System.Drawing.Point(519, 31);
+            this.lblTiempo.Name = "lblTiempo";
+            this.lblTiempo.Size = new System.Drawing.Size(35, 13);
+            this.lblTiempo.TabIndex = 24;
+            this.lblTiempo.Text = "label1";
+            this.lblTiempo.Visible = false;
+            // 
+            // pbAF4
+            // 
+            this.pbAF4.BackColor = System.Drawing.Color.Transparent;
+            this.pbAF4.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
+            this.pbAF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAF4.Location = new System.Drawing.Point(466, 31);
+            this.pbAF4.Name = "pbAF4";
+            this.pbAF4.Size = new System.Drawing.Size(19, 11);
+            this.pbAF4.TabIndex = 23;
+            this.pbAF4.TabStop = false;
+            this.pbAF4.Visible = false;
+            // 
+            // pbT8
+            // 
+            this.pbT8.BackColor = System.Drawing.Color.Transparent;
+            this.pbT8.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
+            this.pbT8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbT8.Location = new System.Drawing.Point(441, 31);
+            this.pbT8.Name = "pbT8";
+            this.pbT8.Size = new System.Drawing.Size(19, 11);
+            this.pbT8.TabIndex = 22;
+            this.pbT8.TabStop = false;
+            this.pbT8.Visible = false;
+            // 
+            // pbPZ
+            // 
+            this.pbPZ.BackColor = System.Drawing.Color.Transparent;
+            this.pbPZ.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
+            this.pbPZ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbPZ.Location = new System.Drawing.Point(416, 31);
+            this.pbPZ.Name = "pbPZ";
+            this.pbPZ.Size = new System.Drawing.Size(19, 11);
+            this.pbPZ.TabIndex = 21;
+            this.pbPZ.TabStop = false;
+            this.pbPZ.Visible = false;
+            // 
+            // pbT7
+            // 
+            this.pbT7.BackColor = System.Drawing.Color.Transparent;
+            this.pbT7.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
+            this.pbT7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbT7.Location = new System.Drawing.Point(391, 31);
+            this.pbT7.Name = "pbT7";
+            this.pbT7.Size = new System.Drawing.Size(19, 11);
+            this.pbT7.TabIndex = 20;
+            this.pbT7.TabStop = false;
+            this.pbT7.Visible = false;
+            // 
+            // pbAF3
+            // 
+            this.pbAF3.BackColor = System.Drawing.Color.Transparent;
+            this.pbAF3.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
+            this.pbAF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAF3.Location = new System.Drawing.Point(366, 31);
+            this.pbAF3.Name = "pbAF3";
+            this.pbAF3.Size = new System.Drawing.Size(19, 11);
+            this.pbAF3.TabIndex = 19;
+            this.pbAF3.TabStop = false;
+            this.pbAF3.Visible = false;
+            // 
+            // pbWifi
+            // 
+            this.pbWifi.BackColor = System.Drawing.Color.Transparent;
+            this.pbWifi.BackgroundImage = global::InterfaceTIV.Properties.Resources.W0;
+            this.pbWifi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbWifi.Location = new System.Drawing.Point(658, 23);
+            this.pbWifi.Name = "pbWifi";
+            this.pbWifi.Size = new System.Drawing.Size(29, 21);
+            this.pbWifi.TabIndex = 18;
+            this.pbWifi.TabStop = false;
+            this.pbWifi.Visible = false;
+            // 
+            // pbBateria
+            // 
+            this.pbBateria.BackColor = System.Drawing.Color.Transparent;
+            this.pbBateria.BackgroundImage = global::InterfaceTIV.Properties.Resources.B0;
+            this.pbBateria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbBateria.Location = new System.Drawing.Point(606, 23);
+            this.pbBateria.Name = "pbBateria";
+            this.pbBateria.Size = new System.Drawing.Size(29, 21);
+            this.pbBateria.TabIndex = 17;
+            this.pbBateria.TabStop = false;
+            this.pbBateria.Visible = false;
+            // 
+            // Hora
+            // 
+            this.Hora.AutoSize = true;
+            this.Hora.BackColor = System.Drawing.Color.Transparent;
+            this.Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hora.ForeColor = System.Drawing.SystemColors.Control;
+            this.Hora.Location = new System.Drawing.Point(788, 23);
+            this.Hora.Name = "Hora";
+            this.Hora.Size = new System.Drawing.Size(71, 26);
+            this.Hora.TabIndex = 16;
+            this.Hora.Text = "00:00";
             // 
             // pictureBox2
             // 
@@ -912,74 +1109,6 @@
             this.btnRegresarAutomatico.MouseLeave += new System.EventHandler(this.btnRegresarAutomatico_MouseLeave);
             this.btnRegresarAutomatico.MouseHover += new System.EventHandler(this.btnRegresarAutomatico_MouseHover);
             // 
-            // btnRegresarAlimentos
-            // 
-            this.btnRegresarAlimentos.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
-            this.btnRegresarAlimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegresarAlimentos.FlatAppearance.BorderSize = 0;
-            this.btnRegresarAlimentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRegresarAlimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRegresarAlimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresarAlimentos.Location = new System.Drawing.Point(784, 33);
-            this.btnRegresarAlimentos.Name = "btnRegresarAlimentos";
-            this.btnRegresarAlimentos.Size = new System.Drawing.Size(101, 72);
-            this.btnRegresarAlimentos.TabIndex = 5;
-            this.btnRegresarAlimentos.UseVisualStyleBackColor = true;
-            this.btnRegresarAlimentos.Click += new System.EventHandler(this.btnRegresarAlimentos_Click);
-            this.btnRegresarAlimentos.MouseLeave += new System.EventHandler(this.btnRegresarAlimentos_MouseLeave);
-            this.btnRegresarAlimentos.MouseHover += new System.EventHandler(this.btnRegresarAlimentos_MouseHover);
-            // 
-            // btnPostres
-            // 
-            this.btnPostres.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnPostre;
-            this.btnPostres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPostres.FlatAppearance.BorderSize = 0;
-            this.btnPostres.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPostres.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPostres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPostres.Location = new System.Drawing.Point(658, 180);
-            this.btnPostres.Name = "btnPostres";
-            this.btnPostres.Size = new System.Drawing.Size(210, 148);
-            this.btnPostres.TabIndex = 4;
-            this.btnPostres.UseVisualStyleBackColor = true;
-            this.btnPostres.Click += new System.EventHandler(this.btnPostres_Click);
-            this.btnPostres.MouseLeave += new System.EventHandler(this.btnPostres_MouseLeave);
-            this.btnPostres.MouseHover += new System.EventHandler(this.btnPostres_MouseHover);
-            // 
-            // btnBebidas
-            // 
-            this.btnBebidas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBebida;
-            this.btnBebidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBebidas.FlatAppearance.BorderSize = 0;
-            this.btnBebidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnBebidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBebidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBebidas.Location = new System.Drawing.Point(360, 180);
-            this.btnBebidas.Name = "btnBebidas";
-            this.btnBebidas.Size = new System.Drawing.Size(210, 148);
-            this.btnBebidas.TabIndex = 3;
-            this.btnBebidas.UseVisualStyleBackColor = true;
-            this.btnBebidas.Click += new System.EventHandler(this.btnBebidas_Click);
-            this.btnBebidas.MouseLeave += new System.EventHandler(this.btnBebidas_MouseLeave);
-            this.btnBebidas.MouseHover += new System.EventHandler(this.btnBebidas_MouseHover);
-            // 
-            // btnComidas
-            // 
-            this.btnComidas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnComida;
-            this.btnComidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnComidas.FlatAppearance.BorderSize = 0;
-            this.btnComidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnComidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnComidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComidas.Location = new System.Drawing.Point(70, 180);
-            this.btnComidas.Name = "btnComidas";
-            this.btnComidas.Size = new System.Drawing.Size(210, 148);
-            this.btnComidas.TabIndex = 1;
-            this.btnComidas.UseVisualStyleBackColor = true;
-            this.btnComidas.Click += new System.EventHandler(this.btnComidas_Click);
-            this.btnComidas.MouseLeave += new System.EventHandler(this.btnComidas_MouseLeave);
-            this.btnComidas.MouseHover += new System.EventHandler(this.btnComidas_MouseHover);
-            // 
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.Transparent;
@@ -1125,18 +1254,6 @@
             this.btnAlimentos.MouseLeave += new System.EventHandler(this.btnAlimentos_MouseLeave);
             this.btnAlimentos.MouseHover += new System.EventHandler(this.btnAlimentos_MouseHover);
             // 
-            // Hora
-            // 
-            this.Hora.AutoSize = true;
-            this.Hora.BackColor = System.Drawing.Color.Transparent;
-            this.Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hora.ForeColor = System.Drawing.SystemColors.Control;
-            this.Hora.Location = new System.Drawing.Point(788, 23);
-            this.Hora.Name = "Hora";
-            this.Hora.Size = new System.Drawing.Size(71, 26);
-            this.Hora.TabIndex = 16;
-            this.Hora.Text = "00:00";
-            // 
             // Cronometro
             // 
             this.Cronometro.Enabled = true;
@@ -1170,6 +1287,13 @@
             this.panelRUTA.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAF4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbT8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPZ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbT7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAF3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWifi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBateria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panelSilla.ResumeLayout(false);
@@ -1257,5 +1381,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Hora;
         private System.Windows.Forms.Timer Cronometro;
+        private System.Windows.Forms.Label lblTiempo;
+        private System.Windows.Forms.PictureBox pbAF4;
+        private System.Windows.Forms.PictureBox pbT8;
+        private System.Windows.Forms.PictureBox pbPZ;
+        private System.Windows.Forms.PictureBox pbT7;
+        private System.Windows.Forms.PictureBox pbAF3;
+        private System.Windows.Forms.PictureBox pbWifi;
+        private System.Windows.Forms.PictureBox pbBateria;
     }
 }
