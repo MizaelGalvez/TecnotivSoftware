@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace InterfaceTIV.Vista
 {
-    public partial class Electrodos_Carga_señal : Form
+    public partial  class Electrodos_Carga_señal : Form
     {
         public Electrodos_Carga_señal()
         {
@@ -21,38 +21,23 @@ namespace InterfaceTIV.Vista
         }
 
         static int userID = -1;
-        static string filename = "BateriayContactodeElectrodos.csv";
-        static TextWriter file = new StreamWriter(filename, false);
 
+        int c1, c2, c3, c4, c5, b1;
 
+        int a = 0;
 
-        static void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("User Added Event has occured");
-            userID = (int)e.userId;
+            a = 0;
+            Main();
         }
 
-        void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
+        public async Task estadistica(int c1,int c2,int c3,int c4,int c5,int b1, string señal)
         {
-
-            EmoState es = e.emoState;
-
-            if (e.userId != 0) return;
-
-            float timeFromStart = es.GetTimeFromStart();
-            lblTiempo.Text = timeFromStart.ToString();
-            //Console.WriteLine("Timer: " + timeFromStart);
-
-            EdkDll.IEE_SignalStrength_t signalStrength = es.GetWirelessSignalStatus();
-
-            Int32 chargeLevel = 0;
-            Int32 maxChargeLevel = 0;
-            es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
-            Console.WriteLine(chargeLevel);
-            switch (chargeLevel)
+            switch (b1)
             {
                 case 0:
-                    pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
+                    pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.B1;
                     break;
                 case 1:
                     pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.B1;
@@ -70,11 +55,10 @@ namespace InterfaceTIV.Vista
                 default:
                     break;
             }
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3))
+            switch (c1)
             {
                 case 0:
-                    pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
+                    pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
                     break;
                 case 1:
                     pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -93,11 +77,10 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7))
+            switch (c2)
             {
                 case 0:
-                    pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
+                    pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
                     break;
                 case 1:
                     pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -116,11 +99,10 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1))
+            switch (c3)
             {
                 case 0:
-                    pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
+                    pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
                     break;
                 case 1:
                     pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -139,11 +121,10 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8))
+            switch (c4)
             {
                 case 0:
-                    pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
+                    pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
                     break;
                 case 1:
                     pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -162,11 +143,10 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4))
+            switch (c5)
             {
                 case 0:
-                    pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
+                    pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
                     break;
                 case 1:
                     pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -184,9 +164,65 @@ namespace InterfaceTIV.Vista
                 default:
                     break;
             }
+            switch (señal)
+            {
+                case "NO_SIG":
+                    pbWifi.BackgroundImage = InterfaceTIV.Properties.Resources.W0;
+                    break;
+                case "BAD_SIG":
+                    pbWifi.BackgroundImage = InterfaceTIV.Properties.Resources.W1;
+                    break;
+                case "GOOD_SIG ":
+                    pbWifi.BackgroundImage = InterfaceTIV.Properties.Resources.W2;
+                    break;
+                case "GOOD_SIG":
+                    pbWifi.BackgroundImage = InterfaceTIV.Properties.Resources.W3;
+                    break;
+
+                default:
+                    break;
+            }
         }
 
-        public void Main()
+        
+        public void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
+        {
+            Console.WriteLine("User Added Event has occured");
+            userID = (int)e.userId;
+        }
+
+
+        public async void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
+        {
+
+            EmoState es = e.emoState;
+
+            if (e.userId != 0) return;
+
+            float timeFromStart = es.GetTimeFromStart();
+            lblTiempo.Text = timeFromStart.ToString();
+            //Console.WriteLine("Timer: " + timeFromStart);
+
+            EdkDll.IEE_SignalStrength_t signalStrength = es.GetWirelessSignalStatus();
+
+            Int32 chargeLevel = 0;
+            Int32 maxChargeLevel = 0;
+            es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
+            b1 = chargeLevel;
+            await estadistica((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4), chargeLevel, signalStrength.ToString());
+
+
+
+            // c1 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3);
+            //c2 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7);
+            // c3 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1);
+            //c4 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8);
+            // c5 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4);
+
+
+        }
+
+        public async void Main()
         {
 
             //Console.WriteLine("Headset Information Logger Example");
@@ -199,28 +235,36 @@ namespace InterfaceTIV.Vista
             // connect to Emoengine.            
             engine.Connect();
 
-            Electrodos_Carga_señal p = new Electrodos_Carga_señal();
-
-            string header = "Time, Wireless Strength, Battery Level, AF3, T7, Pz, T8, AF4";
-            file.WriteLine(header);
-            file.WriteLine("");
 
             while (true)
             {
-                if (Console.KeyAvailable)
+                if (a >= 10)
                     break;
 
+
+                Console.WriteLine("hola Mizael");
+                Console.WriteLine(b1);
+                Console.WriteLine(c1);
+                Console.WriteLine(c2);
+                Console.WriteLine(c3);
+                Console.WriteLine(c4);
+                Console.WriteLine(c5);
+
+
                 engine.ProcessEvents();
+
+
+                a++;
 
                 // If the user has not yet connected, do not proceed
                 if ((int)userID == -1)
                     continue;
 
-                Thread.Sleep(10);
+                Thread.Sleep(500);
             }
 
-            file.Close();
             engine.Disconnect();
+
         }
     }
 }

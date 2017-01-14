@@ -95,31 +95,11 @@ namespace InterfaceTIV.Vista
         //
         //
         static int userID = -1;
-        
-        static void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
-        {
-            Console.WriteLine("User Added Event has occured");
-            userID = (int)e.userId;
-        }
 
-        void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
-        {
+        int c1, c2, c3, c4, c5, b1;
 
-            EmoState es = e.emoState;
-
-            if (e.userId != 0) return;
-
-            float timeFromStart = es.GetTimeFromStart();
-            lblTiempo.Text = timeFromStart.ToString();
-            //Console.WriteLine("Timer: " + timeFromStart);
-
-            EdkDll.IEE_SignalStrength_t signalStrength = es.GetWirelessSignalStatus();
-
-            Int32 chargeLevel = 0;
-            Int32 maxChargeLevel = 0;
-            es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
-            Console.WriteLine(chargeLevel);
-            switch (chargeLevel)
+        public void estadistica(int c1, int c2, int c3, int c4, int c5, int b1) {
+            switch (b1)
             {
                 case 0:
                     pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
@@ -140,8 +120,7 @@ namespace InterfaceTIV.Vista
                 default:
                     break;
             }
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3))
+            switch (c1)
             {
                 case 0:
                     pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
@@ -163,8 +142,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7))
+            switch (c2)
             {
                 case 0:
                     pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
@@ -186,8 +164,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1))
+            switch (c3)
             {
                 case 0:
                     pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
@@ -209,8 +186,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8))
+            switch (c4)
             {
                 case 0:
                     pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
@@ -232,8 +208,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            Console.WriteLine((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4));
-            switch ((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4))
+            switch (c5)
             {
                 case 0:
                     pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
@@ -256,11 +231,48 @@ namespace InterfaceTIV.Vista
             }
         }
 
-        public async Task<String> leerAsync()
-        {
-            
-            //Console.WriteLine("Headset Information Logger Example");
 
+        
+        public void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
+        {
+            Console.WriteLine("User Added Event has occured");
+            userID = (int)e.userId;
+        }
+
+
+
+
+
+        public void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
+        {
+
+            EmoState es = e.emoState;
+
+            if (e.userId != 0) return;
+
+            float timeFromStart = es.GetTimeFromStart();
+            lblTiempo.Text = timeFromStart.ToString();
+            //Console.WriteLine("Timer: " + timeFromStart);
+
+            EdkDll.IEE_SignalStrength_t signalStrength = es.GetWirelessSignalStatus();
+
+            Int32 chargeLevel = 0;
+            Int32 maxChargeLevel = 0;
+            es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
+            b1 = chargeLevel;
+            
+            c1 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3);
+            c2 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7);
+            c3 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1);
+            c4 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8);
+            c5 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4);
+        }
+
+        public async Task<string> leerAsync()
+        {
+
+            //Console.WriteLine("Headset Information Logger Example");
+            
             EmoEngine engine = EmoEngine.Instance;
 
             engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
@@ -276,14 +288,27 @@ namespace InterfaceTIV.Vista
                     break;
 
 
-                 engine.ProcessEvents();
+                //Console.WriteLine("hola Mizael");
+                //Console.WriteLine(b1);
+                //Console.WriteLine(c1);
+                //Console.WriteLine(c2);
+                //Console.WriteLine(c3);
+                //Console.WriteLine(c4);
+                //Console.WriteLine(c5);
 
+
+                engine.ProcessEvents();
+
+                
+                estadistica(c1, c2, c3, c4, c5, b1);
+
+                
 
                 // If the user has not yet connected, do not proceed
                 if ((int)userID == -1)
                     continue;
 
-                Thread.Sleep(10);
+                Thread.Sleep(500);
             }
             
             engine.Disconnect();
@@ -479,6 +504,7 @@ namespace InterfaceTIV.Vista
             }
             
             enviar(valor);
+            Thread.Sleep(100);
         }         //Eventos de enviar comandos recibidos cuando el txt cambia de Valor.
         private void Home_Click(object sender, EventArgs e)
         {
@@ -1021,13 +1047,16 @@ namespace InterfaceTIV.Vista
             cambioPanel = "controlremoto";
             contador = 0;
         }
-        private async void btnSilla_Click(object sender, EventArgs e)
+        public async void btnSilla_Click(object sender, EventArgs e)
         {
+            
 
+            //String X = await leerAsync();
 
+            Electrodos_Carga_señal hola = new Electrodos_Carga_señal();
+            hola.Show();
 
-            URL = await leerAsync();
-
+            //Console.WriteLine(X);
 
             ocultarVentana(ref panelSilla, ref panelHome);
             cambio = 1;
