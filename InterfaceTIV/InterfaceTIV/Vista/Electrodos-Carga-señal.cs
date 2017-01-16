@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,23 +19,34 @@ namespace InterfaceTIV.Vista
         public Electrodos_Carga_señal()
         {
             InitializeComponent();
+            this.SetDesktopLocation(500,0);
+            this.Show();
+            pbBateria.BackgroundImage = Properties.Resources.B0;
+            pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
+            pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
+            pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
+            pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
+            pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
+
+            
         }
 
         static int userID = -1;
 
         int c1, c2, c3, c4, c5, b1;
+        string fuerzaseñal = "";
 
         int a = 0;
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             a = 0;
-            Main();
+            await Main();
         }
 
-        public async Task estadistica(int c1,int c2,int c3,int c4,int c5,int b1, string señal)
+        public async Task estadistica(int a,int b,int c,int d,int e,int f, string señal)
         {
-            switch (b1)
+            switch (f)
             {
                 case 0:
                     pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.B1;
@@ -55,7 +67,7 @@ namespace InterfaceTIV.Vista
                 default:
                     break;
             }
-            switch (c1)
+            switch (a)
             {
                 case 0:
                     pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -77,7 +89,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            switch (c2)
+            switch (b)
             {
                 case 0:
                     pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -99,7 +111,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            switch (c3)
+            switch (c)
             {
                 case 0:
                     pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -121,7 +133,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            switch (c4)
+            switch (d)
             {
                 case 0:
                     pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -143,7 +155,7 @@ namespace InterfaceTIV.Vista
                     break;
             }
 
-            switch (c5)
+            switch (e)
             {
                 case 0:
                     pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -182,47 +194,44 @@ namespace InterfaceTIV.Vista
                 default:
                     break;
             }
+            a = 0;
         }
 
         
         public void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
         {
-            Console.WriteLine("User Added Event has occured");
             userID = (int)e.userId;
         }
 
 
-        public async void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
+        public void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
         {
 
             EmoState es = e.emoState;
+
 
             if (e.userId != 0) return;
 
             float timeFromStart = es.GetTimeFromStart();
             lblTiempo.Text = timeFromStart.ToString();
-            //Console.WriteLine("Timer: " + timeFromStart);
+            Console.WriteLine("Timer: " + timeFromStart);
 
             EdkDll.IEE_SignalStrength_t signalStrength = es.GetWirelessSignalStatus();
-
+            fuerzaseñal = signalStrength.ToString();
             Int32 chargeLevel = 0;
             Int32 maxChargeLevel = 0;
             es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
             b1 = chargeLevel;
-            await estadistica((int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8), (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4), chargeLevel, signalStrength.ToString());
 
-
-
-            // c1 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3);
-            //c2 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7);
-            // c3 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1);
-            //c4 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8);
-            // c5 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4);
-
-
+            c1 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3);
+            c2 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7);
+            c3 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1);
+            c4 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8);
+            c5 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4);
+            
         }
 
-        public async void Main()
+        public async Task Main()
         {
 
             //Console.WriteLine("Headset Information Logger Example");
@@ -236,13 +245,17 @@ namespace InterfaceTIV.Vista
             engine.Connect();
 
 
+
             while (true)
             {
                 if (a >= 10)
+                {
+
                     break;
+                }
 
 
-                Console.WriteLine("hola Mizael");
+                Console.WriteLine("hola Mizael " + a);
                 Console.WriteLine(b1);
                 Console.WriteLine(c1);
                 Console.WriteLine(c2);
@@ -253,6 +266,7 @@ namespace InterfaceTIV.Vista
 
                 engine.ProcessEvents();
 
+                await estadistica(c1, c2, c3, c4, c5, b1, fuerzaseñal);
 
                 a++;
 
@@ -264,7 +278,31 @@ namespace InterfaceTIV.Vista
             }
 
             engine.Disconnect();
-
         }
+
+
+
+
+        /////////////////////////////////////////////Arrastrar Ventana/////////////////////////////////////////////////////////
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        /////////////////////////////////////////////Arrastrar Ventana/////////////////////////////////////////////////////////
+
+
+
+
+
+
+
     }
 }

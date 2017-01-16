@@ -18,13 +18,16 @@ namespace InterfaceTIV
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            InicioCarga HOME = new InicioCarga();
-            
+            //InicioCarga HOME = new InicioCarga();
+
             //IntegracionDiadiema Estados = new IntegracionDiadiema();
             //Estados.Main();
 
             //LecturaFrecuencias Frecuencias = new LecturaFrecuencias();
             //Frecuencias.Main();
+
+            Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
+
 
             Application.Run();
 
