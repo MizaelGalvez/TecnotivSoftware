@@ -19,7 +19,7 @@ namespace InterfaceTIV.Vista
         public Electrodos_Carga_señal()
         {
             InitializeComponent();
-            this.SetDesktopLocation(500,0);
+            this.SetDesktopLocation(420,8);
             this.Show();
             pbBateria.BackgroundImage = Properties.Resources.B0;
             pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
@@ -27,15 +27,14 @@ namespace InterfaceTIV.Vista
             pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
             pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
             pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
-
+            TopMost = true;
             
+
         }
 
         static int userID = -1;
-
         int c1, c2, c3, c4, c5, b1;
         string fuerzaseñal = "";
-
         int a = 0;
 
         private async void button1_Click(object sender, EventArgs e)
@@ -244,18 +243,16 @@ namespace InterfaceTIV.Vista
             // connect to Emoengine.            
             engine.Connect();
 
-
+            button1.Text = "Conectado";
 
             while (true)
             {
                 if (a >= 10)
                 {
-
                     break;
                 }
-
-
-                Console.WriteLine("hola Mizael " + a);
+                
+                Console.WriteLine("Hi Mizael ");
                 Console.WriteLine(b1);
                 Console.WriteLine(c1);
                 Console.WriteLine(c2);
@@ -265,11 +262,9 @@ namespace InterfaceTIV.Vista
 
 
                 engine.ProcessEvents();
-
+                this.Refresh();
                 await estadistica(c1, c2, c3, c4, c5, b1, fuerzaseñal);
-
-                a++;
-
+                
                 // If the user has not yet connected, do not proceed
                 if ((int)userID == -1)
                     continue;

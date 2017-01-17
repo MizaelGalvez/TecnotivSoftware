@@ -18,7 +18,7 @@ namespace InterfaceTIV
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //InicioCarga HOME = new InicioCarga();
+            InicioCarga HOME = new InicioCarga();
 
             //IntegracionDiadiema Estados = new IntegracionDiadiema();
             //Estados.Main();

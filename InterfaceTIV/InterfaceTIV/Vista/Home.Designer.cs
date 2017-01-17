@@ -55,14 +55,6 @@
             this.btnRegresarRutas = new System.Windows.Forms.Button();
             this.btnIRbaño = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTiempo = new System.Windows.Forms.Label();
-            this.pbAF4 = new System.Windows.Forms.PictureBox();
-            this.pbT8 = new System.Windows.Forms.PictureBox();
-            this.pbPZ = new System.Windows.Forms.PictureBox();
-            this.pbT7 = new System.Windows.Forms.PictureBox();
-            this.pbAF3 = new System.Windows.Forms.PictureBox();
-            this.pbWifi = new System.Windows.Forms.PictureBox();
-            this.pbBateria = new System.Windows.Forms.PictureBox();
             this.Hora = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -110,13 +102,6 @@
             this.panelComando.SuspendLayout();
             this.panelRUTA.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAF4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbT8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPZ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbT7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAF3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWifi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBateria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panelSilla.SuspendLayout();
@@ -492,14 +477,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(99)))));
             this.panel1.BackgroundImage = global::InterfaceTIV.Properties.Resources.SuperiorDegradadobest;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.lblTiempo);
-            this.panel1.Controls.Add(this.pbAF4);
-            this.panel1.Controls.Add(this.pbT8);
-            this.panel1.Controls.Add(this.pbPZ);
-            this.panel1.Controls.Add(this.pbT7);
-            this.panel1.Controls.Add(this.pbAF3);
-            this.panel1.Controls.Add(this.pbWifi);
-            this.panel1.Controls.Add(this.pbBateria);
             this.panel1.Controls.Add(this.Hora);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox8);
@@ -507,100 +484,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(942, 70);
             this.panel1.TabIndex = 15;
-            // 
-            // lblTiempo
-            // 
-            this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Location = new System.Drawing.Point(519, 31);
-            this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(35, 13);
-            this.lblTiempo.TabIndex = 24;
-            this.lblTiempo.Text = "label1";
-            this.lblTiempo.Visible = false;
-            // 
-            // pbAF4
-            // 
-            this.pbAF4.BackColor = System.Drawing.Color.Transparent;
-            this.pbAF4.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
-            this.pbAF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbAF4.Location = new System.Drawing.Point(466, 31);
-            this.pbAF4.Name = "pbAF4";
-            this.pbAF4.Size = new System.Drawing.Size(19, 11);
-            this.pbAF4.TabIndex = 23;
-            this.pbAF4.TabStop = false;
-            this.pbAF4.Visible = false;
-            // 
-            // pbT8
-            // 
-            this.pbT8.BackColor = System.Drawing.Color.Transparent;
-            this.pbT8.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
-            this.pbT8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbT8.Location = new System.Drawing.Point(441, 31);
-            this.pbT8.Name = "pbT8";
-            this.pbT8.Size = new System.Drawing.Size(19, 11);
-            this.pbT8.TabIndex = 22;
-            this.pbT8.TabStop = false;
-            this.pbT8.Visible = false;
-            // 
-            // pbPZ
-            // 
-            this.pbPZ.BackColor = System.Drawing.Color.Transparent;
-            this.pbPZ.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
-            this.pbPZ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbPZ.Location = new System.Drawing.Point(416, 31);
-            this.pbPZ.Name = "pbPZ";
-            this.pbPZ.Size = new System.Drawing.Size(19, 11);
-            this.pbPZ.TabIndex = 21;
-            this.pbPZ.TabStop = false;
-            this.pbPZ.Visible = false;
-            // 
-            // pbT7
-            // 
-            this.pbT7.BackColor = System.Drawing.Color.Transparent;
-            this.pbT7.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
-            this.pbT7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbT7.Location = new System.Drawing.Point(391, 31);
-            this.pbT7.Name = "pbT7";
-            this.pbT7.Size = new System.Drawing.Size(19, 11);
-            this.pbT7.TabIndex = 20;
-            this.pbT7.TabStop = false;
-            this.pbT7.Visible = false;
-            // 
-            // pbAF3
-            // 
-            this.pbAF3.BackColor = System.Drawing.Color.Transparent;
-            this.pbAF3.BackgroundImage = global::InterfaceTIV.Properties.Resources.C0;
-            this.pbAF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbAF3.Location = new System.Drawing.Point(366, 31);
-            this.pbAF3.Name = "pbAF3";
-            this.pbAF3.Size = new System.Drawing.Size(19, 11);
-            this.pbAF3.TabIndex = 19;
-            this.pbAF3.TabStop = false;
-            this.pbAF3.Visible = false;
-            // 
-            // pbWifi
-            // 
-            this.pbWifi.BackColor = System.Drawing.Color.Transparent;
-            this.pbWifi.BackgroundImage = global::InterfaceTIV.Properties.Resources.W0;
-            this.pbWifi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbWifi.Location = new System.Drawing.Point(658, 23);
-            this.pbWifi.Name = "pbWifi";
-            this.pbWifi.Size = new System.Drawing.Size(29, 21);
-            this.pbWifi.TabIndex = 18;
-            this.pbWifi.TabStop = false;
-            this.pbWifi.Visible = false;
-            // 
-            // pbBateria
-            // 
-            this.pbBateria.BackColor = System.Drawing.Color.Transparent;
-            this.pbBateria.BackgroundImage = global::InterfaceTIV.Properties.Resources.B0;
-            this.pbBateria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbBateria.Location = new System.Drawing.Point(606, 23);
-            this.pbBateria.Name = "pbBateria";
-            this.pbBateria.Size = new System.Drawing.Size(29, 21);
-            this.pbBateria.TabIndex = 17;
-            this.pbBateria.TabStop = false;
-            this.pbBateria.Visible = false;
             // 
             // Hora
             // 
@@ -1287,13 +1170,6 @@
             this.panelRUTA.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAF4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbT8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPZ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbT7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAF3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWifi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBateria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panelSilla.ResumeLayout(false);
@@ -1381,13 +1257,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Hora;
         private System.Windows.Forms.Timer Cronometro;
-        private System.Windows.Forms.Label lblTiempo;
-        private System.Windows.Forms.PictureBox pbAF4;
-        private System.Windows.Forms.PictureBox pbT8;
-        private System.Windows.Forms.PictureBox pbPZ;
-        private System.Windows.Forms.PictureBox pbT7;
-        private System.Windows.Forms.PictureBox pbAF3;
-        private System.Windows.Forms.PictureBox pbWifi;
-        private System.Windows.Forms.PictureBox pbBateria;
     }
 }
