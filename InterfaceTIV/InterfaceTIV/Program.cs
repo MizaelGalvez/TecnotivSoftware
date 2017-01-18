@@ -18,6 +18,10 @@ namespace InterfaceTIV
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //IntegracionDiadiema Bluethoot = new IntegracionDiadiema();
+            //Bluethoot.Main();
+
             InicioCarga HOME = new InicioCarga();
 
             //IntegracionDiadiema Estados = new IntegracionDiadiema();

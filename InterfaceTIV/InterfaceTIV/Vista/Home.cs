@@ -774,10 +774,7 @@ namespace InterfaceTIV.Vista
             
 
             //String X = await leerAsync();
-
-            Electrodos_Carga_señal hola = new Electrodos_Carga_señal();
-            hola.Show();
-
+            
             //Console.WriteLine(X);
 
             ocultarVentana(ref panelSilla, ref panelHome);

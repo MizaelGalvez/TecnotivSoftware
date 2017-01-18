@@ -36,7 +36,6 @@
             this.pbT8 = new System.Windows.Forms.PictureBox();
             this.pbAF4 = new System.Windows.Forms.PictureBox();
             this.lblTiempo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbBateria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWifi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAF3)).BeginInit();
@@ -136,21 +135,6 @@
             this.lblTiempo.Text = "0.000 s/f";
             this.lblTiempo.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(223, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 37);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Conectar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Electrodos_Carga_señal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,8 +142,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(163)))));
             this.BackgroundImage = global::InterfaceTIV.Properties.Resources.Transparente;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(330, 56);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(222, 56);
             this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.pbAF4);
             this.Controls.Add(this.pbT8);
@@ -197,6 +180,5 @@
         private System.Windows.Forms.PictureBox pbT8;
         private System.Windows.Forms.PictureBox pbAF4;
         private System.Windows.Forms.Label lblTiempo;
-        private System.Windows.Forms.Button button1;
     }
 }
