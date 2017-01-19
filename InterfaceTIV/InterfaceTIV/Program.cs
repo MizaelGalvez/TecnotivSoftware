@@ -22,17 +22,12 @@ namespace InterfaceTIV
             //IntegracionDiadiema Bluethoot = new IntegracionDiadiema();
             //Bluethoot.Main();
 
-            InicioCarga HOME = new InicioCarga();
+            //InicioCarga HOME = new InicioCarga();
+            
+            //Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
 
-            //IntegracionDiadiema Estados = new IntegracionDiadiema();
-            //Estados.Main();
-
-            //LecturaFrecuencias Frecuencias = new LecturaFrecuencias();
-            //Frecuencias.Main();
-
-            Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
-
-
+            GraficaFrecuencias grafica = new GraficaFrecuencias();
+            
             Application.Run();
 
 

@@ -60,6 +60,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -121,6 +122,12 @@
     <Compile Include="Vista\Electrodos-Carga-señal.Designer.cs">
       <DependentUpon>Electrodos-Carga-señal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\GraficaFrecuencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\GraficaFrecuencias.Designer.cs">
+      <DependentUpon>GraficaFrecuencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\GuardarRuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Electrodos-Carga-señal.resx">
       <DependentUpon>Electrodos-Carga-señal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\GraficaFrecuencias.resx">
+      <DependentUpon>GraficaFrecuencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\GuardarRuta.resx">
       <DependentUpon>GuardarRuta.cs</DependentUpon>
