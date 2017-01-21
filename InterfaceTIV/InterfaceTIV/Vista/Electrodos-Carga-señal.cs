@@ -34,10 +34,11 @@ namespace InterfaceTIV.Vista
             pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
             pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
             TopMost = true;
-            Thread procesoAsync = new Thread(Main);
-
+            Thread procesoAsync = new Thread(iniciar);
             procesoAsync.Start();
+            
         }
+        
 
         public void estadistica(int a,int b,int c,int d,int e,int f, string señal)
         {
@@ -226,7 +227,7 @@ namespace InterfaceTIV.Vista
             
         }
 
-        public void Main()
+        public void iniciar()
         {
 
             //Console.WriteLine("Headset Information Logger Example");

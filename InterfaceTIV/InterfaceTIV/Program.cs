@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using InterfaceTIV.Vista;
 using InterfaceTIV.Controladores;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace InterfaceTIV
 {
@@ -24,13 +25,13 @@ namespace InterfaceTIV
 
             //InicioCarga HOME = new InicioCarga();
             
+            
             //Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
 
             GraficaFrecuencias grafica = new GraficaFrecuencias();
-            
+
             Application.Run();
-
-
+            
         }
     }
 }
