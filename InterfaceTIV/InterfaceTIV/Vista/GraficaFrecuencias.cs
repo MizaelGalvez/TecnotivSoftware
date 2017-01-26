@@ -34,13 +34,28 @@ namespace InterfaceTIV.Vista
         {
             InitializeComponent();
             this.Show();
+            this.SetDesktopLocation(0, 0);
+
+            GraficaT7.ChartAreas[0].AxisY.Interval = 5;
+            GraficaT8.ChartAreas[0].AxisY.Interval = 5;
+            GraficaAF3.ChartAreas[0].AxisY.Interval = 5;
+            GraficaAF4.ChartAreas[0].AxisY.Interval = 5;
+            GraficaPZ.ChartAreas[0].AxisY.Interval = 5;
+            
+            GraficaT7.ChartAreas[0].AxisY.Maximum = 40;
+            GraficaT8.ChartAreas[0].AxisY.Maximum = 40;
+            GraficaAF3.ChartAreas[0].AxisY.Maximum = 40;
+            GraficaAF4.ChartAreas[0].AxisY.Maximum = 40;
+            GraficaPZ.ChartAreas[0].AxisY.Maximum = 40;
+
+            GraficaT7.ChartAreas[0].AxisX.Maximum = 100;
+            GraficaT8.ChartAreas[0].AxisX.Maximum = 100;
+            GraficaAF3.ChartAreas[0].AxisX.Maximum = 100;
+            GraficaAF4.ChartAreas[0].AxisX.Maximum = 100;
+            GraficaPZ.ChartAreas[0].AxisX.Maximum = 100;
 
 
-            //GraficaT7.ChartAreas[0].AxisY.Interval = 5;
-            //GraficaT8.ChartAreas[0].AxisY.Interval = 5;
-            GraficaAF3.ChartAreas[0].AxisY.Interval = 15;
-            GraficaAF4.ChartAreas[0].AxisY.Interval = 15;
-            //GraficaPZ.ChartAreas[0].AxisY.Interval = 5;
+
 
             Thread procesoAsync = new Thread(Main);
             procesoAsync.Start();
@@ -58,19 +73,11 @@ namespace InterfaceTIV.Vista
 
         public void Main()
         {
-           Console.WriteLine("===================================================================");
-           Console.WriteLine("Example to get the average banpecific channel from the latst epoch.");
-           Console.WriteLine("===================================================================");
             
-
-            // create the engine
+            
             EmoEngine engine = EmoEngine.Instance;
             engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
             engine.Connect();
-
-           // string header = "Theta, Alpha, Low_beta, High_beta, Gamma"; ;
-            //file.WriteLine(header);
-           // file.WriteLine("");
 
             EdkDll.IEE_DataChannel_t[] channelList = new EdkDll.IEE_DataChannel_t[5] { EdkDll.IEE_DataChannel_t.IED_AF3,
                                                                                        EdkDll.IEE_DataChannel_t.IED_AF4,
@@ -183,90 +190,90 @@ namespace InterfaceTIV.Vista
                 switch (Electrodo)
                 {
                     case 0:
-                        //this.GraficaT7.Series[0].Points.AddXY(0, AF3a);
-                        //this.GraficaT7.Series[1].Points.AddXY(0, AF3b);
-                        //this.GraficaT7.Series[2].Points.AddXY(0, AF3c);
+                        this.GraficaT7.Series[0].Points.AddXY(0, AF3a);
+                        this.GraficaT7.Series[1].Points.AddXY(0, AF3b);
+                        this.GraficaT7.Series[2].Points.AddXY(0, AF3c);
                         this.GraficaT7.Series[3].Points.AddXY(0, AF3d);
                         this.GraficaT7.Series[4].Points.AddXY(0, AF3e);
 
-                        if (GraficaT7.Series[3].Points.Count > 200)
+                        if (GraficaT7.Series[3].Points.Count > 100)
                         {
                             // Borra desde X = 0.
-                            //GraficaT7.Series[0].Points.RemoveAt(0);
-                            //GraficaT7.Series[1].Points.RemoveAt(0);
-                            //GraficaT7.Series[2].Points.RemoveAt(0);
+                            GraficaT7.Series[0].Points.RemoveAt(0);
+                            GraficaT7.Series[1].Points.RemoveAt(0);
+                            GraficaT7.Series[2].Points.RemoveAt(0);
                             GraficaT7.Series[3].Points.RemoveAt(0);
                             GraficaT7.Series[4].Points.RemoveAt(0);
                         }
 
                         break;
                     case 1:
-                        //this.GraficaT8.Series[0].Points.AddXY(0, AF3a);
-                        //this.GraficaT8.Series[1].Points.AddXY(0, AF3b);
-                        //this.GraficaT8.Series[2].Points.AddXY(0, AF3c);
+                        this.GraficaT8.Series[0].Points.AddXY(0, AF3a);
+                        this.GraficaT8.Series[1].Points.AddXY(0, AF3b);
+                        this.GraficaT8.Series[2].Points.AddXY(0, AF3c);
                         this.GraficaT8.Series[3].Points.AddXY(0, AF3d);
                         this.GraficaT8.Series[4].Points.AddXY(0, AF3e);
 
-                        if (GraficaT8.Series[3].Points.Count > 200)
+                        if (GraficaT8.Series[3].Points.Count > 100)
                         {
                             // Borra desde X = 0.
-                            //GraficaT8.Series[0].Points.RemoveAt(0);
-                            //GraficaT8.Series[1].Points.RemoveAt(0);
-                            //GraficaT8.Series[2].Points.RemoveAt(0);
+                            GraficaT8.Series[0].Points.RemoveAt(0);
+                            GraficaT8.Series[1].Points.RemoveAt(0);
+                            GraficaT8.Series[2].Points.RemoveAt(0);
                             GraficaT8.Series[3].Points.RemoveAt(0);
                             GraficaT8.Series[4].Points.RemoveAt(0);
                         }
 
                         break;
                     case 2:
-                        //this.GraficaAF3.Series[0].Points.AddXY(0, AF3a);
-                        //this.GraficaAF3.Series[1].Points.AddXY(0, AF3b);
-                        //this.GraficaAF3.Series[2].Points.AddXY(0, AF3c);
+                        this.GraficaAF3.Series[0].Points.AddXY(0, AF3a);
+                        this.GraficaAF3.Series[1].Points.AddXY(0, AF3b);
+                        this.GraficaAF3.Series[2].Points.AddXY(0, AF3c);
                         this.GraficaAF3.Series[3].Points.AddXY(0, AF3d);
                         this.GraficaAF3.Series[4].Points.AddXY(0, AF3e);
 
-                        if (GraficaAF3.Series[3].Points.Count > 400)
+                        if (GraficaAF3.Series[3].Points.Count > 100)
                         {
                             // Borra desde X = 0.
-                            //GraficaAF3.Series[0].Points.RemoveAt(0);
-                            //GraficaAF3.Series[1].Points.RemoveAt(0);
-                            //GraficaAF3.Series[2].Points.RemoveAt(0);
+                            GraficaAF3.Series[0].Points.RemoveAt(0);
+                            GraficaAF3.Series[1].Points.RemoveAt(0);
+                            GraficaAF3.Series[2].Points.RemoveAt(0);
                             GraficaAF3.Series[3].Points.RemoveAt(0);
                             GraficaAF3.Series[4].Points.RemoveAt(0);
                         }
 
                         break;
                     case 3:
-                        //this.GraficaAF4.Series[0].Points.AddXY(0, AF3a);
-                        //this.GraficaAF4.Series[1].Points.AddXY(0, AF3b);
-                        //this.GraficaAF4.Series[2].Points.AddXY(0, AF3c);
+                        this.GraficaAF4.Series[0].Points.AddXY(0, AF3a);
+                        this.GraficaAF4.Series[1].Points.AddXY(0, AF3b);
+                        this.GraficaAF4.Series[2].Points.AddXY(0, AF3c);
                         this.GraficaAF4.Series[3].Points.AddXY(0, AF3d);
                         this.GraficaAF4.Series[4].Points.AddXY(0, AF3e);
 
-                        if (GraficaAF4.Series[3].Points.Count > 400)
+                        if (GraficaAF4.Series[3].Points.Count > 100)
                         {
                             // Borra desde X = 0.
-                            //GraficaAF4.Series[0].Points.RemoveAt(0);
-                            //GraficaAF4.Series[1].Points.RemoveAt(0);
-                            //GraficaAF4.Series[2].Points.RemoveAt(0);
+                            GraficaAF4.Series[0].Points.RemoveAt(0);
+                            GraficaAF4.Series[1].Points.RemoveAt(0);
+                            GraficaAF4.Series[2].Points.RemoveAt(0);
                             GraficaAF4.Series[3].Points.RemoveAt(0);
                             GraficaAF4.Series[4].Points.RemoveAt(0);
                         }
 
                         break;
                     case 4:
-                        //this.GraficaPZ.Series[0].Points.AddXY(0, AF3a);
-                        //this.GraficaPZ.Series[1].Points.AddXY(0, AF3b);
-                        //this.GraficaPZ.Series[2].Points.AddXY(0, AF3c);
+                        this.GraficaPZ.Series[0].Points.AddXY(0, AF3a);
+                        this.GraficaPZ.Series[1].Points.AddXY(0, AF3b);
+                        this.GraficaPZ.Series[2].Points.AddXY(0, AF3c);
                         this.GraficaPZ.Series[3].Points.AddXY(0, AF3d);
                         this.GraficaPZ.Series[4].Points.AddXY(0, AF3e);
 
-                        if (GraficaPZ.Series[3].Points.Count > 300)
+                        if (GraficaPZ.Series[3].Points.Count > 100)
                         {
                             // Borra desde X = 0.
-                            //GraficaPZ.Series[0].Points.RemoveAt(0);
-                            //GraficaPZ.Series[1].Points.RemoveAt(0);
-                            //GraficaPZ.Series[2].Points.RemoveAt(0);
+                            GraficaPZ.Series[0].Points.RemoveAt(0);
+                            GraficaPZ.Series[1].Points.RemoveAt(0);
+                            GraficaPZ.Series[2].Points.RemoveAt(0);
                             GraficaPZ.Series[3].Points.RemoveAt(0);
                             GraficaPZ.Series[4].Points.RemoveAt(0);
                         }

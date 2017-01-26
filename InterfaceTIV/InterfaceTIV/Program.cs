@@ -26,7 +26,7 @@ namespace InterfaceTIV
             //InicioCarga HOME = new InicioCarga();
             
             
-            //Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
+            Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
 
             GraficaFrecuencias grafica = new GraficaFrecuencias();
 
