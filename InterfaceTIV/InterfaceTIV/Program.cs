@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using InterfaceTIV.Vista;
 using InterfaceTIV.Controladores;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace InterfaceTIV
 {
@@ -18,20 +19,21 @@ namespace InterfaceTIV
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //IntegracionDiadiema Bluethoot = new IntegracionDiadiema();
+            //Bluethoot.Main();
+
             //InicioCarga HOME = new InicioCarga();
 
-            //IntegracionDiadiema Estados = new IntegracionDiadiema();
-            //Estados.Main();
 
-            //LecturaFrecuencias Frecuencias = new LecturaFrecuencias();
-            //Frecuencias.Main();
+            //Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
 
-            Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
+            //GraficaFrecuencias grafica = new GraficaFrecuencias();
 
+            ReconocimeintoVoz escuchando = new ReconocimeintoVoz();
 
             Application.Run();
-
-
+            
         }
     }
 }

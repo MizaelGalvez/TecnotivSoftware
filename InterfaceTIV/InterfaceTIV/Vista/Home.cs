@@ -68,285 +68,7 @@ namespace InterfaceTIV.Vista
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ///////////////////////////////////////////////////LECTURA DE DIADEMA///////////////////////////////////////////////////////
-        //
-        //
-        //
-        //
-        static int userID = -1;
-
-        int c1, c2, c3, c4, c5, b1;
-
-        public void estadistica(int c1, int c2, int c3, int c4, int c5, int b1) {
-            switch (b1)
-            {
-                case 0:
-                    pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
-                    break;
-                case 1:
-                    pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.B1;
-                    break;
-                case 2:
-                    pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.B2;
-                    break;
-                case 3:
-                    pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.B3;
-                    break;
-                case 4:
-                    pbBateria.BackgroundImage = InterfaceTIV.Properties.Resources.B3;
-                    break;
-
-                default:
-                    break;
-            }
-            switch (c1)
-            {
-                case 0:
-                    pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
-                    break;
-                case 1:
-                    pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
-                    break;
-                case 2:
-                    pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C2;
-                    break;
-                case 3:
-                    pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C3;
-                    break;
-                case 4:
-                    pbAF3.BackgroundImage = InterfaceTIV.Properties.Resources.C4;
-                    break;
-
-                default:
-                    break;
-            }
-
-            switch (c2)
-            {
-                case 0:
-                    pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
-                    break;
-                case 1:
-                    pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
-                    break;
-                case 2:
-                    pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C2;
-                    break;
-                case 3:
-                    pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C3;
-                    break;
-                case 4:
-                    pbT7.BackgroundImage = InterfaceTIV.Properties.Resources.C4;
-                    break;
-
-                default:
-                    break;
-            }
-
-            switch (c3)
-            {
-                case 0:
-                    pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
-                    break;
-                case 1:
-                    pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
-                    break;
-                case 2:
-                    pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C2;
-                    break;
-                case 3:
-                    pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C3;
-                    break;
-                case 4:
-                    pbPZ.BackgroundImage = InterfaceTIV.Properties.Resources.C4;
-                    break;
-
-                default:
-                    break;
-            }
-
-            switch (c4)
-            {
-                case 0:
-                    pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
-                    break;
-                case 1:
-                    pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
-                    break;
-                case 2:
-                    pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C2;
-                    break;
-                case 3:
-                    pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C3;
-                    break;
-                case 4:
-                    pbT8.BackgroundImage = InterfaceTIV.Properties.Resources.C4;
-                    break;
-
-                default:
-                    break;
-            }
-
-            switch (c5)
-            {
-                case 0:
-                    pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C0;
-                    break;
-                case 1:
-                    pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C1;
-                    break;
-                case 2:
-                    pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C2;
-                    break;
-                case 3:
-                    pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C3;
-                    break;
-                case 4:
-                    pbAF4.BackgroundImage = InterfaceTIV.Properties.Resources.C4;
-                    break;
-
-                default:
-                    break;
-            }
-        }
-
-
-        
-        public void engine_UserAdded_Event(object sender, EmoEngineEventArgs e)
-        {
-            Console.WriteLine("User Added Event has occured");
-            userID = (int)e.userId;
-        }
-
-
-
-
-
-        public void engine_EmoStateUpdated(object sender, EmoStateUpdatedEventArgs e)
-        {
-
-            EmoState es = e.emoState;
-
-            if (e.userId != 0) return;
-
-            float timeFromStart = es.GetTimeFromStart();
-            lblTiempo.Text = timeFromStart.ToString();
-            //Console.WriteLine("Timer: " + timeFromStart);
-
-            EdkDll.IEE_SignalStrength_t signalStrength = es.GetWirelessSignalStatus();
-
-            Int32 chargeLevel = 0;
-            Int32 maxChargeLevel = 0;
-            es.GetBatteryChargeLevel(out chargeLevel, out maxChargeLevel);
-            b1 = chargeLevel;
             
-            c1 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF3);
-            c2 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T7);
-            c3 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_O1);
-            c4 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_T8);
-            c5 = (int)es.GetContactQuality((int)EdkDll.IEE_InputChannels_t.IEE_CHAN_AF4);
-        }
-
-        public async Task<string> leerAsync()
-        {
-
-            //Console.WriteLine("Headset Information Logger Example");
-            
-            EmoEngine engine = EmoEngine.Instance;
-
-            engine.UserAdded += new EmoEngine.UserAddedEventHandler(engine_UserAdded_Event);
-            engine.EmoStateUpdated += new EmoEngine.EmoStateUpdatedEventHandler(engine_EmoStateUpdated);
-
-            // connect to Emoengine.            
-            engine.Connect();
-            
-
-            while (true)
-            {
-                if (Console.KeyAvailable)
-                    break;
-
-
-                //Console.WriteLine("hola Mizael");
-                //Console.WriteLine(b1);
-                //Console.WriteLine(c1);
-                //Console.WriteLine(c2);
-                //Console.WriteLine(c3);
-                //Console.WriteLine(c4);
-                //Console.WriteLine(c5);
-
-
-                engine.ProcessEvents();
-
-                
-                estadistica(c1, c2, c3, c4, c5, b1);
-
-                
-
-                // If the user has not yet connected, do not proceed
-                if ((int)userID == -1)
-                    continue;
-
-                Thread.Sleep(500);
-            }
-            
-            engine.Disconnect();
-            return "Finished";
-        }
-        //
-        //
-        //
-        //
-        //
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -440,21 +162,35 @@ namespace InterfaceTIV.Vista
 
         public void enviar(string valor) {
 
+            focus();
             if (contador == Vlongitud)
             {
                 contador = contador + restaLongitud;
             }
+            if (cambio == 1)
+            {
+                pintarMovimiento(valor);
+            }
+            
+            if (valor.Equals("R") || valor.Equals("A") || valor.Equals("D") || valor.Equals("W") || valor.Equals("S") || valor.Equals("4") || valor.Equals("6") || valor.Equals("8") || valor.Equals("5"))
+            {
                 
-                Console.WriteLine(valor);
                 LecturaSerial enviardatos = new LecturaSerial();
                 enviardatos.sensor = cambio;
                 enviardatos.valor = valor;
                 enviardatos.contador = contador;
                 enviardatos.panelReferencia = cambioPanel;
                 enviardatos.Lectura();
-                focus();
-                contador++;
+                contador= contador+2;
                 ReiniciarContador();
+            }
+            else
+            {
+                Console.WriteLine("letra no reconosible :"+ valor);
+                focus();
+            }
+            
+
         }                                       //Evento para enviar los datos recividos por Diadema y canalizarlos a movimiento mause o impresion Serial
         public void pintarMovimiento(string valor) {
             switch (valor)
@@ -468,19 +204,20 @@ namespace InterfaceTIV.Vista
                     btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArribaClick;//arriba
                     btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
                     btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+                    
 
                     break;
                 case "A":
                     btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierdaClick;//Izquierda
                     btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
                     btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerecha;
+                   
                     break;
                 case "D":
                     btnFlechaDerecha.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaDerechaClick;//derecha
                     btnFlechaArriba.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaArriba;
                     btnFlechaIzquierda.BackgroundImage = InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
-                    break;
-                case "C":
+                    
                     break;
                 default:
                     break;
@@ -498,13 +235,9 @@ namespace InterfaceTIV.Vista
         private void txtComando_TextChanged(object sender, EventArgs e)
         {
             string valor = txtComando.Text;
-            if (cambio==1)
-            {
-                pintarMovimiento(valor);
-            }
-            
             enviar(valor);
-            Thread.Sleep(100);
+
+
         }         //Eventos de enviar comandos recibidos cuando el txt cambia de Valor.
         private void Home_Click(object sender, EventArgs e)
         {
@@ -1047,15 +780,12 @@ namespace InterfaceTIV.Vista
             cambioPanel = "controlremoto";
             contador = 0;
         }
-        public async void btnSilla_Click(object sender, EventArgs e)
+        public void btnSilla_Click(object sender, EventArgs e)
         {
             
 
             //String X = await leerAsync();
-
-            Electrodos_Carga_señal hola = new Electrodos_Carga_señal();
-            hola.Show();
-
+            
             //Console.WriteLine(X);
 
             ocultarVentana(ref panelSilla, ref panelHome);
@@ -1066,7 +796,7 @@ namespace InterfaceTIV.Vista
 
             try
             {
-                Cursor.Position = new Point(830, 89);
+                Cursor.Position = new Point(875, 150);
             }
             catch
             {
@@ -1086,61 +816,85 @@ namespace InterfaceTIV.Vista
         {
 
             Notificador(0, btnUNO.Text, descripUNO, URL1);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void btnUNO_Click(object sender, EventArgs e)
         {
             Notificador(0, btnUNO.Text, descripUNO, URL1);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void imgDOS_Click(object sender, EventArgs e)
         {
             Notificador(2, btnDOS.Text, descripDOS, URL2);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void btnDOS_Click(object sender, EventArgs e)
         {
             Notificador(2, btnDOS.Text, descripDOS, URL2);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void imgTRES_Click(object sender, EventArgs e)
         {
             Notificador(0, btnTRES.Text, descripTRES, URL3);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void btnTRES_Click(object sender, EventArgs e)
         {
             Notificador(0, btnTRES.Text, descripTRES, URL3);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void imgCUATRO_Click(object sender, EventArgs e)
         {
             Notificador(1, btnCUATRO.Text, descripCUATRO, URL4);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void btnCUATRO_Click(object sender, EventArgs e)
         {
             Notificador(1, btnCUATRO.Text, descripCUATRO, URL4);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void imgCINCO_Click(object sender, EventArgs e)
         {
             Notificador(0, btnCINCO.Text, descripCINCO, URL5);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void btnCINCO_Click(object sender, EventArgs e)
         {
             Notificador(0, btnCINCO.Text, descripCINCO, URL5);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void imgSEIS_Click(object sender, EventArgs e)
         {
             Notificador(0, btnSEIS.Text, descripSEIS, URL6);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
 
         private void btnSEIS_Click(object sender, EventArgs e)
         {
             Notificador(0, btnSEIS.Text, descripSEIS, URL6);
+            Confirmacion aviso = new Confirmacion();
+            aviso.Show();
         }
         //
         //
@@ -1157,17 +911,23 @@ namespace InterfaceTIV.Vista
         //
         //
         //Eventos del panel de  la silla
-        private void btnFlechaArriba_Click(object sender, EventArgs e)
+        public void btnFlechaArriba_Click(object sender, EventArgs e)
         {
-
+            String Valor = "8";
+            contador = 2;
+            enviar(Valor);
         }
         private void btnFlechaDerecha_Click(object sender, EventArgs e)
         {
-
+            String Valor = "6";
+            contador = 2;
+            enviar(Valor);
         }
         private void btnFlechaIzquierda_Click(object sender, EventArgs e)
         {
-
+            String Valor = "4";
+            contador = 2;
+            enviar(Valor);
         }
         private void btnRutas_Click(object sender, EventArgs e)
         {
@@ -1230,13 +990,13 @@ namespace InterfaceTIV.Vista
         private void btnAlimentos_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnAlimentos);
-            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.btnAlimentosClick;
+            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.Recurso_9_8;
         }
 
         private void btnAlimentos_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnAlimentos);
-            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgAlimentos;
+            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.Recurso_8_8;
         }
 
         private void btnActividades_MouseHover(object sender, EventArgs e)
