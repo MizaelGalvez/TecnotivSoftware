@@ -24,11 +24,13 @@ namespace InterfaceTIV
             //Bluethoot.Main();
 
             //InicioCarga HOME = new InicioCarga();
-            
-            
-            Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
 
-            GraficaFrecuencias grafica = new GraficaFrecuencias();
+
+            //Electrodos_Carga_señal Electro  = new Electrodos_Carga_señal();
+
+            //GraficaFrecuencias grafica = new GraficaFrecuencias();
+
+            ReconocimeintoVoz escuchando = new ReconocimeintoVoz();
 
             Application.Run();
             

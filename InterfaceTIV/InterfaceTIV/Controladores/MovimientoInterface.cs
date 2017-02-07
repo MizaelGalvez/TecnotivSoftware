@@ -22,9 +22,9 @@ namespace InterfaceTIV.Controladores
 
         public void MoverCursor()
         {
-            
+            //Console.WriteLine(valor);
             // N = neutral A = adelante I = izquierda D = derecha UP = arriba DOWN = abajo
-            if (valor.Equals("A")||valor.Equals("S")||valor.Equals("D")|| valor.Equals("W"))
+            if (valor.Equals("4")||valor.Equals("5")||valor.Equals("6")|| valor.Equals("8"))
             {
                 try
                 {
@@ -35,7 +35,7 @@ namespace InterfaceTIV.Controladores
                 }
                 switch (valor)
                 {
-                    case "A":
+                    case "4":
 
                         try
                         {
@@ -48,7 +48,7 @@ namespace InterfaceTIV.Controladores
 
 
                         break;
-                    case "D":
+                    case "6":
                         try
                         {
                             Cursor.Position = new Point(Cursor.Position.X + 50, Cursor.Position.Y + 0);
@@ -59,7 +59,7 @@ namespace InterfaceTIV.Controladores
                         }
 
                         break;
-                    case "S":
+                    case "5":
                         try
                         {
                             Cursor.Position = new Point(Cursor.Position.X + 0, Cursor.Position.Y + 50);
@@ -69,7 +69,7 @@ namespace InterfaceTIV.Controladores
                             Console.Write("Error clase MovimientoInterface al Mover Mause");
                         }
                         break;
-                    case "W":
+                    case "8":
                         try
                         {
                             Cursor.Position = new Point(Cursor.Position.X - 0, Cursor.Position.Y - 50);
@@ -100,7 +100,7 @@ namespace InterfaceTIV.Controladores
             catch
             {
             }
-            //Console.WriteLine(contador+" "+panelReferencia);
+            Console.WriteLine(contador+" "+panelReferencia);
             switch (panelReferencia)
             {
                 case "comidas":
@@ -358,7 +358,7 @@ namespace InterfaceTIV.Controladores
                 case 0:
                     try
                     {
-                        Cursor.Position = new Point(875, 455);
+                        Cursor.Position = new Point(875, 500);
                     }
                     catch
                     {
@@ -376,7 +376,7 @@ namespace InterfaceTIV.Controladores
                 case 4:
                     try
                     {
-                        Cursor.Position = new Point(175, 305);
+                        Cursor.Position = new Point(175, 325);
                     }
                     catch
                     {

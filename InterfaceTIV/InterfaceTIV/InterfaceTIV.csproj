@@ -59,6 +59,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -115,6 +116,12 @@
     <Compile Include="Vista\Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Confirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Confirmacion.Designer.cs">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Electrodos-Carga-señal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +152,12 @@
     <Compile Include="Vista\InicioCarga.Designer.cs">
       <DependentUpon>InicioCarga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ReconocimeintoVoz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ReconocimeintoVoz.Designer.cs">
+      <DependentUpon>ReconocimeintoVoz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\WebNavegador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +185,9 @@
     <EmbeddedResource Include="Vista\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Confirmacion.resx">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Electrodos-Carga-señal.resx">
       <DependentUpon>Electrodos-Carga-señal.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +203,9 @@
     <EmbeddedResource Include="Vista\InicioCarga.resx">
       <DependentUpon>InicioCarga.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ReconocimeintoVoz.resx">
+      <DependentUpon>ReconocimeintoVoz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\WebNavegador.resx">
       <DependentUpon>WebNavegador.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +220,12 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\Recurso 9-8.png" />
+    <None Include="Resources\Recurso 8-8.png" />
+    <None Include="Resources\new_btnAlimentos-100.jpg" />
+    <None Include="Resources\new_Fondo.jpg" />
+    <None Include="Resources\new_Fondo.png" />
+    <None Include="Resources\BotonAlimentos.png" />
     <None Include="Resources\C4.png" />
     <None Include="Resources\C3.png" />
     <None Include="Resources\C2.png" />

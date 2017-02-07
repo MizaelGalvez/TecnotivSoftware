@@ -133,6 +133,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonAlimentos {
+            get {
+                object obj = ResourceManager.GetObject("BotonAlimentos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brnBaño {
             get {
                 object obj = ResourceManager.GetObject("brnBaño", resourceCulture);
@@ -796,6 +806,56 @@ namespace InterfaceTIV.Properties {
         internal static System.Drawing.Bitmap mamona1 {
             get {
                 object obj = ResourceManager.GetObject("mamona1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_btnAlimentos_100 {
+            get {
+                object obj = ResourceManager.GetObject("new_btnAlimentos-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_Fondo {
+            get {
+                object obj = ResourceManager.GetObject("new_Fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_Fondo1 {
+            get {
+                object obj = ResourceManager.GetObject("new_Fondo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recurso_8_8 {
+            get {
+                object obj = ResourceManager.GetObject("Recurso 8-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recurso_9_8 {
+            get {
+                object obj = ResourceManager.GetObject("Recurso 9-8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
