@@ -990,86 +990,86 @@ namespace InterfaceTIV.Vista
         private void btnAlimentos_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnAlimentos);
-            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.Recurso_9_8;
+            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.hoverALIMENTOS;
         }
 
         private void btnAlimentos_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnAlimentos);
-            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.Recurso_8_8;
+            btnAlimentos.BackgroundImage = InterfaceTIV.Properties.Resources.btnALIMENTOS;
         }
 
         private void btnActividades_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnActividades);
-            btnActividades.BackgroundImage = InterfaceTIV.Properties.Resources.btnActividadesClick;
+            btnActividades.BackgroundImage = InterfaceTIV.Properties.Resources.hoverACTIVIDADES;
         }
 
         private void btnActividades_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnActividades);
-            btnActividades.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgActividades;
+            btnActividades.BackgroundImage = InterfaceTIV.Properties.Resources.btnACTIVIDADES;
         }
 
         private void btnEntretenimiento_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnEntretenimiento);
-            btnEntretenimiento.BackgroundImage = InterfaceTIV.Properties.Resources.btnEntretenimientoClick;
+            btnEntretenimiento.BackgroundImage = InterfaceTIV.Properties.Resources.hoverENTRETENIMIENTO;
         }
 
         private void btnEntretenimiento_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnEntretenimiento);
-            btnEntretenimiento.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgEntretenimiento;
+            btnEntretenimiento.BackgroundImage = InterfaceTIV.Properties.Resources.btnENTRETENIMIENTO;
         }
 
         private void btnControlRemoto_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnControlRemoto);
-            btnControlRemoto.BackgroundImage = InterfaceTIV.Properties.Resources.btnControlRemotoClick;
+            btnControlRemoto.BackgroundImage = InterfaceTIV.Properties.Resources.hoverCONTROL;
         }
 
         private void btnControlRemoto_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnControlRemoto);
-            btnControlRemoto.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgControl;
+            btnControlRemoto.BackgroundImage = InterfaceTIV.Properties.Resources.btnCONTROL;
         }
 
         private void btnHablar_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnHablar);
-            btnHablar.BackgroundImage = InterfaceTIV.Properties.Resources.btnHablarClick;
+            btnHablar.BackgroundImage = InterfaceTIV.Properties.Resources.hoverHABLAR;
         }
 
         private void btnHablar_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnHablar);
-            btnHablar.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgHablar;
+            btnHablar.BackgroundImage = InterfaceTIV.Properties.Resources.btnHABLAR;
         }
 
         private void btnSilla_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnSilla);
-            btnSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnSillaClick;
+            btnSilla.BackgroundImage = InterfaceTIV.Properties.Resources.hoverSILLA;
         }
 
         private void btnSilla_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnSilla);
-            btnSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgSilla;
+            btnSilla.BackgroundImage = InterfaceTIV.Properties.Resources.btnSILLA;
         }
 
         private void btnSeleccion_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnSeleccion);
-            btnSeleccion.BackgroundImage = InterfaceTIV.Properties.Resources.btnMensajeClick;
+            btnSeleccion.BackgroundImage = InterfaceTIV.Properties.Resources.hoverMENSAJE;
 
         }
 
         private void btnSeleccion_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnSeleccion);
-            btnSeleccion.BackgroundImage = InterfaceTIV.Properties.Resources.btnimgMensaje;
+            btnSeleccion.BackgroundImage = InterfaceTIV.Properties.Resources.btnMENSAJE;
         }
         //
         //
@@ -1249,122 +1249,122 @@ namespace InterfaceTIV.Vista
         private void imgUNO_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnUNO);
-            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void imgUNO_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnUNO);
-            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void btnUNO_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnUNO);
-            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void btnUNO_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnUNO);
-            btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnUNO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void imgDOS_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnDOS);
-            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void imgDOS_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnDOS);
-            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void btnDOS_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnDOS);
-            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void btnDOS_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnDOS);
-            btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnDOS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void imgTRES_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnTRES);
-            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void imgTRES_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnTRES);
-            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void btnTRES_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnTRES);
-            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void btnTRES_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnTRES);
-            btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnTRES.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void imgCUATRO_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnCUATRO);
-            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void imgCUATRO_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnCUATRO);
-            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void btnCUATRO_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnCUATRO);
-            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void btnCUATRO_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnCUATRO);
-            btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnCUATRO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void imgCINCO_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnCINCO);
-            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void imgCINCO_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnCINCO);
-            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void btnCINCO_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnCINCO);
-            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void btnCINCO_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnCINCO);
-            btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnCINCO.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void imgSEIS_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnSEIS);
-            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void imgSEIS_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnSEIS);
-            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         private void btnSEIS_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnSEIS);
-            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
+            //btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGrisClick;
         }
         private void btnSEIS_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnSEIS);
-            btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
+            //btnSEIS.BackgroundImage = InterfaceTIV.Properties.Resources.btnGris;
         }
         //
         //
