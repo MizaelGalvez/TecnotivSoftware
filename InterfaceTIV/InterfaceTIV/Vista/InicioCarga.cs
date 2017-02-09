@@ -47,12 +47,9 @@ namespace InterfaceTIV.Vista
                 progressBar1.Increment(100);
 
 
-                Home HOME = new Home();
-                HOME.Show();
-                HOME.SetDesktopLocation(0, 0);
-                HOME.Activate();
-
-
+                ReconocimeintoVoz TECNOTIV = new ReconocimeintoVoz();
+                TECNOTIV.Show();
+                
                 this.Close();
 
 
