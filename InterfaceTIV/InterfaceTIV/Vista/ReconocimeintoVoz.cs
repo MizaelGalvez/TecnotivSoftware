@@ -17,22 +17,32 @@ namespace InterfaceTIV.Vista
 
         public ReconocimeintoVoz()
         {
+            Home HOME = new Home();
+            HOME.Show();
+            HOME.SetDesktopLocation(0, 0);
+            HOME.Activate();
+            
             InitializeComponent();
-            this.SetDesktopLocation(420, 8);
+            this.SetDesktopLocation(10, 380);
             this.Show();
             TopMost = true;
-            label1.Text = "";
-            label2.Text = "";
+            lblVerificacion.Text = "";
+            lblTexto.Text = "";
             Main();
         }
 
 
         public void Main() {
+            Choices palabras = new Choices();
+            palabras.Add(new string[] { "Netflix", "Google", "Hola Henry"});
+            Grammar gramatica = new Grammar(new GrammarBuilder(palabras));
+
 
             try
             {
                 voz.SetInputToDefaultAudioDevice();
                 voz.LoadGrammar(new DictationGrammar());
+                voz.LoadGrammar(gramatica);
                 voz.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Escuchando);
                 voz.RecognizeAsync(RecognizeMode.Multiple);
 
@@ -44,25 +54,32 @@ namespace InterfaceTIV.Vista
 
         }
 
+
         public void Escuchando(object sender, SpeechRecognizedEventArgs frase) {
 
             
             foreach (RecognizedWordUnit palabras in frase.Result.Words)
             {
 
-                label1.Text = label1.Text + palabras.Text + " ";
+                lblVerificacion.Text = lblVerificacion.Text + palabras.Text + " ";
 
             }
-
             
-            label2.Text = label1.Text;
-
-            label1.Text = ""; 
+            lblTexto.Text = lblVerificacion.Text;
+            lblVerificacion.Text = ""; 
             
-
+            
 
         }
 
+        public void ComandosVoz(string comando) {
+
+            if (comando == "Netflix")
+            {
+
+            }
+
+        }
 
 
 

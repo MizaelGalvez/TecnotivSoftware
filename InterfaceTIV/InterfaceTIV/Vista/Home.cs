@@ -561,6 +561,15 @@ namespace InterfaceTIV.Vista
         //
         //
         //
+        private void btnGraficas_Click(object sender, EventArgs e)
+        {
+            GraficaFrecuencias Graficas = new GraficaFrecuencias();
+            Graficas.Show();
+            Graficas.SetDesktopLocation(0, 70);
+            
+        }
+
+
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
            
@@ -1487,7 +1496,7 @@ namespace InterfaceTIV.Vista
             }
             
         }
-
+        
         //
         //
         //

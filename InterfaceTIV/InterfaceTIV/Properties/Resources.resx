@@ -145,6 +145,9 @@
   <data name="btnCargarMenos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnCargarMenos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imgLogoSecundario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgLogoSecundario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imgLogodegradado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgLogodegradado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,14 +166,11 @@
   <data name="Transparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Transparente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hoverHABLAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hoverHABLAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mamona1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mamona1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgLogoDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgLogoDark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnRegresarClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnRegresarClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hoverALIMENTOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoverALIMENTOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +180,9 @@
   </data>
   <data name="btnAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnBorrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnBorrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,14 +223,17 @@
   <data name="Config" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mamona1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mamona1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Recurso 8-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recurso 8-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AUDIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AUDIO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnCerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnCerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoverHABLAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoverHABLAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnimgMensaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnimgMensaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +244,14 @@
   <data name="C1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\C1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnEntretenimientoClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnEntretenimientoClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnControlRemotoClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnControlRemotoClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="asd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnCargarMenosIZQ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnCargarMenosIZQ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,9 +271,6 @@
   <data name="btnHablarClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnHablarClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hoverCONTROL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hoverCONTROL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="imgBaseElectrodos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgBaseElectrodos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -276,9 +285,6 @@
   </data>
   <data name="W2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\W2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnENTRETENIMIENTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnENTRETENIMIENTO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,8 +313,8 @@
   <data name="hoverSILLA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoverSILLA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnGuardarRuta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnGuardarRuta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnRegresarClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnRegresarClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnPostreClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnPostreClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,14 +322,11 @@
   <data name="B0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\B0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Recurso 8-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Recurso 8-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnFlechaArribaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnFlechaArribaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="foto3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foto3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnHabitacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnHabitacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,20 +337,17 @@
   <data name="btnimgSilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnimgSilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnimgActividades" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnimgActividades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foto3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foto3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnFlechaIzquierdaClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnFlechaIzquierdaClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="asd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\asd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btnHABLAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnHABLAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnHotmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnHotmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnBOTON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnBOTON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="W0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\W0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -376,17 +376,20 @@
   <data name="btnGmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnGmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SuperiorDegradado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SuperiorDegradado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnIniciarRuta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnIniciarRuta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="B3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\B3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnGuardarRuta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnGuardarRuta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_Fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_Fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="C3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\C3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hoverCONTROL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoverCONTROL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_Fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_Fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -403,8 +406,8 @@
   <data name="imgLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnBorrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnBorrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnimgActividades" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnimgActividades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnFlechaArriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnFlechaArriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -412,8 +415,8 @@
   <data name="btnFlechaDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnFlechaDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgLogoSecundario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgLogoSecundario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="B3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonAlimentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonAlimentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -421,16 +424,31 @@
   <data name="foto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SuperiorDegradado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SuperiorDegradado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="C3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\C3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hoverACTIVIDADES" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoverACTIVIDADES.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnEntretenimientoClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnEntretenimientoClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnHotmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnHotmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnBOTON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnBOTON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnBEBIDAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnBEBIDAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnCOMIDA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnCOMIDA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnPOSTRES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPOSTRES.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoverBEBIDAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoverBEBIDAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoverCOMIDAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoverCOMIDAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoverPOSTRES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoverPOSTRES.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
