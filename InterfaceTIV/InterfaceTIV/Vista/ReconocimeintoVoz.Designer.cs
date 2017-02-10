@@ -60,6 +60,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = Properties.Resources.AUDIO;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(13, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
