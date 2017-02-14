@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(163)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(161)))), ((int)(((byte)(209)))));
             this.BackgroundImage = global::InterfaceTIV.Properties.Resources.Transparente;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(222, 56);
@@ -157,7 +157,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Electrodos_Carga_señal";
             this.TopMost = true;
-            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(163)))));
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(161)))), ((int)(((byte)(209)))));
             ((System.ComponentModel.ISupportInitialize)(this.pbBateria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWifi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAF3)).EndInit();

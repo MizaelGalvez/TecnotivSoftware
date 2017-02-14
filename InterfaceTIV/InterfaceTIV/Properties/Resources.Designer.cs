@@ -253,6 +253,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnBEBIDASnew_8 {
+            get {
+                object obj = ResourceManager.GetObject("btnBEBIDASnew-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnBorrar {
             get {
                 object obj = ResourceManager.GetObject("btnBorrar", resourceCulture);
@@ -336,6 +346,16 @@ namespace InterfaceTIV.Properties {
         internal static System.Drawing.Bitmap btnComidaclick {
             get {
                 object obj = ResourceManager.GetObject("btnComidaclick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnCOMIDASnew_8 {
+            get {
+                object obj = ResourceManager.GetObject("btnCOMIDASnew-8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,6 +663,16 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnPOSTRESnew_8 {
+            get {
+                object obj = ResourceManager.GetObject("btnPOSTRESnew-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnRegresar {
             get {
                 object obj = ResourceManager.GetObject("btnRegresar", resourceCulture);
@@ -853,6 +883,26 @@ namespace InterfaceTIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hoverBEBIDAS_8 {
+            get {
+                object obj = ResourceManager.GetObject("hoverBEBIDAS-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hoverCOMIDAS_8 {
+            get {
+                object obj = ResourceManager.GetObject("hoverCOMIDAS-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hoverCONTROL {
             get {
                 object obj = ResourceManager.GetObject("hoverCONTROL", resourceCulture);
@@ -886,6 +936,16 @@ namespace InterfaceTIV.Properties {
         internal static System.Drawing.Bitmap hoverMENSAJE {
             get {
                 object obj = ResourceManager.GetObject("hoverMENSAJE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hoverPOSTRE_8 {
+            get {
+                object obj = ResourceManager.GetObject("hoverPOSTRE-8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

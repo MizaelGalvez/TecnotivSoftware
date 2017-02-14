@@ -33,7 +33,9 @@ namespace InterfaceTIV.Vista
         public GraficaFrecuencias()
         {
             InitializeComponent();
-            
+            this.Show();
+            this.SetDesktopLocation(0, 62);
+
             GraficaT7.ChartAreas[0].AxisY.Interval = 5;
             GraficaT8.ChartAreas[0].AxisY.Interval = 5;
             GraficaAF3.ChartAreas[0].AxisY.Interval = 5;

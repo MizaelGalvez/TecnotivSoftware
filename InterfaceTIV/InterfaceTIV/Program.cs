@@ -30,7 +30,7 @@ namespace InterfaceTIV
 
             //GraficaFrecuencias grafica = new GraficaFrecuencias();
 
-            //ReconocimeintoVoz escuchando = new ReconocimeintoVoz();
+            ReconocimeintoVoz escuchando = new ReconocimeintoVoz();
 
             Application.Run();
             

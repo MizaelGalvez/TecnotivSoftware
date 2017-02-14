@@ -74,6 +74,7 @@
     <Compile Include="Cabezeras\EmoEngine.cs" />
     <Compile Include="Cabezeras\EmoState.cs" />
     <Compile Include="Cabezeras\EmotivCloudClient.cs" />
+    <Compile Include="Controladores\ComandosDeVoz.cs" />
     <Compile Include="Controladores\IntegracionDiadema.cs" />
     <Compile Include="Controladores\LecturaSerial.cs" />
     <Compile Include="Controladores\MetodosHTTP.cs" />
@@ -220,6 +221,12 @@
     <Content Include="Cabezeras\IedkErrorCode.h" />
     <Content Include="Cabezeras\IEmoStateDLL.h" />
     <Content Include="Cabezeras\MentalCommandDetection.h" />
+    <None Include="Resources\hoverPOSTRE-8.png" />
+    <None Include="Resources\hoverCOMIDAS-8.png" />
+    <None Include="Resources\hoverBEBIDAS-8.png" />
+    <None Include="Resources\btnPOSTRESnew-8.png" />
+    <None Include="Resources\btnBEBIDASnew-8.png" />
+    <None Include="Resources\btnCOMIDASnew-8.png" />
     <None Include="Resources\btnBOTON.png" />
     <None Include="Resources\AUDIO.png" />
     <None Include="Resources\Config.png" />
