@@ -74,12 +74,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1024, 65);
+            this.ClientSize = new System.Drawing.Size(1024, 67);
             this.Controls.Add(this.txtEnviar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WebNavegador";
             this.Text = "WebNavegador";
+            this.Activated += new System.EventHandler(this.WebNavegador_Activated);
+            this.Deactivate += new System.EventHandler(this.WebNavegador_Deactivate);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

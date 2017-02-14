@@ -6,18 +6,24 @@ using System.Threading.Tasks;
 using InterfaceTIV.Vista;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace InterfaceTIV.Controladores
 {
     class MovimientoInterface
     {
+        private Point position;
 
         public string valor { get; set; }
         public static Point Position { get; set; }
         public Cursor Cursor { get; private set; }
         public string panelReferencia { get; set; }
         public int contador { get; set; }
+        public int X { get; private set; }
+        public int Y { get; private set; }
 
+        [DllImport("user32.dll")]
+        static extern bool GetCursorPos(ref Point lpPoint);
 
 
         public void MoverCursor()
@@ -39,7 +45,28 @@ namespace InterfaceTIV.Controladores
 
                         try
                         {
-                            Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 0);
+                            position = new Point();
+                            GetCursorPos(ref position);
+                            Console.WriteLine(position.X.ToString());
+
+                            if (position.X <= 150)
+                            {
+                                Cursor.Position = new Point(Cursor.Position.X + 750, Cursor.Position.Y - 50);
+                            }
+                            else
+                            {
+                                Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 0);
+                            }
+
+
+                            ///////////////////////////////////////////////////////////////////////////
+                            if (position.Y <= 100)
+                            {
+                                Cursor.Position = new Point(position.X = 121, position.Y = 828);
+                            }
+                            ////////////////////////////////////////////////////////////////////////////
+
+
                         }
                         catch
                         {
@@ -51,7 +78,30 @@ namespace InterfaceTIV.Controladores
                     case "6":
                         try
                         {
-                            Cursor.Position = new Point(Cursor.Position.X + 50, Cursor.Position.Y + 0);
+                            position = new Point();
+                            GetCursorPos(ref position);
+                            Console.WriteLine(position.X.ToString());
+
+                            
+                            if (position.X >= 850)
+                            {
+                                Cursor.Position = new Point(Cursor.Position.X - 750, Cursor.Position.Y + 50);
+                            }
+                            else
+                            {
+                                Cursor.Position = new Point(Cursor.Position.X + 50, Cursor.Position.Y + 0);
+                            }
+
+                            
+                            ///////////////////////////////////////////////////////////////////////////
+                            if (position.Y >= 800)
+                            {
+
+                                Cursor.Position = new Point(position.X = 923, position.Y = 828);
+                            }
+                            ///////////////////////////////////////////////////////////////////////////
+                            
+
                         }
                         catch
                         {
@@ -62,7 +112,21 @@ namespace InterfaceTIV.Controladores
                     case "5":
                         try
                         {
-                            Cursor.Position = new Point(Cursor.Position.X + 0, Cursor.Position.Y + 50);
+                            position = new Point();
+                            GetCursorPos(ref position);
+                            Console.WriteLine(position.X.ToString());
+
+
+                            
+                            if (position.Y >= 800)
+                            {
+
+                                Cursor.Position = new Point(position.X = 923, position.Y = 828);
+                            }
+                            else
+                            {
+                                Cursor.Position = new Point(Cursor.Position.X + 0, Cursor.Position.Y + 50);
+                            }
                         }
                         catch
                         {
@@ -72,7 +136,20 @@ namespace InterfaceTIV.Controladores
                     case "8":
                         try
                         {
-                            Cursor.Position = new Point(Cursor.Position.X - 0, Cursor.Position.Y - 50);
+                            position = new Point();
+                            GetCursorPos(ref position);
+                            Console.WriteLine(position.X.ToString());
+
+
+
+                            if (position.Y <= 100)
+                            {
+                                Cursor.Position = new Point(position.X = 121, position.Y = 828);
+                            }
+                            else
+                            {
+                                Cursor.Position = new Point(Cursor.Position.X - 0, Cursor.Position.Y - 50);
+                            }
                         }
                         catch
                         {

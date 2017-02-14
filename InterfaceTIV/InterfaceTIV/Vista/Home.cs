@@ -14,6 +14,7 @@ using Emotiv;
 using System.IO.Ports;  // crear los parametros en esta clase principal
 using InterfaceTIV.Model;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace InterfaceTIV.Vista
 {
@@ -57,6 +58,10 @@ namespace InterfaceTIV.Vista
         //
         int animacion;
         int tipoGuardado = 0;
+
+        public int CartesianoX { get; private set; }
+        public int CartesianoY { get; private set; }
+
         //
         //
         //
@@ -68,7 +73,7 @@ namespace InterfaceTIV.Vista
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-            
+
 
 
 
@@ -561,15 +566,6 @@ namespace InterfaceTIV.Vista
         //
         //
         //
-        private void btnGraficas_Click(object sender, EventArgs e)
-        {
-            GraficaFrecuencias Graficas = new GraficaFrecuencias();
-            Graficas.Show();
-            Graficas.SetDesktopLocation(0, 70);
-            
-        }
-
-
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
            
@@ -1104,37 +1100,37 @@ namespace InterfaceTIV.Vista
         private void btnComidas_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnComidas);
-            btnComidas.BackgroundImage = InterfaceTIV.Properties.Resources.btnComidaclick;
+            btnComidas.BackgroundImage = InterfaceTIV.Properties.Resources.hoverCOMIDAS_8;
         }
 
         private void btnComidas_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnComidas);
-            btnComidas.BackgroundImage = InterfaceTIV.Properties.Resources.btnComida;
+            btnComidas.BackgroundImage = InterfaceTIV.Properties.Resources.btnCOMIDASnew_8;
         }
 
         private void btnBebidas_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnBebidas);
-            btnBebidas.BackgroundImage = InterfaceTIV.Properties.Resources.btnBebidaClick;
+            btnBebidas.BackgroundImage = InterfaceTIV.Properties.Resources.hoverBEBIDAS_8;
         }
 
         private void btnBebidas_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnBebidas);
-            btnBebidas.BackgroundImage = InterfaceTIV.Properties.Resources.btnBebida;
+            btnBebidas.BackgroundImage = InterfaceTIV.Properties.Resources.btnBEBIDASnew_8;
         }
 
         private void btnPostres_MouseHover(object sender, EventArgs e)
         {
             CambiarTamañoControl(ref btnPostres);
-            btnPostres.BackgroundImage = InterfaceTIV.Properties.Resources.btnPostreClick;
+            btnPostres.BackgroundImage = InterfaceTIV.Properties.Resources.hoverPOSTRE_8;
         }
 
         private void btnPostres_MouseLeave(object sender, EventArgs e)
         {
             RegresarTamañoControl(ref btnPostres);
-            btnPostres.BackgroundImage = InterfaceTIV.Properties.Resources.btnPostre;
+            btnPostres.BackgroundImage = InterfaceTIV.Properties.Resources.btnPOSTRESnew_8;
         }
         //
         //
@@ -1496,7 +1492,18 @@ namespace InterfaceTIV.Vista
             }
             
         }
-        
+
+        private void btnGraficas_Click(object sender, EventArgs e)
+        {
+            GraficaFrecuencias grafica = new GraficaFrecuencias();
+        }
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
         //
         //
         //

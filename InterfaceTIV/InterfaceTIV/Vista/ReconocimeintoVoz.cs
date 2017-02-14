@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Recognition;
+using System.Speech.Synthesis;
+using InterfaceTIV.Controladores;
 
 namespace InterfaceTIV.Vista
 {
@@ -17,13 +19,8 @@ namespace InterfaceTIV.Vista
 
         public ReconocimeintoVoz()
         {
-            Home HOME = new Home();
-            HOME.Show();
-            HOME.SetDesktopLocation(0, 0);
-            HOME.Activate();
-            
             InitializeComponent();
-            this.SetDesktopLocation(10, 380);
+            this.SetDesktopLocation(10, 340);
             this.Show();
             TopMost = true;
             lblVerificacion.Text = "";
@@ -34,10 +31,8 @@ namespace InterfaceTIV.Vista
 
         public void Main() {
             Choices palabras = new Choices();
-            palabras.Add(new string[] { "Netflix", "Google", "Hola Henry"});
+            palabras.Add(new string[] { "Netflix", "Google", "Hola Henry" });
             Grammar gramatica = new Grammar(new GrammarBuilder(palabras));
-
-
             try
             {
                 voz.SetInputToDefaultAudioDevice();
@@ -54,7 +49,6 @@ namespace InterfaceTIV.Vista
 
         }
 
-
         public void Escuchando(object sender, SpeechRecognizedEventArgs frase) {
 
             
@@ -64,24 +58,20 @@ namespace InterfaceTIV.Vista
                 lblVerificacion.Text = lblVerificacion.Text + palabras.Text + " ";
 
             }
+
             
             lblTexto.Text = lblVerificacion.Text;
-            lblVerificacion.Text = ""; 
+
+            ComandosDeVoz secuencia = new ComandosDeVoz();
+            secuencia.comando = lblTexto.Text;
+            secuencia.ComandosVoz();
+
+            lblVerificacion.Text = "";
             
-            
+
 
         }
 
-        public void ComandosVoz(string comando) {
-
-            if (comando == "Netflix")
-            {
-
-            }
-
-        }
-
-
-
+       
     }
 }

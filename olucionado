@@ -1,0 +1,285 @@
+[33mcommit 7d91ccb47aaae16cec8f3f38e6a842b10dfbbc57[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Fri Feb 10 11:28:14 2017 -0700
+
+    Regresando a v ersiones
+
+[33mcommit 2f5f4fcf259dc9163358ba917d004fa93464668c[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Feb 9 14:23:40 2017 -0700
+
+    Problematica
+    
+    solucionado manual, pero sin reconocer internamente los recursos IMG
+
+[33mcommit e40adfe04ee92f27f2e9094c6c99adefb98e7723[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Wed Feb 8 15:53:31 2017 -0700
+
+    Nueva Interface Aplicada
+
+[33mcommit d5f14b12aaa94febf06c1a3b8b84d1049def549b[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Feb 7 08:44:36 2017 -0700
+
+    Adaptaciones
+    
+    integraciones con comando de Voz
+
+[33mcommit 3b2f7d4933b07a1631bb2a791945955849941916[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Jan 26 16:17:15 2017 -0700
+
+    Jueves 26
+    
+    Graficas Listas y algoritmo en Produccion
+
+[33mcommit 3f7532b4a4133ac6a02af6efc39afb0f66f55389[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Fri Jan 20 17:06:21 2017 -0700
+
+    Graficas Listas
+    
+    Versin Lista Para desarrollar los Algoritmos. !!!
+
+[33mcommit ad53ab73932ffaafc620e3590701f7583ab4ea45[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Jan 19 16:09:49 2017 -0700
+
+    Grafica para interpretr nuestro Propio Comando
+
+[33mcommit 98a5c16c243b53f9f9bc5be18b00d2b62ac0117a[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Wed Jan 18 16:06:20 2017 -0700
+
+    Proseso Asyncrono
+    
+    Magnifico,  separar a continuacion mas Procesos Asyncronod
+
+[33mcommit f18c87349e4310eb773071effb5e24b69617c74c[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Jan 17 11:52:49 2017 -0700
+
+    Interpretacion en Tiempo Real
+    
+    Actualizacion
+
+[33mcommit 25a38f647bd51658ea26b77673305623ad6fd7c5[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Mon Jan 16 15:35:26 2017 -0700
+
+    continua
+    
+    previas pruebas
+
+[33mcommit c997a67a88736bcb90a25b43c6bb7db28301b0ae[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Fri Jan 13 17:23:18 2017 -0700
+
+    Continuando con Asyncronacion
+    
+    representar en Tiempo Real
+
+[33mcommit 7f99c4b269fafab36815910fd9c3c9c858202f45[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Jan 12 17:55:56 2017 -0700
+
+    seguios con la integracion Asyncrona
+    
+    buscar otros metodsas mas Funcionales
+
+[33mcommit 9f5f2100915e223546dbb6ee3c79bc9fc7b79528[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Wed Jan 11 16:58:40 2017 -0700
+
+    Agregarndo funciones Asyncronas
+    
+    ......
+
+[33mcommit 678aad0c4ae62ebd4529058584bc98104778b248[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Jan 10 17:06:37 2017 -0700
+
+    Version 0.0.6 Beta !!
+    
+    Obtencion de Datos, Validado !!!! wuuu
+
+[33mcommit dde54641c771d7bc778903c89a75109ae70daddb[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Jan 10 10:43:12 2017 -0700
+
+    Empezando la Integracion
+    
+    Integracion con la Diadema
+
+[33mcommit 9932fc850c403f5a50f101d7b30319d37962489a[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Jan 10 10:08:32 2017 -0700
+
+    Revert "nuevo Notificador en C#"
+    
+    This reverts commit ec64c7edad572be375406157a91ab075a0850520.
+
+[33mcommit f1280863681ecb225c6b4b30a81e897f5adcc3fa[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Jan 10 10:08:13 2017 -0700
+
+    Error de Borrado
+    
+    se realizara un Reset al comit
+    ec64c7edad572be375406157a91ab075a0850520
+
+[33mcommit ec64c7edad572be375406157a91ab075a0850520[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Mon Jan 9 17:30:43 2017 -0700
+
+    nuevo Notificador en C#
+    
+    se cambiara el desarrollo a android
+
+[33mcommit c0899eb0179f04cd6ee882545f0f63afccf92f22[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Fri Jan 6 16:52:35 2017 -0700
+
+    listo para Presentacion
+    
+    ya envia la url por web para la notificaciomn
+
+[33mcommit a15f444b42247dbd76fd72d421ed4424e4cb5598[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Jan 5 17:37:54 2017 -0700
+
+    validacion en cambios
+    
+    ver imagenes desde la app
+
+[33mcommit b6041792e6c96c727078e24d795a252265be98b7[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Wed Jan 4 16:54:00 2017 -0700
+
+    Version 0.0.5 Full
+    
+    Version Lista, Guardado y Borrado, nueva Interface Home e Inicio de
+    secion, Acepta caracteres para movimiento de mause y mueca unica para
+    recorrido en Ciclo
+
+[33mcommit 9ff1e13227f665b94fdc907b018056c128046d21[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Jan 3 18:09:41 2017 -0700
+
+    nuevos abances
+
+[33mcommit 27a3113796a5670129ef209e407c4336a6e575cb[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Fri Dec 30 17:45:56 2016 -0700
+
+    Version 0.0.4 BETA, en Pruebas
+    
+    lo nuevo son los Movimientos, con el nuevo comando y agregada la ventana
+    de agregarRuta
+
+[33mcommit c4859152a95e92e53cc3a98f2ddfaef37e382267[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Dec 29 16:38:35 2016 -0700
+
+    Version 0.0.3 Estable
+    
+    agregar a base de datos,  Abrir en navegadores,  y botones sin errores
+
+[33mcommit 8282d60cfb990eaa4aebd1bc77e22b58830de261[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Wed Dec 28 17:44:39 2016 -0700
+
+    xxxxxxxxxxxxxxxxxxxxxxxx
+    
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+[33mcommit 49f2d03973cd9e77e941bdf618e0e487629487a2[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Dec 27 17:45:16 2016 -0700
+
+    Empezando Con las Rutas
+    
+    Agregar los WebBrowsers
+
+[33mcommit df7d85d2f8ae29a042ad2bf282fddfa6341e5628[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Fri Dec 23 17:34:56 2016 -0700
+
+    Version 0.0.2 Estable para Presentacion
+    
+    Version Estable !!!! hacer Branch de esta Version 0.0.2
+
+[33mcommit 27ea685247b8b20198d9a4c199064c3ba243bce7[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Dec 22 16:48:36 2016 -0700
+
+    extencion del dia
+    
+    falto hcer el comit
+
+[33mcommit f9d0058d05bd4641e1b814dc16821a1a3be59bb3[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Dec 22 16:47:27 2016 -0700
+
+    Listo para empezar el Autollenado
+    
+    empezar a agregar a la clase de acciones la obtencion de datos
+
+[33mcommit 884a6ee49f96ce0de9d1e19137b59ff187882167[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Wed Dec 21 14:42:04 2016 -0700
+
+    Miercoles, guardado Expres
+    
+    diseño de silla listo falta agrupar con el evento de guardar tamaño
+
+[33mcommit d0c8618a4c317e65b0b0abcd4684a0d85ddde012[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Dec 20 16:42:31 2016 -0700
+
+    version 0.0.2
+    
+    Avanzado el 50%, falta diseñar
+
+[33mcommit a1714010920bcbaf4b82c24c8af7971cf3a495a0[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Mon Dec 19 17:35:36 2016 -0700
+
+    Sitema Agregados las Imagenes y el Diseño
+    
+    estable con error es el tamano de los botones, se reducen asta cero si
+    no se maneja con cuidado, arreglar cuando se tenga los tamaños de las
+    pantallas
+
+[33mcommit 75f62e54caf7acf6bbdfe80ababc09a360792714[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Fri Dec 16 16:17:44 2016 -0700
+
+    Version Estable 0.0.1
+    
+    version estable del softhware y version estable de la APP
+
+[33mcommit 73e74ecbd76ecd414db13d4e605eea9f2078f80c[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Thu Dec 15 16:49:23 2016 -0700
+
+    Sitema estable, silla y notificaciones
+    
+    pulir con imagenes y diseño todo el modelo, optimizar las notificaciones
+
+[33mcommit 7cdd1b2fd7bc81a765723dfd30f1267919625dd9[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Wed Dec 14 18:00:37 2016 -0700
+
+    App Android y sistema casi Listos
+    
+    falta aprender a leer json con Android
+
+[33mcommit f5cf99f8d241486754c8bec4753d9b4482bcb527[m
+Author: @MizaelGalvez <mizaelgalvez@gmail.com>
+Date:   Tue Dec 13 17:30:22 2016 -0700
+
+    Web service, interface, y appAndroid
+    
+    listo el web servis para contestar y responder, 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.panelActividades = new System.Windows.Forms.Panel();
             this.btnCine = new System.Windows.Forms.Button();
@@ -118,6 +117,7 @@
             // btnConfiguracion
             // 
             this.btnConfiguracion.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfiguracion.BackgroundImage = global::InterfaceTIV.Properties.Resources.Config;
             this.btnConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfiguracion.FlatAppearance.BorderSize = 0;
@@ -126,7 +126,7 @@
             this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfiguracion.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnConfiguracion.Location = new System.Drawing.Point(8, 9);
+            this.btnConfiguracion.Location = new System.Drawing.Point(2, 86);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(32, 33);
             this.btnConfiguracion.TabIndex = 0;
@@ -220,33 +220,28 @@
             this.panelComando.Controls.Add(this.btnGraficas);
             this.panelComando.Controls.Add(this.txtComando);
             this.panelComando.Controls.Add(this.btnConfiguracion);
-            this.panelComando.Location = new System.Drawing.Point(38, 486);
+            this.panelComando.Location = new System.Drawing.Point(2, 437);
             this.panelComando.Name = "panelComando";
-            this.panelComando.Size = new System.Drawing.Size(97, 115);
+            this.panelComando.Size = new System.Drawing.Size(77, 214);
             this.panelComando.TabIndex = 13;
             // 
             // btnGraficas
             // 
-            this.btnGraficas.BackColor = System.Drawing.Color.Gold;
-            this.btnGraficas.FlatAppearance.BorderSize = 0;
-            this.btnGraficas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnGraficas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraficas.Location = new System.Drawing.Point(46, 9);
-            this.btnGraficas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGraficas.Location = new System.Drawing.Point(41, 88);
             this.btnGraficas.Name = "btnGraficas";
-            this.btnGraficas.Size = new System.Drawing.Size(44, 32);
+            this.btnGraficas.Size = new System.Drawing.Size(32, 29);
             this.btnGraficas.TabIndex = 2;
-            this.btnGraficas.Text = "G";
-            this.btnGraficas.UseVisualStyleBackColor = false;
+            this.btnGraficas.Text = "C";
+            this.btnGraficas.UseVisualStyleBackColor = true;
             this.btnGraficas.Click += new System.EventHandler(this.btnGraficas_Click);
             // 
             // txtComando
             // 
             this.txtComando.BackColor = System.Drawing.Color.Azure;
             this.txtComando.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtComando.Location = new System.Drawing.Point(8, 84);
+            this.txtComando.Location = new System.Drawing.Point(10, 152);
             this.txtComando.Name = "txtComando";
-            this.txtComando.Size = new System.Drawing.Size(33, 20);
+            this.txtComando.Size = new System.Drawing.Size(70, 20);
             this.txtComando.TabIndex = 1;
             this.txtComando.TextChanged += new System.EventHandler(this.txtComando_TextChanged);
             // 
@@ -270,6 +265,7 @@
             // 
             // panelRUTA
             // 
+            this.panelRUTA.BackgroundImage = global::InterfaceTIV.Properties.Resources.FondoMAPA;
             this.panelRUTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelRUTA.Controls.Add(this.btnRuta2);
             this.panelRUTA.Controls.Add(this.btnRuta5);
@@ -305,6 +301,7 @@
             // btnRuta5
             // 
             this.btnRuta5.BackColor = System.Drawing.Color.Transparent;
+            this.btnRuta5.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
             this.btnRuta5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRuta5.FlatAppearance.BorderSize = 0;
             this.btnRuta5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -322,6 +319,7 @@
             // btnRuta4
             // 
             this.btnRuta4.BackColor = System.Drawing.Color.Transparent;
+            this.btnRuta4.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
             this.btnRuta4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRuta4.FlatAppearance.BorderSize = 0;
             this.btnRuta4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -339,6 +337,7 @@
             // btnRuta3
             // 
             this.btnRuta3.BackColor = System.Drawing.Color.Transparent;
+            this.btnRuta3.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregarRuta;
             this.btnRuta3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRuta3.FlatAppearance.BorderSize = 0;
             this.btnRuta3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -373,6 +372,7 @@
             // btnIRhabitacion
             // 
             this.btnIRhabitacion.BackColor = System.Drawing.Color.Transparent;
+            this.btnIRhabitacion.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnHabitacion;
             this.btnIRhabitacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIRhabitacion.FlatAppearance.BorderSize = 0;
             this.btnIRhabitacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -390,6 +390,7 @@
             // btnRegresarRutas
             // 
             this.btnRegresarRutas.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegresarRutas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
             this.btnRegresarRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresarRutas.FlatAppearance.BorderSize = 0;
             this.btnRegresarRutas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -407,6 +408,7 @@
             // btnIRbaño
             // 
             this.btnIRbaño.BackColor = System.Drawing.Color.Transparent;
+            this.btnIRbaño.BackgroundImage = global::InterfaceTIV.Properties.Resources.brnBaño;
             this.btnIRbaño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIRbaño.FlatAppearance.BorderSize = 0;
             this.btnIRbaño.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -439,6 +441,7 @@
             // 
             // btnRutas
             // 
+            this.btnRutas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRutas;
             this.btnRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRutas.FlatAppearance.BorderSize = 0;
             this.btnRutas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -455,6 +458,7 @@
             // 
             // btnFlechaIzquierda
             // 
+            this.btnFlechaIzquierda.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnFlechaIzquierda;
             this.btnFlechaIzquierda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFlechaIzquierda.FlatAppearance.BorderSize = 0;
             this.btnFlechaIzquierda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -471,6 +475,7 @@
             // 
             // btnFlechaDerecha
             // 
+            this.btnFlechaDerecha.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnFlechaDerecha;
             this.btnFlechaDerecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFlechaDerecha.FlatAppearance.BorderSize = 0;
             this.btnFlechaDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -487,6 +492,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgBaseElectrodos;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(581, 123);
             this.pictureBox1.Name = "pictureBox1";
@@ -496,6 +502,7 @@
             // 
             // btnRegresarSilla
             // 
+            this.btnRegresarSilla.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
             this.btnRegresarSilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresarSilla.FlatAppearance.BorderSize = 0;
             this.btnRegresarSilla.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -512,6 +519,7 @@
             // 
             // btnFlechaArriba
             // 
+            this.btnFlechaArriba.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnFlechaArriba;
             this.btnFlechaArriba.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFlechaArriba.FlatAppearance.BorderSize = 0;
             this.btnFlechaArriba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -529,6 +537,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = global::InterfaceTIV.Properties.Resources.Logo;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox8.Location = new System.Drawing.Point(2, 1);
             this.pictureBox8.Name = "pictureBox8";
@@ -553,6 +562,7 @@
             // 
             // btnRegresarRemoto
             // 
+            this.btnRegresarRemoto.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
             this.btnRegresarRemoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresarRemoto.FlatAppearance.BorderSize = 0;
             this.btnRegresarRemoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -621,6 +631,7 @@
             // 
             // btnBorrar
             // 
+            this.btnBorrar.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBorrar;
             this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -637,6 +648,7 @@
             // 
             // btnAgregarMAS
             // 
+            this.btnAgregarMAS.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnAgregar;
             this.btnAgregarMAS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregarMAS.FlatAppearance.BorderSize = 0;
             this.btnAgregarMAS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -653,6 +665,7 @@
             // 
             // btnMostrarMasDER
             // 
+            this.btnMostrarMasDER.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnCargarMasDER;
             this.btnMostrarMasDER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMostrarMasDER.FlatAppearance.BorderSize = 0;
             this.btnMostrarMasDER.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -668,6 +681,7 @@
             // 
             // btnMostrarMenosIZQ
             // 
+            this.btnMostrarMenosIZQ.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnCargarMenosIZQ;
             this.btnMostrarMenosIZQ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMostrarMenosIZQ.FlatAppearance.BorderSize = 0;
             this.btnMostrarMenosIZQ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -683,6 +697,7 @@
             // 
             // btnSEIS
             // 
+            this.btnSEIS.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBOTON;
             this.btnSEIS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSEIS.FlatAppearance.BorderSize = 0;
             this.btnSEIS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -701,6 +716,7 @@
             // 
             // imgSEIS
             // 
+            this.imgSEIS.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgNO;
             this.imgSEIS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgSEIS.Location = new System.Drawing.Point(624, 274);
             this.imgSEIS.Name = "imgSEIS";
@@ -713,6 +729,7 @@
             // 
             // btnCINCO
             // 
+            this.btnCINCO.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBOTON;
             this.btnCINCO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCINCO.FlatAppearance.BorderSize = 0;
             this.btnCINCO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -731,6 +748,7 @@
             // 
             // imgCINCO
             // 
+            this.imgCINCO.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgNO;
             this.imgCINCO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgCINCO.Location = new System.Drawing.Point(386, 274);
             this.imgCINCO.Name = "imgCINCO";
@@ -743,6 +761,7 @@
             // 
             // btnCUATRO
             // 
+            this.btnCUATRO.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBOTON;
             this.btnCUATRO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCUATRO.FlatAppearance.BorderSize = 0;
             this.btnCUATRO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -761,6 +780,7 @@
             // 
             // imgCUATRO
             // 
+            this.imgCUATRO.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgNO;
             this.imgCUATRO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgCUATRO.Location = new System.Drawing.Point(149, 274);
             this.imgCUATRO.Name = "imgCUATRO";
@@ -773,6 +793,7 @@
             // 
             // btnTRES
             // 
+            this.btnTRES.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBOTON;
             this.btnTRES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTRES.FlatAppearance.BorderSize = 0;
             this.btnTRES.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -791,6 +812,7 @@
             // 
             // imgTRES
             // 
+            this.imgTRES.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgNO;
             this.imgTRES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgTRES.Location = new System.Drawing.Point(624, 107);
             this.imgTRES.Name = "imgTRES";
@@ -803,6 +825,7 @@
             // 
             // btnDOS
             // 
+            this.btnDOS.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBOTON;
             this.btnDOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDOS.FlatAppearance.BorderSize = 0;
             this.btnDOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -821,6 +844,7 @@
             // 
             // imgDOS
             // 
+            this.imgDOS.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgNO;
             this.imgDOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgDOS.Location = new System.Drawing.Point(386, 107);
             this.imgDOS.Name = "imgDOS";
@@ -833,6 +857,7 @@
             // 
             // btnUNO
             // 
+            this.btnUNO.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBOTON;
             this.btnUNO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUNO.FlatAppearance.BorderSize = 0;
             this.btnUNO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -851,6 +876,7 @@
             // 
             // imgUNO
             // 
+            this.imgUNO.BackgroundImage = global::InterfaceTIV.Properties.Resources.imgNO;
             this.imgUNO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgUNO.Location = new System.Drawing.Point(149, 107);
             this.imgUNO.Name = "imgUNO";
@@ -863,6 +889,7 @@
             // 
             // btnRegresarAutomatico
             // 
+            this.btnRegresarAutomatico.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
             this.btnRegresarAutomatico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresarAutomatico.FlatAppearance.BorderSize = 0;
             this.btnRegresarAutomatico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -885,7 +912,7 @@
             this.panelAlimentos.Controls.Add(this.btnPostres);
             this.panelAlimentos.Controls.Add(this.btnBebidas);
             this.panelAlimentos.Controls.Add(this.btnComidas);
-            this.panelAlimentos.Location = new System.Drawing.Point(658, 707);
+            this.panelAlimentos.Location = new System.Drawing.Point(875, 577);
             this.panelAlimentos.Name = "panelAlimentos";
             this.panelAlimentos.Size = new System.Drawing.Size(939, 516);
             this.panelAlimentos.TabIndex = 9;
@@ -893,6 +920,7 @@
             // 
             // btnRegresarAlimentos
             // 
+            this.btnRegresarAlimentos.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnRegresar;
             this.btnRegresarAlimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresarAlimentos.FlatAppearance.BorderSize = 0;
             this.btnRegresarAlimentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -909,6 +937,7 @@
             // 
             // btnPostres
             // 
+            this.btnPostres.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnPOSTRESnew_8;
             this.btnPostres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPostres.FlatAppearance.BorderSize = 0;
             this.btnPostres.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -925,6 +954,7 @@
             // 
             // btnBebidas
             // 
+            this.btnBebidas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnBEBIDASnew_8;
             this.btnBebidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBebidas.FlatAppearance.BorderSize = 0;
             this.btnBebidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -941,6 +971,7 @@
             // 
             // btnComidas
             // 
+            this.btnComidas.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnCOMIDASnew_8;
             this.btnComidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnComidas.FlatAppearance.BorderSize = 0;
             this.btnComidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -966,14 +997,15 @@
             this.panelHome.Controls.Add(this.btnActividades);
             this.panelHome.Controls.Add(this.btnEntretenimiento);
             this.panelHome.Controls.Add(this.btnAlimentos);
-            this.panelHome.Location = new System.Drawing.Point(2, 68);
+            this.panelHome.Location = new System.Drawing.Point(2, 61);
             this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(942, 495);
+            this.panelHome.Size = new System.Drawing.Size(938, 495);
             this.panelHome.TabIndex = 8;
             this.panelHome.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHome_Paint);
             // 
             // btnSeleccion
             // 
+            this.btnSeleccion.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnMENSAJE;
             this.btnSeleccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSeleccion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccion.FlatAppearance.BorderSize = 0;
@@ -990,6 +1022,7 @@
             // 
             // btnSilla
             // 
+            this.btnSilla.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnSILLA;
             this.btnSilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSilla.FlatAppearance.BorderSize = 0;
@@ -1008,6 +1041,7 @@
             // btnHablar
             // 
             this.btnHablar.BackColor = System.Drawing.Color.Transparent;
+            this.btnHablar.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnHABLAR;
             this.btnHablar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHablar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHablar.FlatAppearance.BorderSize = 0;
@@ -1026,6 +1060,7 @@
             // 
             // btnControlRemoto
             // 
+            this.btnControlRemoto.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnCONTROL;
             this.btnControlRemoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnControlRemoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnControlRemoto.FlatAppearance.BorderSize = 0;
@@ -1043,7 +1078,7 @@
             // 
             // btnActividades
             // 
-            this.btnActividades.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActividades.BackgroundImage")));
+            this.btnActividades.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnACTIVIDADES;
             this.btnActividades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActividades.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActividades.FlatAppearance.BorderSize = 0;
@@ -1061,6 +1096,7 @@
             // 
             // btnEntretenimiento
             // 
+            this.btnEntretenimiento.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnENTRETENIMIENTO;
             this.btnEntretenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntretenimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntretenimiento.FlatAppearance.BorderSize = 0;
@@ -1078,7 +1114,7 @@
             // 
             // btnAlimentos
             // 
-            this.btnAlimentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlimentos.BackgroundImage")));
+            this.btnAlimentos.BackgroundImage = global::InterfaceTIV.Properties.Resources.btnALIMENTOS;
             this.btnAlimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlimentos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlimentos.FlatAppearance.BorderSize = 0;
@@ -1099,8 +1135,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(161)))), ((int)(((byte)(209)))));
+            this.BackgroundImage = global::InterfaceTIV.Properties.Resources.new_Fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(940, 566);
+            this.ClientSize = new System.Drawing.Size(940, 562);
             this.Controls.Add(this.panelComando);
             this.Controls.Add(this.Hora);
             this.Controls.Add(this.panelRUTA);
